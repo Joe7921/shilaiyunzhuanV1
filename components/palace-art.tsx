@@ -1,5 +1,4 @@
 import {useId} from 'react';
-import kitten from '@/lib/palace-kitten.json';
 import holiday from '@/lib/palace-holidays.json';
 import scenes from '@/lib/palace-scenes.json';
 import {seasons,skies,type Season,type Festival,type Sky} from '@/lib/palace';
@@ -9,9 +8,9 @@ const descriptions={
   midautumn:'兔子灯旁，橘猫双爪压月饼模，小鸭举着桂花茶',
   qixi:'蓝粉丝带和鹊鸟围着双人晚餐，橘猫把草莓甜点端上桌',
   halloween:'南瓜灯围着温暖的厨房，橘猫和小鸭忙着招待万圣节客人',
-  everyday:'玫瑰色窗帘下，橘猫正给小鸭盛南瓜汤',
+  everyday:'玫瑰窗帘下，穿雏菊围裙的小奶橘扶着花汤锅，给小鸭盛南瓜汤',
   christmas:'挂满彩灯的圣诞树旁，小橘猫双爪推着擀面杖做姜饼',
-  lunar:'两盏大红灯笼下，小橘猫双爪捏着一只饺子，小鸭守着年夜饭',
+  lunar:'两盏红灯笼下，戴金橘厨师帽的小奶橘两爪合捏饺子，小鸭守着年夜饭',
 };
 
 function Firework({x,y,color,delay}:{x:number;y:number;color:string;delay:number}) {
@@ -41,7 +40,6 @@ export default function PalaceArt({season,theme,sky,night,fire,fireworks}:{seaso
   const ref=(key:string)=>'url(#'+id+'-'+key+')';
   const room=theme==='plain'?'everyday':theme;
   const {window:win,flame,lights,steam,file}=({...scenes,...holiday})[room];
-  const face=room==='everyday'?kitten.everyday:null;
   return <figure className="palace-art" data-season={season} data-theme={theme} data-sky={sky} data-night={night} data-fire={fire} data-fireworks={fireworks}>
     <svg viewBox="0 0 1000 625" role="img" aria-label={seasons[season]+'季的城堡厨房，'+descriptions[room]+'。窗外'+skies[sky]+(night?'夜':'天')+(fire?'，壁炉正燃烧':'')+(fireworks?'，天空绽放烟花':'')}>
       <defs>
@@ -56,7 +54,6 @@ export default function PalaceArt({season,theme,sky,night,fire,fireworks}:{seaso
         {fireworks&&<><Firework x={125} y={101} color="#ffdd9e" delay={0}/><Firework x={292} y={76} color="#ffc5d7" delay={-2.1}/></>}
       </svg>
       <image href={'/images/palace/'+file} width="1000" height="625" preserveAspectRatio="none"/>
-      {face&&<image href={'/images/palace/'+face.file} x={face.x} y={face.y} width={face.width} height={face.height} preserveAspectRatio="none"/>}
       {night&&<rect width="1000" height="625" fill="#684655" opacity=".085"/>}
       {lights.map(([x,y],i)=><g key={i} className="palace-fairy-light" style={{animationDelay:-(i%6)*.64+'s'}}><circle cx={x} cy={y} r={room==='lunar'?12:7} fill={ref('glow')}/><circle cx={x} cy={y} r="1.45" fill="#fff4bc"/></g>)}
       {room==='lunar'&&scenes.lunar.lanterns.map(([x,y])=><ellipse key={x} cx={x} cy={y} rx="29" ry="33" fill={ref('glow')} className="palace-lantern-glow"/>)}

@@ -7,7 +7,7 @@ import "./table.css";
 import "./sharing.css";
 
 export const metadata: Metadata = {
-  title: "食来运转 · 今天一起好好吃饭",
+  title: "食来运转 · 四季入窗，三餐生香",
   description: "从每日星座食签到完整菜谱，发现四季汤水、节日菜单，记录你的一餐。",
   icons: {
     icon: "/favicon.svg",

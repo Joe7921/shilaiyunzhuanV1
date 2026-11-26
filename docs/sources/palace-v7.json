@@ -1,15 +1,15 @@
 [
   {
-    "file": "everyday.webp",
+    "file": "daily-kitten-soup.webp",
     "title": "宫廷厨房的南瓜浓汤",
-    "alt": "戴厨师帽的橘猫给小鸭盛汤，蓝粉格窗帘间的大拱窗敞开。",
-    "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
+    "alt": "玫瑰窗帘下，穿雏菊围裙的小奶橘一爪拿汤勺、一爪扶着花汤锅，给小鸭盛南瓜汤。",
+    "source": "OpenAI ImageGen，为食来运转原创重绘角色，合成于原厨房场景。",
     "mediaType": "image/webp",
     "dimensions": [
       1586,
       992
     ],
-    "sha256": "82d64399446686f23eae0c220bd863e5a83ef554e8f1ab133ef1d5b360df1450",
+    "sha256": "8f7b08d85e67fc1c095c22755febfa8607505251763e6e3bca26e19e68847cae",
     "externalStock": false
   },
   {
@@ -26,16 +26,16 @@
     "externalStock": false
   },
   {
-    "file": "lunar-dumplings.webp",
+    "file": "lunar-kitten-feast.webp",
     "title": "新春厨房的团圆饭",
-    "alt": "大红灯笼下，穿红背心的小橘猫用两只前爪捏好一只饺子，小鸭守着年夜饭。",
-    "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
+    "alt": "灯笼下，戴金橘厨师帽、穿红围裙的小奶橘两爪合捏饺子，小鸭坐在年夜饭旁。",
+    "source": "OpenAI ImageGen，为食来运转原创重绘角色，合成于原厨房场景。",
     "mediaType": "image/webp",
     "dimensions": [
       1586,
       992
     ],
-    "sha256": "b409ad030f62ee277caba8c526f3a6cbb11b69b1100991e3bfe50b232eddfe25",
+    "sha256": "4836a932f728492d4759b18d77ba1b2ba6ccd27a428915d220f998b833364f36",
     "externalStock": false
   }
 ]

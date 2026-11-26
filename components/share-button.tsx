@@ -17,7 +17,7 @@ export default function ShareButton({ recipe }: { recipe?: { id: string; title: 
 
   async function share() {
     const url = recipe ? shareUrl('recipe', recipe.id) : shareUrl();
-    const title = recipe ? recipe.title + ' · 食来运转' : '食来运转 · 今天一起好好吃饭';
+    const title = recipe ? recipe.title + ' · 食来运转' : '食来运转 · 四季入窗，三餐生香';
     setManualLink('');
     if (navigator.share) {
       try {

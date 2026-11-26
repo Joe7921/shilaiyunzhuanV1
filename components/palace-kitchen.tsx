@@ -63,8 +63,8 @@ export default function PalaceKitchen({day,recipes,fortune}:{day:string;recipes:
   return <section className={'castle-home castle-'+theme} aria-label="四季城堡厨房">
     <div className="castle-spread"><div className="castle-copy">
       <p className="castle-eyebrow"><Castle size={20}/> 食来运转 · 城堡厨房</p>
-      <h1>今天，一起<br/><em>好好吃饭。</em></h1>
-      <p className="castle-subtitle">挑一道想吃的菜，让厨房里飘起香气。</p>
+      <h1>四季入窗，<br/><em>三餐生香。</em></h1>
+      <p className="castle-subtitle"><span>翻开一页菜谱，</span><span>把喜欢的季节盛进碗里。</span></p>
       <div className="castle-actions"><button className="castle-primary" onClick={recipes}><BookOpen size={18}/>翻开菜谱</button><button className="castle-secondary" onClick={fortune}><Sparkles size={16}/>抽今日幸运菜</button></div>
     </div><div className="castle-stage"><PalaceArt season={season} theme={theme} {...conditions}/>
       <p className="castle-scene-tag"><WeatherIcon size={15}/>{badge}{conditions.fire&&<Flame size={15} aria-label="壁炉已点燃"/>}</p>
