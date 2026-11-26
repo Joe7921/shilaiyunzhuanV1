@@ -1,7 +1,7 @@
 import { env } from "cloudflare:workers";
 
 export type KitchenUser = { id: string; name: string };
-type KitchenEnv = Cloudflare.Env & { OPENAI_API_KEY?: string };
+type KitchenEnv = Cloudflare.Env;
 
 export class HttpError extends Error {
   constructor(public status: number, message: string) { super(message); }
@@ -110,5 +110,3 @@ export function uploadKey(value: unknown): string {
 
 export function imageUrl(key: string): string { return `/api/image?key=${encodeURIComponent(key)}`; }
 
-// Capability stays false until an authorized image-model provider is connected.
-export function aiAvailable(): boolean { return false; }

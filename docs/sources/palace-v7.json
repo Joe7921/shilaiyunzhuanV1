@@ -1,0 +1,41 @@
+[
+  {
+    "file": "everyday.webp",
+    "title": "宫廷厨房的南瓜浓汤",
+    "alt": "戴厨师帽的橘猫给小鸭盛汤，蓝粉格窗帘间的大拱窗敞开。",
+    "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "82d64399446686f23eae0c220bd863e5a83ef554e8f1ab133ef1d5b360df1450",
+    "externalStock": false
+  },
+  {
+    "file": "christmas.webp",
+    "title": "圣诞厨房的姜饼餐桌",
+    "alt": "落地圣诞树缀满小灯，树下堆着礼物，橘猫和小鸭在餐桌上准备姜饼。",
+    "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "3e18c7e4308cd323729d955fc16b3625915e64e31d92dca3577957dcfeb1bbf4",
+    "externalStock": false
+  },
+  {
+    "file": "lunar.webp",
+    "title": "新春厨房的团圆饭",
+    "alt": "两盏大红灯笼映着梅枝和金桔，橘猫和小鸭在蒸鱼、饺子与笼屉旁预备年夜饭。",
+    "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "a5adcafd96e2fac63492161bb0cf98d879260293c74c2129415d27164104b545",
+    "externalStock": false
+  }
+]

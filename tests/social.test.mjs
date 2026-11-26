@@ -18,6 +18,7 @@ test('D1 and R2 preserve the V1 profile, voting, photo diary, sharing and deleti
   const db=await mf.getD1Database('DB');
   const sql=await readFile('drizzle/0000_flippant_next_avengers.sql','utf8');
   for(const stmt of sql.split('--> statement-breakpoint').filter(s=>s.trim())) await db.prepare(stmt.trim()).run();
+  await db.prepare(await readFile('drizzle/0002_confirmed_meal.sql','utf8')).run();
   const req=(user,path,init={})=>mf.dispatchFetch('http://localhost'+path,{...init,headers:{...(user?{'oai-authenticated-user-id':user}:{}),...init.headers}});
   const get=async(user,path)=>(await req(user,'/api/kitchen'+path)).json();
   async function post(user,body){
@@ -52,7 +53,11 @@ test('D1 and R2 preserve the V1 profile, voting, photo diary, sharing and deleti
   assert.equal((await post(peer,{action:'toggle-like',id:pub.id})).likes,1);
   assert.equal((await post(peer,{action:'toggle-like',id:pub.id})).likes,0);
   const ai=await req(mine,'/api/estimate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({imageKey})});
-  assert.equal(ai.status,503);assert.match(await ai.text(),/尚未连接/);
+  assert.equal(ai.status,400);assert.match(await ai.text(),/确认菜品/);
+  const scanned=await post(mine,{...entry,visibility:'private',mealItems:[{id:'fdc-168878',amount:150}],kcal:999});
+  assert.equal(scanned.post.kcal,195);assert.equal(scanned.post.mealEstimate.items[0].amount,150);
+  assert.equal((await get(peer,'?resource=posts&scope=community')).posts.some(p=>p.id===scanned.post.id),false);
+  await post(mine,{action:'delete-post',id:scanned.post.id});
   for(const {id} of [pub,priv])assert((await post(mine,{action:'delete-post',id})).success);
   assert.equal((await get(mine,'?resource=posts&scope=mine')).posts.length,0);
 });

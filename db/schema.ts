@@ -26,6 +26,7 @@ export const posts = sqliteTable("kitchen_posts", {
   imageKey: text("image_key").references(() => uploads.key, { onDelete: "set null" }),
   recipeId: text("recipe_id"),
   kcal: real("kcal"),
+  mealEstimate:text("meal_estimate"),
   visibility: text("visibility", { enum: ["private", "community"] }).notNull().default("private"),
   createdAt: text("created_at").notNull(),
 }, (table) => [

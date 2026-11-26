@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
-import {BookOpen,Castle,ChevronDown,CloudSun,Flame,Flower2,Leaf,LocateFixed,MapPin,Moon,Palette,SlidersHorizontal,Snowflake,Sparkles,Sun,TreeDeciduous} from 'lucide-react';
+import {BookOpen,Castle,ChevronDown,CloudSun,Flame,Flower2,Leaf,LocateFixed,MapPin,Moon,Gift,TreePine,SlidersHorizontal,Snowflake,Sparkles,Sun,TreeDeciduous} from 'lucide-react';
 import {cities,festivals,festivalFor,palaceConditions,scenes,seasonFor,seasons,skies,type City,type Festival,type SceneMode,type Season,type WeatherReading} from '@/lib/palace';
 import PalaceArt from './palace-art';
 
@@ -71,7 +71,7 @@ export default function PalaceKitchen({day,recipes,fortune}:{day:string;recipes:
     </div></div>
     <div className="castle-toolbar">
       <div className="castle-season"><span className="castle-label"><TreeDeciduous size={16}/>窗外四季</span><div role="group" aria-label="切换窗外季节">{(Object.keys(seasons) as Season[]).map(s=>{const Icon=icons[s];return <button key={s} type="button" onClick={()=>update('season',s)} aria-pressed={season===s} className={'season-'+s}><Icon size={15}/>{seasonNames[s]}</button>})}</div></div>
-      <label className="castle-theme-select"><Palette size={16}/><span>装饰</span><select aria-label="厨房节日主题" value={settings.theme} onChange={e=>update('theme',e.target.value as Settings['theme'])}><option value="auto">跟随节日</option>{(Object.keys(festivals) as Festival[]).map(t=><option key={t} value={t}>{themeNames[t]}</option>)}</select></label>
+      <div className="castle-theme-group" role="group" aria-label="厨房节日主题">{(['auto','plain','christmas','lunar'] as const).map(t=>{const Icon=t==='christmas'?TreePine:t==='lunar'?Gift:t==='plain'?Castle:Sparkles;return <button key={t} type="button" aria-pressed={settings.theme===t} onClick={()=>update('theme',t)}><Icon size={15}/>{t==='auto'?'跟随节日':themeNames[t]}</button>})}</div>
       <details className="castle-settings"><summary><SlidersHorizontal size={16}/> 窗景设置 <ChevronDown size={14}/></summary>
         <div className="palace-settings-body">
           <label><span><MapPin size={15}/>天气地点</span><select aria-label="天气地点" value={coords?'nearby':settings.city} onChange={e=>{setCoords(null);setMessage('');update('city',e.target.value as City);setMode('live')}}>{coords&&<option value="nearby">定位附近</option>}{(Object.keys(cities) as City[]).map(id=><option key={id} value={id}>{cities[id][0]}</option>)}</select></label>

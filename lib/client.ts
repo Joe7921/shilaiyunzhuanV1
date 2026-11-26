@@ -2,7 +2,7 @@ import type { Recipe } from './recipes';
 
 export type User = { id: string; name: string };
 export type Preferences = { excluded: string[]; maxTime: number; vegetarian: boolean; avoid?: string[]; tastes?: string[] };
-export type Post = { id: string; title: string; body: string; imageUrl: string | null; recipeId: string | null; kcal: number | null; visibility: 'private' | 'community'; authorName: string; createdAt: string; likes: number; likedByMe: boolean; isMine: boolean };
+export type Post = { id: string; title: string; body: string; imageUrl: string | null; recipeId: string | null; kcal: number | null; mealEstimate?:import('./vision/meal').Meal|null; visibility: 'private' | 'community'; authorName: string; createdAt: string; likes: number; likedByMe: boolean; isMine: boolean };
 export type Poll = { id: string; title: string; options: { id: string; label: string; votes: number }[]; totalVotes: number; myVote: string | null };
 export const defaultPrefs: Preferences = { excluded: [], maxTime: 0, vegetarian: false };
 

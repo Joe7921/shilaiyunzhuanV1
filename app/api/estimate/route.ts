@@ -1,15 +1,11 @@
-import { assertSameOrigin, fail, HttpError, readJson, requireUser, uploadKey } from "@/lib/server/http";
-
-export const dynamic = "force-dynamic";
-
-export async function POST(request: Request) {
-  try {
-    assertSameOrigin(request);
-    requireUser(request);
-    const body = await readJson(request);
-    uploadKey(body.imageKey);
-    // Do not send users' photographs to an external model until a provider and
-    // credentials have been explicitly connected. No fabricated scan result.
-    throw new HttpError(503, "AI识别尚未连接，请先手动填写食物与份量");
-  } catch (error) { return fail(error); }
+import {assertSameOrigin,fail,HttpError,json,readJson} from '@/lib/server/http';
+import {confirmedMeal} from '@/lib/vision/meal';
+export const dynamic='force-dynamic';
+// Older clients used to post an image key. Inference now runs on device; only confirmed foods can be estimated.
+export async function POST(request:Request){
+ try{
+   assertSameOrigin(request);const data=await readJson(request);
+   if(!data.confirmed||data.confirmed!==true||!Array.isArray(data.items))throw new HttpError(400,'请先在本机识别并确认菜品与份量。');
+   try{return json(confirmedMeal(data.items))}catch(e){throw new HttpError(400,(e as Error).message)}
+ }catch(e){return fail(e)}
 }

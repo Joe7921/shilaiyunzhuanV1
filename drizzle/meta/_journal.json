@@ -15,6 +15,13 @@
       "when": 1795665152638,
       "tag": "0001_kitchen_planner",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1795667375291,
+      "tag": "0002_confirmed_meal",
+      "breakpoints": true
     }
   ]
 }

@@ -1,4 +1,5 @@
-import { aiAvailable, assertSameOrigin, database, fail, getUser, HttpError, idField, json, readJson, requireUser, stringField, uploadKey } from "@/lib/server/http";
+import {confirmedMeal,type Meal} from '@/lib/vision/meal';
+import { assertSameOrigin, database, fail, getUser, HttpError, idField, json, readJson, requireUser, stringField, uploadKey } from "@/lib/server/http";
 import { accessiblePost, getPoll, rateLimit, serializePost, type PostRow } from "@/lib/server/store";
 
 export const dynamic = "force-dynamic";
@@ -7,7 +8,7 @@ export async function GET(request: Request) {
   try {
     const url = new URL(request.url);
     const resource = url.searchParams.get("resource");
-    if (resource === "me") return json({ user: getUser(request), aiAvailable: aiAvailable() });
+    if (resource === "me") return json({ user: getUser(request), aiAvailable: true, photoRecognition: "local-aiy-v1" });
     const user = requireUser(request);
     const db = database();
     if (resource === "profile") {
@@ -57,7 +58,9 @@ export async function POST(request: Request) {
       if (body.visibility !== "private" && body.visibility !== "community") throw new HttpError(400, "请选择记录的可见范围。");
       const imageKey = body.imageKey === undefined || body.imageKey === null ? null : uploadKey(body.imageKey);
       const recipeId = body.recipeId === undefined || body.recipeId === null ? null : idField(body.recipeId, "菜谱编号");
-      const kcal = body.kcal === undefined || body.kcal === null ? null : body.kcal;
+      let estimate:Meal|null=null;
+      if(body.mealItems!==undefined){try{estimate=confirmedMeal(body.mealItems)}catch(e){throw new HttpError(400,(e as Error).message)}}
+      const kcal = estimate ? estimate.kcal : body.kcal === undefined || body.kcal === null ? null : body.kcal;
       if (kcal !== null && (typeof kcal !== "number" || !Number.isFinite(kcal) || kcal < 0 || kcal > 20000)) throw new HttpError(400, "热量请输入 0–20000 范围内的数值。");
       if (imageKey) {
         const upload = await db.prepare("SELECT key FROM kitchen_uploads WHERE key = ? AND user_id = ?").bind(imageKey, user.id).first();
@@ -69,8 +72,8 @@ export async function POST(request: Request) {
       }
       await rateLimit("kitchen_posts", user.id, 100);
       const id = crypto.randomUUID();
-      await db.prepare("INSERT INTO kitchen_posts (id, user_id, author_name, title, body, image_key, recipe_id, kcal, visibility, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(id, user.id, user.name, title, caption, imageKey, recipeId, kcal, body.visibility, now).run();
-      return json({ post: serializePost({ id, user_id: user.id, author_name: user.name, title, body: caption, image_key: imageKey, recipe_id: recipeId, kcal: kcal as number | null, visibility: body.visibility, created_at: now }, user.id) }, 201);
+      await db.prepare("INSERT INTO kitchen_posts (id, user_id, author_name, title, body, image_key, recipe_id, kcal, meal_estimate, visibility, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(id, user.id, user.name, title, caption, imageKey, recipeId, kcal, estimate?JSON.stringify(estimate):null, body.visibility, now).run();
+      return json({ post: serializePost({ id, user_id: user.id, author_name: user.name, title, body: caption, image_key: imageKey, recipe_id: recipeId, kcal: kcal as number | null, meal_estimate:estimate?JSON.stringify(estimate):null, visibility: body.visibility, created_at: now }, user.id) }, 201);
     }
     if (body.action === "delete-post") {
       const id = idField(body.id, "记录编号");

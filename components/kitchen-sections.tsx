@@ -14,7 +14,7 @@ type Occasion={id:string;name:string;date:string;kind:string;menu:string[];theme
 function forEvent(e:Occasion,pool:Recipe[]){
   return pool.filter(r=>r.festivals.includes(e.name)||e.menu.some(name=>[r.title,...r.aliases].includes(name)));
 }
-export function Home({day,birthday,pool,renderCard,go,tool,onOpen}:{day:string;birthday?:string;go:(p:Page)=>void;tool:(t:Tool)=>void;onOpen:(r:Recipe)=>void}&CardProps){
+export function Home({day,birthday,pool,renderCard,go,tool,onOpen,onPhoto}:{day:string;birthday?:string;go:(p:Page)=>void;tool:(t:Tool)=>void;onOpen:(r:Recipe)=>void;onPhoto:()=>void}&CardProps){
   const [showTerm,setShowTerm]=useState(false);
   useEffect(()=>{try{setShowTerm(localStorage.getItem('sl-desk-seasonal')==='yes')}catch{}},[]);
   const thisTerm=showTerm&&day?calendarYear(Number(day.slice(0,4))).filter(e=>e.kind==='term'&&e.date<=day).at(-1):null;
@@ -30,7 +30,7 @@ export function Home({day,birthday,pool,renderCard,go,tool,onOpen}:{day:string;b
   return <div className="journal page-content">
     <PalaceKitchen day={day} recipes={()=>go('recipes')} fortune={()=>go('magic')}/>
     <div className="discovery-strip">{[{label:'美食大转盘',desc:'转出一桌好味',icon:Dices,act:()=>tool('wheel')},{label:'四季食养馆',desc:'汤水与暖饮',icon:Soup,act:()=>go('season')},{label:'节日限定菜单',desc:near?near.name+' · '+near.date.slice(5):'全年食历',icon:CalendarDays,act:()=>go('calendar')},{label:'好友帮选',desc:'请饭搭子投一票',icon:Users,act:()=>tool('poll')}].map(({label,desc,icon:Icon,act})=><button onClick={act} key={label}><i><Icon size={24}/></i><span><b>{label}</b><small>{desc}</small></span></button>)}</div>
-    <div className="home-planner"><div><p className="overline"><ChefHat size={16}/> 我的厨房工具</p><h2>厨房计划室</h2></div><div><a href="#planner/pantry">用冰箱配菜</a><a href="#planner/diet">安排三餐</a><a href="#planner/party">搭一桌家宴</a><a href="#planner">全部工具</a></div></div>
+    <div className="home-planner"><div><p className="overline"><ChefHat size={16}/> 我的厨房工具</p><h2>厨房计划室</h2></div><div><a href="#planner/pantry">用冰箱配菜</a><a href="#planner/diet">安排三餐</a><a href="#planner/party">搭一桌家宴</a><button className="text-button" onClick={onPhoto}>拍照估热量</button><a href="#planner">全部工具</a></div></div>
     {thisTerm&&<a className="home-term-note" href="#planner/seasonal"><Flower2 size={16}/>{thisTerm.name}到了，看看本期菜篮子</a>}
     <section className="editor-picks"><div className="sectitle"><div><p className="overline"><ChefHat size={15}/> 厨房手记</p><h2>今天端上桌</h2></div><button className="flat-button" onClick={()=>go('recipes')}>浏览全部 {recipes.length} 道 <BookOpen size={16}/></button></div><div className="paper-tabs">{['编辑精选','半小时开饭','一碗热汤','饭后甜点'].map(f=><button className={filter===f?'active':''} key={f} onClick={()=>setFilter(f)}>{f}</button>)}</div>
     {featured.length?<div className="recipe-grid">{featured.map(renderCard)}</div>:<Empty title="这个栏目暂时没有匹配的菜" text="可以看看其他分类，或调整选菜偏好。"/>}</section>

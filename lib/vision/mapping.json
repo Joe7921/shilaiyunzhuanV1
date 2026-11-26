@@ -1,0 +1,4151 @@
+{
+  "4": {
+    "label": "芒果糯米饭",
+    "english": "Mango sticky rice",
+    "recipes": [
+      "intl-mango-rice"
+    ],
+    "approximate": false
+  },
+  "5": {
+    "label": "煎饼",
+    "english": "Jianbing",
+    "recipes": [],
+    "approximate": false
+  },
+  "21": {
+    "label": "福建红糟鸡",
+    "english": "Fujian red wine chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "26": {
+    "label": "虾酱鸡",
+    "english": "Har cheong gai",
+    "recipes": [],
+    "approximate": false
+  },
+  "30": {
+    "label": "海南咖喱饭",
+    "english": "Hainanese curry rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "31": {
+    "label": "索诺兰热狗",
+    "english": "Sonoran hot dog",
+    "recipes": [],
+    "approximate": false
+  },
+  "34": {
+    "label": "潮州粥",
+    "english": "Teochew porridge",
+    "recipes": [],
+    "approximate": false
+  },
+  "36": {
+    "label": "黑麦面包熏牛肉三明治",
+    "english": "Pastrami on rye",
+    "recipes": [],
+    "approximate": false
+  },
+  "37": {
+    "label": "烤牛肉三明治",
+    "english": "Roast beef sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "38": {
+    "label": "日式炒饭",
+    "english": "Chahan",
+    "recipes": [
+      "shrimp-fried-rice"
+    ],
+    "approximate": true
+  },
+  "41": {
+    "label": "墨西哥早餐卷饼",
+    "english": "Breakfast burrito",
+    "recipes": [],
+    "approximate": false
+  },
+  "44": {
+    "label": "马来网饼",
+    "english": "Roti jala",
+    "recipes": [],
+    "approximate": false
+  },
+  "55": {
+    "label": "瑞典肉丸",
+    "english": "Köttbullar",
+    "recipes": [],
+    "approximate": false
+  },
+  "65": {
+    "label": "蒜香黄油虾",
+    "english": "Garlic butter shrimp",
+    "recipes": [
+      "world-garlic-butter-shrimp"
+    ],
+    "approximate": false
+  },
+  "71": {
+    "label": "爆肚",
+    "english": "Baodu",
+    "recipes": [],
+    "approximate": false
+  },
+  "74": {
+    "label": "韩式鸡蛋面包",
+    "english": "Gyeran-ppang",
+    "recipes": [],
+    "approximate": false
+  },
+  "85": {
+    "label": "猪骨",
+    "english": "Pork Bones",
+    "recipes": [],
+    "approximate": false
+  },
+  "92": {
+    "label": "越式焦糖炖猪肉",
+    "english": "Thịt kho tàu",
+    "recipes": [],
+    "approximate": false
+  },
+  "93": {
+    "label": "棒棒鸡",
+    "english": "Bon bon chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "107": {
+    "label": "韩式糯米糕",
+    "english": "Chapssal-tteok",
+    "recipes": [],
+    "approximate": false
+  },
+  "111": {
+    "label": "炸茄子",
+    "english": "Fried eggplant",
+    "recipes": [],
+    "approximate": false
+  },
+  "112": {
+    "label": "葡式海鲜饭",
+    "english": "Portuguese seafood rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "140": {
+    "label": "西米露",
+    "english": "Sago soup",
+    "recipes": [
+      "season-coconut-sago"
+    ],
+    "approximate": true
+  },
+  "142": {
+    "label": "鲜虾玉米糊",
+    "english": "Shrimp and grits",
+    "recipes": [],
+    "approximate": false
+  },
+  "148": {
+    "label": "章鱼",
+    "english": "Octopus",
+    "recipes": [],
+    "approximate": false
+  },
+  "150": {
+    "label": "越式摇滚牛肉",
+    "english": "Bò lúc lắc",
+    "recipes": [],
+    "approximate": false
+  },
+  "153": {
+    "label": "血肠",
+    "english": "Black pudding",
+    "recipes": [],
+    "approximate": false
+  },
+  "162": {
+    "label": "法式奶油焗土豆",
+    "english": "Gratin dauphinois",
+    "recipes": [],
+    "approximate": false
+  },
+  "163": {
+    "label": "秘鲁炒饭",
+    "english": "Arroz chaufa",
+    "recipes": [],
+    "approximate": false
+  },
+  "165": {
+    "label": "印尼炸鸡",
+    "english": "Ayam goreng",
+    "recipes": [],
+    "approximate": false
+  },
+  "169": {
+    "label": "糖衣杏仁",
+    "english": "Candied almonds",
+    "recipes": [],
+    "approximate": false
+  },
+  "170": {
+    "label": "意大利千层面",
+    "english": "Lasagne",
+    "recipes": [],
+    "approximate": false
+  },
+  "174": {
+    "label": "猪血汤",
+    "english": "Pork blood soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "181": {
+    "label": "蛋白霜",
+    "english": "Meringue",
+    "recipes": [],
+    "approximate": false
+  },
+  "182": {
+    "label": "花生酱果酱三明治",
+    "english": "Peanut butter and jelly sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "185": {
+    "label": "泰式红宝石甜品",
+    "english": "Thapthim krop",
+    "recipes": [],
+    "approximate": false
+  },
+  "188": {
+    "label": "瑞士融化奶酪",
+    "english": "Raclette",
+    "recipes": [],
+    "approximate": false
+  },
+  "189": {
+    "label": "窝窝头",
+    "english": "Wotou",
+    "recipes": [],
+    "approximate": false
+  },
+  "194": {
+    "label": "泰式船面",
+    "english": "Boat noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "197": {
+    "label": "越南炸春卷",
+    "english": "Chả giò",
+    "recipes": [],
+    "approximate": false
+  },
+  "205": {
+    "label": "日式便当",
+    "english": "Bento",
+    "recipes": [],
+    "approximate": false
+  },
+  "206": {
+    "label": "日式御节料理",
+    "english": "Osechi",
+    "recipes": [],
+    "approximate": false
+  },
+  "207": {
+    "label": "大阪烧",
+    "english": "Okonomiyaki",
+    "recipes": [],
+    "approximate": false
+  },
+  "208": {
+    "label": "味噌汤",
+    "english": "Miso soup",
+    "recipes": [
+      "intl-miso"
+    ],
+    "approximate": true
+  },
+  "209": {
+    "label": "日式团子",
+    "english": "Dango",
+    "recipes": [],
+    "approximate": false
+  },
+  "210": {
+    "label": "日式饭团",
+    "english": "Onigiri",
+    "recipes": [
+      "world-ham-rice-balls"
+    ],
+    "approximate": true
+  },
+  "211": {
+    "label": "日式凉拌豆腐",
+    "english": "Hiyayakko",
+    "recipes": [
+      "cucumber-tofu"
+    ],
+    "approximate": true
+  },
+  "212": {
+    "label": "天妇罗",
+    "english": "Tempura",
+    "recipes": [],
+    "approximate": false
+  },
+  "213": {
+    "label": "日式麻糬",
+    "english": "Mochi",
+    "recipes": [],
+    "approximate": false
+  },
+  "218": {
+    "label": "红豆汤",
+    "english": "Hong dou tang",
+    "recipes": [],
+    "approximate": false
+  },
+  "219": {
+    "label": "日式刨冰",
+    "english": "Kakigōri",
+    "recipes": [],
+    "approximate": false
+  },
+  "222": {
+    "label": "薯片或玉米片配蘸酱",
+    "english": "Chips and dip",
+    "recipes": [],
+    "approximate": false
+  },
+  "226": {
+    "label": "咖喱羊肉",
+    "english": "Mutton curry",
+    "recipes": [],
+    "approximate": false
+  },
+  "231": {
+    "label": "芝士汉堡",
+    "english": "Cheeseburger",
+    "recipes": [],
+    "approximate": false
+  },
+  "232": {
+    "label": "软心糖豆",
+    "english": "Jelly bean",
+    "recipes": [],
+    "approximate": false
+  },
+  "233": {
+    "label": "苹果派",
+    "english": "Apple pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "234": {
+    "label": "乌冬面",
+    "english": "Udon",
+    "recipes": [],
+    "approximate": false
+  },
+  "235": {
+    "label": "炸豆丸子",
+    "english": "Falafel",
+    "recipes": [],
+    "approximate": false
+  },
+  "236": {
+    "label": "日式高汤炸豆腐",
+    "english": "Agedashi dōfu",
+    "recipes": [],
+    "approximate": false
+  },
+  "237": {
+    "label": "日式出汁高汤",
+    "english": "Dashi",
+    "recipes": [],
+    "approximate": false
+  },
+  "239": {
+    "label": "煎蛋饼",
+    "english": "Omelette",
+    "recipes": [
+      "cheese-omelette",
+      "region-chai-poh-egg"
+    ],
+    "approximate": true
+  },
+  "240": {
+    "label": "法式焦糖布丁",
+    "english": "Crème brûlée",
+    "recipes": [],
+    "approximate": false
+  },
+  "241": {
+    "label": "黄瓜汤",
+    "english": "Cucumber soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "242": {
+    "label": "法式吐司",
+    "english": "French toast",
+    "recipes": [],
+    "approximate": false
+  },
+  "243": {
+    "label": "动物肚杂",
+    "english": "Tripe",
+    "recipes": [],
+    "approximate": false
+  },
+  "244": {
+    "label": "意式辣香肠",
+    "english": "Pepperoni",
+    "recipes": [],
+    "approximate": false
+  },
+  "245": {
+    "label": "萨拉米香肠",
+    "english": "Salami",
+    "recipes": [],
+    "approximate": false
+  },
+  "246": {
+    "label": "韩式泡菜",
+    "english": "Kimchi",
+    "recipes": [],
+    "approximate": false
+  },
+  "248": {
+    "label": "章鱼烧",
+    "english": "Takoyaki",
+    "recipes": [],
+    "approximate": false
+  },
+  "249": {
+    "label": "哈尔瓦甜点",
+    "english": "Halva",
+    "recipes": [],
+    "approximate": false
+  },
+  "251": {
+    "label": "希腊菠菜派",
+    "english": "Spanakopita",
+    "recipes": [],
+    "approximate": false
+  },
+  "252": {
+    "label": "南瓜派",
+    "english": "Pumpkin pie",
+    "recipes": [
+      "intl-pumpkin-pie"
+    ],
+    "approximate": false
+  },
+  "253": {
+    "label": "美式什锦杂烩饭",
+    "english": "Jambalaya",
+    "recipes": [],
+    "approximate": false
+  },
+  "254": {
+    "label": "总汇三明治",
+    "english": "Club sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "255": {
+    "label": "西班牙油条",
+    "english": "Churro",
+    "recipes": [],
+    "approximate": false
+  },
+  "258": {
+    "label": "热狗",
+    "english": "Hot dog",
+    "recipes": [],
+    "approximate": false
+  },
+  "259": {
+    "label": "日式亲子丼",
+    "english": "Oyakodon",
+    "recipes": [],
+    "approximate": false
+  },
+  "260": {
+    "label": "肉丸",
+    "english": "Meatball",
+    "recipes": [],
+    "approximate": false
+  },
+  "261": {
+    "label": "华尔道夫沙拉",
+    "english": "Waldorf salad",
+    "recipes": [],
+    "approximate": false
+  },
+  "262": {
+    "label": "土豆沙拉",
+    "english": "Potato salad",
+    "recipes": [
+      "intl-kartoffelsalat"
+    ],
+    "approximate": true
+  },
+  "263": {
+    "label": "沙嗲烤串",
+    "english": "Satay",
+    "recipes": [],
+    "approximate": false
+  },
+  "267": {
+    "label": "华夫饼",
+    "english": "Waffle",
+    "recipes": [],
+    "approximate": false
+  },
+  "268": {
+    "label": "松饼",
+    "english": "Pancake",
+    "recipes": [
+      "intl-blueberry-pancake"
+    ],
+    "approximate": true
+  },
+  "269": {
+    "label": "法式咸派",
+    "english": "Quiche",
+    "recipes": [],
+    "approximate": false
+  },
+  "270": {
+    "label": "甜菜红汤",
+    "english": "Borscht",
+    "recipes": [
+      "intl-borscht"
+    ],
+    "approximate": false
+  },
+  "271": {
+    "label": "德式烤肠",
+    "english": "Bratwurst",
+    "recipes": [],
+    "approximate": false
+  },
+  "272": {
+    "label": "法式鹅肝或鸭肝",
+    "english": "Foie gras",
+    "recipes": [],
+    "approximate": false
+  },
+  "273": {
+    "label": "墨西哥卷饼",
+    "english": "Burrito",
+    "recipes": [],
+    "approximate": false
+  },
+  "274": {
+    "label": "匈牙利炖肉",
+    "english": "Goulash",
+    "recipes": [],
+    "approximate": false
+  },
+  "276": {
+    "label": "法式红酒炖鸡",
+    "english": "Coq au vin",
+    "recipes": [],
+    "approximate": false
+  },
+  "277": {
+    "label": "普罗旺斯炖菜",
+    "english": "Ratatouille",
+    "recipes": [
+      "intl-ratatouille"
+    ],
+    "approximate": false
+  },
+  "278": {
+    "label": "玉米面包",
+    "english": "Cornbread",
+    "recipes": [],
+    "approximate": false
+  },
+  "279": {
+    "label": "希腊烤肉串",
+    "english": "Souvlaki",
+    "recipes": [],
+    "approximate": false
+  },
+  "280": {
+    "label": "中式炒面",
+    "english": "Chow mein",
+    "recipes": [],
+    "approximate": false
+  },
+  "281": {
+    "label": "烤牛肉",
+    "english": "Roast beef",
+    "recipes": [],
+    "approximate": false
+  },
+  "282": {
+    "label": "北京烤鸭",
+    "english": "Peking duck",
+    "recipes": [],
+    "approximate": false
+  },
+  "283": {
+    "label": "炸鸡",
+    "english": "Fried chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "284": {
+    "label": "法式泡芙塔",
+    "english": "Croquembouche",
+    "recipes": [],
+    "approximate": false
+  },
+  "285": {
+    "label": "芝麻酱",
+    "english": "Tahini",
+    "recipes": [],
+    "approximate": false
+  },
+  "286": {
+    "label": "路易斯安那什锦浓汤",
+    "english": "Gumbo",
+    "recipes": [],
+    "approximate": false
+  },
+  "287": {
+    "label": "墨西哥铁板肉",
+    "english": "Fajita",
+    "recipes": [],
+    "approximate": false
+  },
+  "288": {
+    "label": "美式鸡炸牛排",
+    "english": "Chicken fried steak",
+    "recipes": [],
+    "approximate": false
+  },
+  "289": {
+    "label": "寿喜烧",
+    "english": "Sukiyaki",
+    "recipes": [],
+    "approximate": false
+  },
+  "291": {
+    "label": "辣肉炖豆",
+    "english": "Chili con carne",
+    "recipes": [],
+    "approximate": false
+  },
+  "292": {
+    "label": "蒙特克里斯托三明治",
+    "english": "Monte Cristo sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "293": {
+    "label": "波兰香肠",
+    "english": "Kielbasa",
+    "recipes": [],
+    "approximate": false
+  },
+  "294": {
+    "label": "意式玉米糊",
+    "english": "Polenta",
+    "recipes": [],
+    "approximate": false
+  },
+  "295": {
+    "label": "鲁本三明治",
+    "english": "Reuben sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "296": {
+    "label": "烤棉花糖巧克力夹心饼",
+    "english": "S'more",
+    "recipes": [],
+    "approximate": false
+  },
+  "298": {
+    "label": "法式油炸饼",
+    "english": "Beignet",
+    "recipes": [],
+    "approximate": false
+  },
+  "299": {
+    "label": "可丽饼",
+    "english": "Crêpe",
+    "recipes": [
+      "intl-crepes"
+    ],
+    "approximate": true
+  },
+  "301": {
+    "label": "早餐香肠",
+    "english": "Breakfast sausage",
+    "recipes": [],
+    "approximate": false
+  },
+  "302": {
+    "label": "西班牙辣味香肠",
+    "english": "Chorizo",
+    "recipes": [],
+    "approximate": false
+  },
+  "303": {
+    "label": "希腊旋转烤肉",
+    "english": "Gyro",
+    "recipes": [],
+    "approximate": false
+  },
+  "304": {
+    "label": "芝士玉米片",
+    "english": "Nachos",
+    "recipes": [],
+    "approximate": false
+  },
+  "305": {
+    "label": "泰老式凉拌碎肉",
+    "english": "Larb",
+    "recipes": [],
+    "approximate": false
+  },
+  "306": {
+    "label": "库斯库斯",
+    "english": "Couscous",
+    "recipes": [
+      "intl-couscous"
+    ],
+    "approximate": true
+  },
+  "307": {
+    "label": "地中海式小菜拼盘",
+    "english": "Meze",
+    "recipes": [],
+    "approximate": false
+  },
+  "308": {
+    "label": "费城芝士牛排三明治",
+    "english": "Cheesesteak",
+    "recipes": [],
+    "approximate": false
+  },
+  "309": {
+    "label": "冻酸奶",
+    "english": "Frozen yogurt",
+    "recipes": [],
+    "approximate": false
+  },
+  "310": {
+    "label": "埃塞俄比亚酸饼",
+    "english": "Injera",
+    "recipes": [],
+    "approximate": false
+  },
+  "311": {
+    "label": "什锦燕麦片",
+    "english": "Muesli",
+    "recipes": [],
+    "approximate": false
+  },
+  "312": {
+    "label": "美式烤肉饼",
+    "english": "Meatloaf",
+    "recipes": [],
+    "approximate": false
+  },
+  "314": {
+    "label": "纳豆",
+    "english": "Nattō",
+    "recipes": [],
+    "approximate": false
+  },
+  "315": {
+    "label": "香蕉船",
+    "english": "Banana split",
+    "recipes": [],
+    "approximate": false
+  },
+  "316": {
+    "label": "波兰果酱甜甜圈",
+    "english": "Pączki",
+    "recipes": [],
+    "approximate": false
+  },
+  "317": {
+    "label": "磅蛋糕",
+    "english": "Pound cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "318": {
+    "label": "夫妻肺片",
+    "english": "Fuqi feipian",
+    "recipes": [],
+    "approximate": false
+  },
+  "319": {
+    "label": "椰浆饭",
+    "english": "Nasi lemak",
+    "recipes": [
+      "intl-nasi-lemak"
+    ],
+    "approximate": false
+  },
+  "320": {
+    "label": "焦糖蛋奶布丁",
+    "english": "Flan",
+    "recipes": [],
+    "approximate": false
+  },
+  "321": {
+    "label": "泰式炒河粉",
+    "english": "Pad thai",
+    "recipes": [],
+    "approximate": false
+  },
+  "322": {
+    "label": "日式烤鸡串",
+    "english": "Yakitori",
+    "recipes": [],
+    "approximate": false
+  },
+  "324": {
+    "label": "泰式椰奶鸡汤",
+    "english": "Tom kha kai",
+    "recipes": [],
+    "approximate": false
+  },
+  "326": {
+    "label": "月饼",
+    "english": "Mooncake",
+    "recipes": [
+      "cantonese-bean-mooncake"
+    ],
+    "approximate": true
+  },
+  "327": {
+    "label": "南印度蒸米糕",
+    "english": "Idli",
+    "recipes": [],
+    "approximate": false
+  },
+  "328": {
+    "label": "德式面疙瘩",
+    "english": "Spätzle",
+    "recipes": [],
+    "approximate": false
+  },
+  "334": {
+    "label": "樱桃派",
+    "english": "Cherry pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "335": {
+    "label": "日式梅干",
+    "english": "Umeboshi",
+    "recipes": [],
+    "approximate": false
+  },
+  "340": {
+    "label": "金枪鱼盖饭",
+    "english": "Tekkadon",
+    "recipes": [],
+    "approximate": false
+  },
+  "348": {
+    "label": "韩式部队锅",
+    "english": "Budae jjigae",
+    "recipes": [],
+    "approximate": false
+  },
+  "349": {
+    "label": "韩式下酒菜",
+    "english": "Anju",
+    "recipes": [],
+    "approximate": false
+  },
+  "363": {
+    "label": "韩式海带汤",
+    "english": "Miyeok-guk",
+    "recipes": [],
+    "approximate": false
+  },
+  "368": {
+    "label": "日式炒乌冬",
+    "english": "Yaki udon",
+    "recipes": [],
+    "approximate": false
+  },
+  "377": {
+    "label": "日式角煮",
+    "english": "Kakuni",
+    "recipes": [],
+    "approximate": false
+  },
+  "379": {
+    "label": "西班牙杏仁糖",
+    "english": "Turrón",
+    "recipes": [],
+    "approximate": false
+  },
+  "384": {
+    "label": "韩式葱煎饼",
+    "english": "Pajeon",
+    "recipes": [
+      "intl-pajeon"
+    ],
+    "approximate": false
+  },
+  "386": {
+    "label": "咖椰吐司",
+    "english": "Kaya toast",
+    "recipes": [
+      "intl-kaya-toast"
+    ],
+    "approximate": false
+  },
+  "396": {
+    "label": "培根蛋奶意面",
+    "english": "Carbonara",
+    "recipes": [],
+    "approximate": false
+  },
+  "398": {
+    "label": "北非番茄炖蛋",
+    "english": "Shakshouka",
+    "recipes": [],
+    "approximate": false
+  },
+  "409": {
+    "label": "印度鹰嘴豆咖喱配炸饼",
+    "english": "Chole bhature",
+    "recipes": [],
+    "approximate": false
+  },
+  "412": {
+    "label": "泰北咖喱面",
+    "english": "Khao soi",
+    "recipes": [],
+    "approximate": false
+  },
+  "415": {
+    "label": "银针粉",
+    "english": "Silver needle noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "422": {
+    "label": "杏仁豆腐",
+    "english": "Annin tofu",
+    "recipes": [],
+    "approximate": false
+  },
+  "423": {
+    "label": "饺子",
+    "english": "Jiaozi",
+    "recipes": [
+      "pork-napa-dumplings"
+    ],
+    "approximate": true
+  },
+  "424": {
+    "label": "早餐三明治",
+    "english": "Breakfast sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "425": {
+    "label": "冰糖葫芦",
+    "english": "Tanghulu",
+    "recipes": [],
+    "approximate": false
+  },
+  "426": {
+    "label": "黑芝麻糊",
+    "english": "Black sesame soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "428": {
+    "label": "韩式拌菜",
+    "english": "Namul",
+    "recipes": [],
+    "approximate": false
+  },
+  "431": {
+    "label": "墨式鸡汤",
+    "english": "Caldo de pollo",
+    "recipes": [],
+    "approximate": false
+  },
+  "434": {
+    "label": "印尼杂菜饭",
+    "english": "Nasi campur",
+    "recipes": [],
+    "approximate": false
+  },
+  "436": {
+    "label": "鲷鱼烧",
+    "english": "Taiyaki",
+    "recipes": [],
+    "approximate": false
+  },
+  "438": {
+    "label": "波兰饺子",
+    "english": "Pierogi",
+    "recipes": [
+      "intl-pierogi"
+    ],
+    "approximate": true
+  },
+  "439": {
+    "label": "奶酪通心粉",
+    "english": "Macaroni and cheese",
+    "recipes": [
+      "world-bacon-macaroni"
+    ],
+    "approximate": true
+  },
+  "442": {
+    "label": "玉米热狗",
+    "english": "Corn dog",
+    "recipes": [],
+    "approximate": false
+  },
+  "443": {
+    "label": "中东旋转烤肉",
+    "english": "Shawarma",
+    "recipes": [],
+    "approximate": false
+  },
+  "444": {
+    "label": "粽子",
+    "english": "Zongzi",
+    "recipes": [
+      "jujube-zongzi"
+    ],
+    "approximate": true
+  },
+  "445": {
+    "label": "面皮包馅或面团类食物",
+    "english": "Dumpling",
+    "recipes": [],
+    "approximate": false
+  },
+  "448": {
+    "label": "舒芙蕾",
+    "english": "Soufflé",
+    "recipes": [],
+    "approximate": false
+  },
+  "449": {
+    "label": "日式牛肉丼",
+    "english": "Gyūdon",
+    "recipes": [
+      "world-gyudon"
+    ],
+    "approximate": false
+  },
+  "450": {
+    "label": "鸡块",
+    "english": "Chicken nugget",
+    "recipes": [],
+    "approximate": false
+  },
+  "451": {
+    "label": "韩式烤牛肉",
+    "english": "Bulgogi",
+    "recipes": [],
+    "approximate": false
+  },
+  "452": {
+    "label": "班尼迪克蛋",
+    "english": "Eggs Benedict",
+    "recipes": [],
+    "approximate": false
+  },
+  "453": {
+    "label": "热干面",
+    "english": "Hot dry noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "454": {
+    "label": "土豆泥",
+    "english": "Mashed potato",
+    "recipes": [
+      "region-grandma-potato"
+    ],
+    "approximate": true
+  },
+  "455": {
+    "label": "日式红豆面包",
+    "english": "Anpan",
+    "recipes": [],
+    "approximate": false
+  },
+  "456": {
+    "label": "墨西哥芝士饼",
+    "english": "Quesadilla",
+    "recipes": [],
+    "approximate": false
+  },
+  "457": {
+    "label": "油条",
+    "english": "Youtiao",
+    "recipes": [],
+    "approximate": false
+  },
+  "458": {
+    "label": "粥",
+    "english": "Congee",
+    "recipes": [
+      "world-lotus-rice-porridge"
+    ],
+    "approximate": true
+  },
+  "459": {
+    "label": "日式红豆糯米饭",
+    "english": "Sekihan",
+    "recipes": [],
+    "approximate": false
+  },
+  "462": {
+    "label": "长崎蛋糕",
+    "english": "Castella",
+    "recipes": [],
+    "approximate": false
+  },
+  "466": {
+    "label": "仁当炖肉",
+    "english": "Rendang",
+    "recipes": [],
+    "approximate": false
+  },
+  "467": {
+    "label": "巧克力布朗尼",
+    "english": "Chocolate brownie",
+    "recipes": [],
+    "approximate": false
+  },
+  "468": {
+    "label": "麻婆豆腐",
+    "english": "Mapo doufu",
+    "recipes": [
+      "mapo-tofu"
+    ],
+    "approximate": false
+  },
+  "469": {
+    "label": "中式面条",
+    "english": "Chinese noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "470": {
+    "label": "拉美馅饼",
+    "english": "Empanada",
+    "recipes": [],
+    "approximate": false
+  },
+  "471": {
+    "label": "炒饭",
+    "english": "Fried rice",
+    "recipes": [
+      "shrimp-fried-rice",
+      "intl-pineapple-rice",
+      "intl-kimchi-rice"
+    ],
+    "approximate": true
+  },
+  "472": {
+    "label": "芝加哥式披萨",
+    "english": "Chicago-style pizza",
+    "recipes": [],
+    "approximate": false
+  },
+  "473": {
+    "label": "古巴三明治",
+    "english": "Cuban sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "474": {
+    "label": "法式翻转苹果挞",
+    "english": "Tarte Tatin",
+    "recipes": [],
+    "approximate": false
+  },
+  "475": {
+    "label": "日式炒面",
+    "english": "Yakisoba",
+    "recipes": [],
+    "approximate": false
+  },
+  "477": {
+    "label": "芝士蛋糕",
+    "english": "Cheesecake",
+    "recipes": [
+      "world-basque-cheesecake"
+    ],
+    "approximate": true
+  },
+  "478": {
+    "label": "南亚咖喱角",
+    "english": "Samosa",
+    "recipes": [],
+    "approximate": false
+  },
+  "479": {
+    "label": "魔鬼巧克力蛋糕",
+    "english": "Devil's food cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "480": {
+    "label": "中亚烤肉串",
+    "english": "Shashlik",
+    "recipes": [],
+    "approximate": false
+  },
+  "483": {
+    "label": "青柠派",
+    "english": "Key lime pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "484": {
+    "label": "烤土豆皮",
+    "english": "Potato skins",
+    "recipes": [],
+    "approximate": false
+  },
+  "485": {
+    "label": "韩式醒酒汤",
+    "english": "Haejang-guk",
+    "recipes": [],
+    "approximate": false
+  },
+  "487": {
+    "label": "烧卖",
+    "english": "Shumai",
+    "recipes": [],
+    "approximate": false
+  },
+  "491": {
+    "label": "咖喱鸡",
+    "english": "Chicken curry",
+    "recipes": [
+      "chicken-curry"
+    ],
+    "approximate": true
+  },
+  "509": {
+    "label": "煎堆",
+    "english": "Jian dui",
+    "recipes": [],
+    "approximate": false
+  },
+  "510": {
+    "label": "杏仁饼干",
+    "english": "Almond biscuit",
+    "recipes": [],
+    "approximate": false
+  },
+  "512": {
+    "label": "炸大蕉",
+    "english": "Fried plantain",
+    "recipes": [],
+    "approximate": false
+  },
+  "513": {
+    "label": "酿甜椒",
+    "english": "Stuffed peppers",
+    "recipes": [
+      "world-stuffed-peppers"
+    ],
+    "approximate": true
+  },
+  "515": {
+    "label": "克什米尔红咖喱炖肉",
+    "english": "Rogan josh",
+    "recipes": [],
+    "approximate": false
+  },
+  "517": {
+    "label": "烤制或炸制薯角",
+    "english": "Potato wedges",
+    "recipes": [],
+    "approximate": false
+  },
+  "519": {
+    "label": "虾球",
+    "english": "Prawn ball",
+    "recipes": [],
+    "approximate": false
+  },
+  "520": {
+    "label": "日式炸串",
+    "english": "Kushikatsu",
+    "recipes": [],
+    "approximate": false
+  },
+  "521": {
+    "label": "糯米糍",
+    "english": "Lo mai chi",
+    "recipes": [],
+    "approximate": false
+  },
+  "523": {
+    "label": "韭葱汤",
+    "english": "Leek soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "531": {
+    "label": "墨西哥玉米棒",
+    "english": "Elote",
+    "recipes": [],
+    "approximate": false
+  },
+  "533": {
+    "label": "牛尾汤",
+    "english": "Oxtail soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "542": {
+    "label": "腐皮卷",
+    "english": "Tofu skin roll",
+    "recipes": [],
+    "approximate": false
+  },
+  "543": {
+    "label": "脆皮炸鸡",
+    "english": "Crispy fried chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "544": {
+    "label": "蒸肉丸",
+    "english": "Steamed meatball",
+    "recipes": [],
+    "approximate": false
+  },
+  "555": {
+    "label": "芋角",
+    "english": "Taro dumpling",
+    "recipes": [],
+    "approximate": false
+  },
+  "557": {
+    "label": "越南蒸粉卷",
+    "english": "Bánh cuốn",
+    "recipes": [],
+    "approximate": false
+  },
+  "559": {
+    "label": "炸两",
+    "english": "Zhaliang",
+    "recipes": [],
+    "approximate": false
+  },
+  "560": {
+    "label": "法式砂锅炖豆",
+    "english": "Cassoulet",
+    "recipes": [],
+    "approximate": false
+  },
+  "562": {
+    "label": "斯坎皮虾",
+    "english": "Scampi",
+    "recipes": [],
+    "approximate": false
+  },
+  "563": {
+    "label": "抓饭",
+    "english": "Pilaf",
+    "recipes": [],
+    "approximate": false
+  },
+  "564": {
+    "label": "南印度蔬菜豆汤",
+    "english": "Sambar",
+    "recipes": [],
+    "approximate": false
+  },
+  "565": {
+    "label": "皮蛋",
+    "english": "Century egg",
+    "recipes": [],
+    "approximate": false
+  },
+  "566": {
+    "label": "法式蜗牛",
+    "english": "Escargot",
+    "recipes": [],
+    "approximate": false
+  },
+  "567": {
+    "label": "葱油饼",
+    "english": "Cong you bing",
+    "recipes": [],
+    "approximate": false
+  },
+  "568": {
+    "label": "牛肉汤面",
+    "english": "Beef noodle soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "571": {
+    "label": "沙琪玛",
+    "english": "Sachima",
+    "recipes": [],
+    "approximate": false
+  },
+  "572": {
+    "label": "白米饭",
+    "english": "White rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "575": {
+    "label": "鱼片",
+    "english": "Fish slice",
+    "recipes": [],
+    "approximate": false
+  },
+  "576": {
+    "label": "海参",
+    "english": "Sea cucumber",
+    "recipes": [],
+    "approximate": false
+  },
+  "577": {
+    "label": "牛肉丸",
+    "english": "Beef ball",
+    "recipes": [],
+    "approximate": false
+  },
+  "578": {
+    "label": "粤式脆皮烧肉",
+    "english": "Siu yuk",
+    "recipes": [],
+    "approximate": false
+  },
+  "580": {
+    "label": "白切鸡",
+    "english": "White cut chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "588": {
+    "label": "印度黄油鸡",
+    "english": "Butter chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "590": {
+    "label": "土耳其番茄炒蛋",
+    "english": "Menemen",
+    "recipes": [],
+    "approximate": false
+  },
+  "593": {
+    "label": "软糖",
+    "english": "Fudge",
+    "recipes": [],
+    "approximate": false
+  },
+  "599": {
+    "label": "印度奶油黑豆",
+    "english": "Dal makhani",
+    "recipes": [],
+    "approximate": false
+  },
+  "602": {
+    "label": "越南蟹汤米粉",
+    "english": "Bún riêu",
+    "recipes": [],
+    "approximate": false
+  },
+  "603": {
+    "label": "巴西黑豆炖肉",
+    "english": "Feijoada",
+    "recipes": [],
+    "approximate": false
+  },
+  "604": {
+    "label": "越南河粉",
+    "english": "Pho",
+    "recipes": [],
+    "approximate": false
+  },
+  "605": {
+    "label": "牛奶吐司",
+    "english": "Milk toast",
+    "recipes": [],
+    "approximate": false
+  },
+  "606": {
+    "label": "洋葱煎肝",
+    "english": "Liver and onions",
+    "recipes": [],
+    "approximate": false
+  },
+  "609": {
+    "label": "伊府面",
+    "english": "Yi mein",
+    "recipes": [],
+    "approximate": false
+  },
+  "610": {
+    "label": "虾子面",
+    "english": "Shrimp roe noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "611": {
+    "label": "濑粉",
+    "english": "Lai fun",
+    "recipes": [],
+    "approximate": false
+  },
+  "612": {
+    "label": "油面",
+    "english": "Oil noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "613": {
+    "label": "韩式刀切面",
+    "english": "Kal-guksu",
+    "recipes": [],
+    "approximate": false
+  },
+  "614": {
+    "label": "莜面",
+    "english": "Youmian",
+    "recipes": [],
+    "approximate": false
+  },
+  "617": {
+    "label": "挞",
+    "english": "Tart",
+    "recipes": [],
+    "approximate": false
+  },
+  "621": {
+    "label": "中东烤茄泥",
+    "english": "Baba ghanoush",
+    "recipes": [],
+    "approximate": false
+  },
+  "623": {
+    "label": "鲜奶油水果酥饼",
+    "english": "Shortcake",
+    "recipes": [],
+    "approximate": false
+  },
+  "624": {
+    "label": "奶油泡芙",
+    "english": "Profiterole",
+    "recipes": [],
+    "approximate": false
+  },
+  "625": {
+    "label": "希腊穆萨卡",
+    "english": "Moussaka",
+    "recipes": [],
+    "approximate": false
+  },
+  "626": {
+    "label": "牛奶焦糖酱",
+    "english": "Dulce de leche",
+    "recipes": [],
+    "approximate": false
+  },
+  "628": {
+    "label": "意式烩饭",
+    "english": "Risotto",
+    "recipes": [
+      "intl-risotto"
+    ],
+    "approximate": true
+  },
+  "631": {
+    "label": "法式澄清汤",
+    "english": "Consommé",
+    "recipes": [],
+    "approximate": false
+  },
+  "632": {
+    "label": "蛤蜊浓汤",
+    "english": "Clam chowder",
+    "recipes": [],
+    "approximate": false
+  },
+  "634": {
+    "label": "泰式红咖喱",
+    "english": "Red curry",
+    "recipes": [],
+    "approximate": false
+  },
+  "635": {
+    "label": "印度烤鸡",
+    "english": "Tandoori chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "636": {
+    "label": "西班牙冷汤",
+    "english": "Gazpacho",
+    "recipes": [],
+    "approximate": false
+  },
+  "637": {
+    "label": "意大利生火腿",
+    "english": "Prosciutto",
+    "recipes": [],
+    "approximate": false
+  },
+  "639": {
+    "label": "烤土豆",
+    "english": "Baked potato",
+    "recipes": [],
+    "approximate": false
+  },
+  "640": {
+    "label": "马赛鱼汤",
+    "english": "Bouillabaisse",
+    "recipes": [],
+    "approximate": false
+  },
+  "644": {
+    "label": "美式玉米糊",
+    "english": "Grits",
+    "recipes": [],
+    "approximate": false
+  },
+  "645": {
+    "label": "刨冰",
+    "english": "Shaved ice",
+    "recipes": [],
+    "approximate": false
+  },
+  "646": {
+    "label": "巧克力派",
+    "english": "Choco pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "647": {
+    "label": "粗面",
+    "english": "Cumian",
+    "recipes": [],
+    "approximate": false
+  },
+  "648": {
+    "label": "韩式卤猪蹄",
+    "english": "Jokbal",
+    "recipes": [],
+    "approximate": false
+  },
+  "650": {
+    "label": "韩式糖饼",
+    "english": "Hotteok",
+    "recipes": [],
+    "approximate": false
+  },
+  "655": {
+    "label": "椰香米饭",
+    "english": "Coconut rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "671": {
+    "label": "银丝卷",
+    "english": "Yin si juan",
+    "recipes": [],
+    "approximate": false
+  },
+  "673": {
+    "label": "炒红果",
+    "english": "Chao hong guo",
+    "recipes": [],
+    "approximate": false
+  },
+  "674": {
+    "label": "粉粿",
+    "english": "Fun guo",
+    "recipes": [],
+    "approximate": false
+  },
+  "677": {
+    "label": "圣代",
+    "english": "Sundae",
+    "recipes": [],
+    "approximate": false
+  },
+  "678": {
+    "label": "金枪鱼三明治",
+    "english": "Tuna fish sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "679": {
+    "label": "樟茶鸭",
+    "english": "Zhangcha duck",
+    "recipes": [],
+    "approximate": false
+  },
+  "680": {
+    "label": "老婆饼",
+    "english": "Marry girl cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "685": {
+    "label": "韩式嫩豆腐汤",
+    "english": "Sundubu-jjigae",
+    "recipes": [],
+    "approximate": false
+  },
+  "687": {
+    "label": "韩式萝卜水泡菜",
+    "english": "Dongchimi",
+    "recipes": [],
+    "approximate": false
+  },
+  "688": {
+    "label": "韩式片切水泡菜",
+    "english": "Nabak-kimchi",
+    "recipes": [],
+    "approximate": false
+  },
+  "691": {
+    "label": "韩式白泡菜",
+    "english": "Baek-kimchi",
+    "recipes": [],
+    "approximate": false
+  },
+  "695": {
+    "label": "玛丽饼干",
+    "english": "Marie biscuit",
+    "recipes": [],
+    "approximate": false
+  },
+  "697": {
+    "label": "越南甜汤",
+    "english": "Chè",
+    "recipes": [],
+    "approximate": false
+  },
+  "700": {
+    "label": "印度红腰豆咖喱",
+    "english": "Rajma",
+    "recipes": [],
+    "approximate": false
+  },
+  "704": {
+    "label": "椰奶南瓜布丁",
+    "english": "Pumpkin-coconut custard",
+    "recipes": [],
+    "approximate": false
+  },
+  "706": {
+    "label": "蔬菜汉堡",
+    "english": "Veggie burger",
+    "recipes": [],
+    "approximate": false
+  },
+  "707": {
+    "label": "鞑靼牛肉",
+    "english": "Steak tartare",
+    "recipes": [],
+    "approximate": false
+  },
+  "709": {
+    "label": "法式肉酱",
+    "english": "Pâté",
+    "recipes": [],
+    "approximate": false
+  },
+  "710": {
+    "label": "韩式拌饭",
+    "english": "Bibimbap",
+    "recipes": [
+      "world-korean-bibimbap"
+    ],
+    "approximate": false
+  },
+  "711": {
+    "label": "印度奶油芝士咖喱",
+    "english": "Shahi paneer",
+    "recipes": [],
+    "approximate": false
+  },
+  "714": {
+    "label": "鸡肉三明治",
+    "english": "Chicken sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "718": {
+    "label": "泰式美式炒饭",
+    "english": "American fried rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "720": {
+    "label": "南美烤肉",
+    "english": "Churrasco",
+    "recipes": [],
+    "approximate": false
+  },
+  "724": {
+    "label": "米布丁",
+    "english": "Rice pudding",
+    "recipes": [],
+    "approximate": false
+  },
+  "725": {
+    "label": "瑞士土豆丝饼",
+    "english": "Rösti",
+    "recipes": [],
+    "approximate": false
+  },
+  "730": {
+    "label": "日式渍物",
+    "english": "Tsukemono",
+    "recipes": [],
+    "approximate": false
+  },
+  "731": {
+    "label": "芝士薯条",
+    "english": "Cheese fries",
+    "recipes": [],
+    "approximate": false
+  },
+  "735": {
+    "label": "番薯糖水",
+    "english": "Sweet potato soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "736": {
+    "label": "俄式白菜汤",
+    "english": "Shchi",
+    "recipes": [],
+    "approximate": false
+  },
+  "737": {
+    "label": "印度奶冰",
+    "english": "Kulfi",
+    "recipes": [],
+    "approximate": false
+  },
+  "739": {
+    "label": "泰式烤鸡",
+    "english": "Kai yang",
+    "recipes": [],
+    "approximate": false
+  },
+  "740": {
+    "label": "鱼翅汤",
+    "english": "Shark fin soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "741": {
+    "label": "墨西哥玉米肉汤",
+    "english": "Pozole",
+    "recipes": [],
+    "approximate": false
+  },
+  "742": {
+    "label": "印度炸蔬菜饼",
+    "english": "Pakora",
+    "recipes": [],
+    "approximate": false
+  },
+  "745": {
+    "label": "俄式茶饼",
+    "english": "Russian tea cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "746": {
+    "label": "牛脷酥",
+    "english": "Ox-tongue pastry",
+    "recipes": [],
+    "approximate": false
+  },
+  "747": {
+    "label": "萨赫巧克力蛋糕",
+    "english": "Sachertorte",
+    "recipes": [],
+    "approximate": false
+  },
+  "750": {
+    "label": "馒头",
+    "english": "Mantou",
+    "recipes": [],
+    "approximate": false
+  },
+  "752": {
+    "label": "牛排三明治",
+    "english": "Steak sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "754": {
+    "label": "云南饵块",
+    "english": "Erkuai",
+    "recipes": [],
+    "approximate": false
+  },
+  "755": {
+    "label": "云南米线",
+    "english": "Mixian",
+    "recipes": [
+      "region-kunming-noodles"
+    ],
+    "approximate": true
+  },
+  "761": {
+    "label": "上海炒面",
+    "english": "Shanghai fried noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "763": {
+    "label": "纸杯蛋糕",
+    "english": "Cupcake",
+    "recipes": [],
+    "approximate": false
+  },
+  "766": {
+    "label": "凉拌卷心菜",
+    "english": "Coleslaw",
+    "recipes": [],
+    "approximate": false
+  },
+  "768": {
+    "label": "俄式酸奶油牛肉",
+    "english": "Beef Stroganoff",
+    "recipes": [],
+    "approximate": false
+  },
+  "770": {
+    "label": "乳鸽",
+    "english": "Squab",
+    "recipes": [],
+    "approximate": false
+  },
+  "775": {
+    "label": "日式涮涮锅",
+    "english": "Shabu-shabu",
+    "recipes": [],
+    "approximate": false
+  },
+  "780": {
+    "label": "意式奶冻",
+    "english": "Panna cotta",
+    "recipes": [
+      "world-yogurt-panna-cotta",
+      "intl-panna-cotta"
+    ],
+    "approximate": true
+  },
+  "781": {
+    "label": "印度土豆花菜",
+    "english": "Aloo gobi",
+    "recipes": [],
+    "approximate": false
+  },
+  "782": {
+    "label": "肉冻",
+    "english": "Aspic",
+    "recipes": [
+      "world-pork-aspic"
+    ],
+    "approximate": true
+  },
+  "788": {
+    "label": "俄式酸黄瓜汤",
+    "english": "Rassolnik",
+    "recipes": [],
+    "approximate": false
+  },
+  "789": {
+    "label": "韩式火锅",
+    "english": "Jeongol",
+    "recipes": [],
+    "approximate": false
+  },
+  "790": {
+    "label": "粤式海鲜羹",
+    "english": "Cantonese seafood soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "791": {
+    "label": "茄子沙拉",
+    "english": "Eggplant Salad",
+    "recipes": [],
+    "approximate": false
+  },
+  "794": {
+    "label": "龙虾卷",
+    "english": "Lobster roll",
+    "recipes": [],
+    "approximate": false
+  },
+  "796": {
+    "label": "炸肉排",
+    "english": "Schnitzel",
+    "recipes": [],
+    "approximate": false
+  },
+  "801": {
+    "label": "肝汤",
+    "english": "Liver soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "805": {
+    "label": "肝酱",
+    "english": "Liver pâté",
+    "recipes": [],
+    "approximate": false
+  },
+  "809": {
+    "label": "肉桂卷",
+    "english": "Cinnamon roll",
+    "recipes": [],
+    "approximate": false
+  },
+  "813": {
+    "label": "希腊沙拉",
+    "english": "Greek salad",
+    "recipes": [
+      "intl-horiatiki"
+    ],
+    "approximate": false
+  },
+  "814": {
+    "label": "印度酸奶蘸酱",
+    "english": "Raita",
+    "recipes": [],
+    "approximate": false
+  },
+  "815": {
+    "label": "东安子鸡",
+    "english": "Dong'an chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "818": {
+    "label": "长崎什锦面",
+    "english": "Champon",
+    "recipes": [],
+    "approximate": false
+  },
+  "819": {
+    "label": "中东香芹麦粒沙拉",
+    "english": "Tabbouleh",
+    "recipes": [],
+    "approximate": false
+  },
+  "820": {
+    "label": "日式可乐饼",
+    "english": "Korokke",
+    "recipes": [],
+    "approximate": false
+  },
+  "821": {
+    "label": "墨西哥酿辣椒",
+    "english": "Chile relleno",
+    "recipes": [],
+    "approximate": false
+  },
+  "833": {
+    "label": "红丝绒蛋糕",
+    "english": "Red velvet cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "837": {
+    "label": "摩洛哥塔吉锅",
+    "english": "Tajine",
+    "recipes": [],
+    "approximate": false
+  },
+  "840": {
+    "label": "法式拿破仑千层酥",
+    "english": "Mille-feuille",
+    "recipes": [],
+    "approximate": false
+  },
+  "843": {
+    "label": "日式成吉思汗烤羊肉",
+    "english": "Jingisukan",
+    "recipes": [],
+    "approximate": false
+  },
+  "848": {
+    "label": "犹太辫子面包",
+    "english": "Challah",
+    "recipes": [],
+    "approximate": false
+  },
+  "849": {
+    "label": "炸冰淇淋",
+    "english": "Fried ice cream",
+    "recipes": [],
+    "approximate": false
+  },
+  "850": {
+    "label": "炸洋葱圈",
+    "english": "Onion ring",
+    "recipes": [],
+    "approximate": false
+  },
+  "851": {
+    "label": "熏肉",
+    "english": "Smoked meat",
+    "recipes": [],
+    "approximate": false
+  },
+  "854": {
+    "label": "金发布朗尼",
+    "english": "Blondie",
+    "recipes": [],
+    "approximate": false
+  },
+  "855": {
+    "label": "韩式汤",
+    "english": "Guk",
+    "recipes": [],
+    "approximate": false
+  },
+  "856": {
+    "label": "日式冷中华面",
+    "english": "Hiyashi chūka",
+    "recipes": [],
+    "approximate": false
+  },
+  "858": {
+    "label": "美式汉堡牛排",
+    "english": "Salisbury steak",
+    "recipes": [],
+    "approximate": false
+  },
+  "861": {
+    "label": "韩式炖排骨",
+    "english": "Galbi-jjim",
+    "recipes": [],
+    "approximate": false
+  },
+  "864": {
+    "label": "涮羊肉",
+    "english": "Instant-boiled mutton",
+    "recipes": [],
+    "approximate": false
+  },
+  "866": {
+    "label": "竹升面",
+    "english": "Jook-sing noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "870": {
+    "label": "比利时啤酒炖牛肉",
+    "english": "Carbonade flamande",
+    "recipes": [],
+    "approximate": false
+  },
+  "871": {
+    "label": "越南糯米饭",
+    "english": "Xôi",
+    "recipes": [],
+    "approximate": false
+  },
+  "872": {
+    "label": "德式酸炖牛肉",
+    "english": "Sauerbraten",
+    "recipes": [],
+    "approximate": false
+  },
+  "874": {
+    "label": "韩式紫菜包饭",
+    "english": "Gimbap",
+    "recipes": [],
+    "approximate": false
+  },
+  "877": {
+    "label": "罗汉斋",
+    "english": "Buddha's delight",
+    "recipes": [],
+    "approximate": false
+  },
+  "878": {
+    "label": "巧克力可颂",
+    "english": "Pain au chocolat",
+    "recipes": [],
+    "approximate": false
+  },
+  "881": {
+    "label": "热芝士三明治",
+    "english": "Melt sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "882": {
+    "label": "薄饼卷",
+    "english": "Popiah",
+    "recipes": [],
+    "approximate": false
+  },
+  "885": {
+    "label": "韩式宴会面",
+    "english": "Janchi-guksu",
+    "recipes": [],
+    "approximate": false
+  },
+  "887": {
+    "label": "韩式菜包肉",
+    "english": "Bossam",
+    "recipes": [],
+    "approximate": false
+  },
+  "891": {
+    "label": "布列塔尼焦糖奶油酥",
+    "english": "Kouign-amann",
+    "recipes": [],
+    "approximate": false
+  },
+  "892": {
+    "label": "炒粿条",
+    "english": "Char kway teow",
+    "recipes": [],
+    "approximate": false
+  },
+  "894": {
+    "label": "韩式大酱汤",
+    "english": "Doenjang-jjigae",
+    "recipes": [],
+    "approximate": false
+  },
+  "896": {
+    "label": "海南鸡饭",
+    "english": "Hainanese chicken rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "897": {
+    "label": "肉骨茶",
+    "english": "Bak kut teh",
+    "recipes": [],
+    "approximate": false
+  },
+  "898": {
+    "label": "卷心菜肉卷",
+    "english": "Cabbage roll",
+    "recipes": [],
+    "approximate": false
+  },
+  "900": {
+    "label": "火焰香蕉",
+    "english": "Bananas Foster",
+    "recipes": [],
+    "approximate": false
+  },
+  "903": {
+    "label": "丹麦开放式三明治",
+    "english": "Smørrebrød",
+    "recipes": [],
+    "approximate": false
+  },
+  "905": {
+    "label": "魔鬼蛋",
+    "english": "Deviled egg",
+    "recipes": [],
+    "approximate": false
+  },
+  "907": {
+    "label": "奥地利苹果卷",
+    "english": "Apple strudel",
+    "recipes": [],
+    "approximate": false
+  },
+  "908": {
+    "label": "馄饨",
+    "english": "Wonton",
+    "recipes": [],
+    "approximate": false
+  },
+  "911": {
+    "label": "豆汁",
+    "english": "Douzhi",
+    "recipes": [],
+    "approximate": false
+  },
+  "912": {
+    "label": "通心粉汤",
+    "english": "Macaroni soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "913": {
+    "label": "云南过桥米线",
+    "english": "Crossing-the-bridge noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "924": {
+    "label": "泰式帕能咖喱",
+    "english": "Phanaeng curry",
+    "recipes": [],
+    "approximate": false
+  },
+  "925": {
+    "label": "玛德琳蛋糕",
+    "english": "Madeleine",
+    "recipes": [],
+    "approximate": false
+  },
+  "926": {
+    "label": "南瓜泥",
+    "english": "Mashed pumpkin",
+    "recipes": [],
+    "approximate": false
+  },
+  "931": {
+    "label": "韩式辣炒鸡",
+    "english": "Dak-galbi",
+    "recipes": [],
+    "approximate": false
+  },
+  "935": {
+    "label": "鱼香味菜品",
+    "english": "Yuxiang",
+    "recipes": [],
+    "approximate": false
+  },
+  "936": {
+    "label": "冷冻香蕉",
+    "english": "Frozen banana",
+    "recipes": [],
+    "approximate": false
+  },
+  "943": {
+    "label": "冬阴功汤",
+    "english": "Tom yum",
+    "recipes": [],
+    "approximate": false
+  },
+  "946": {
+    "label": "南亚糖浆炸圈",
+    "english": "Jalebi",
+    "recipes": [],
+    "approximate": false
+  },
+  "955": {
+    "label": "炸酱面",
+    "english": "Zhajiangmian",
+    "recipes": [],
+    "approximate": false
+  },
+  "956": {
+    "label": "科布沙拉",
+    "english": "Cobb salad",
+    "recipes": [],
+    "approximate": false
+  },
+  "957": {
+    "label": "面线",
+    "english": "Misua",
+    "recipes": [],
+    "approximate": false
+  },
+  "960": {
+    "label": "苹果蛋糕",
+    "english": "Apple cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "961": {
+    "label": "陈皮鸡",
+    "english": "Orange chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "962": {
+    "label": "塞拉诺火腿",
+    "english": "Jamón serrano",
+    "recipes": [],
+    "approximate": false
+  },
+  "963": {
+    "label": "环形蛋糕",
+    "english": "Bundt cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "965": {
+    "label": "火锅",
+    "english": "Hot pot",
+    "recipes": [
+      "tomato-beef"
+    ],
+    "approximate": true
+  },
+  "966": {
+    "label": "宫保鸡丁",
+    "english": "Kung Pao chicken",
+    "recipes": [
+      "world-kung-pao-chicken"
+    ],
+    "approximate": false
+  },
+  "974": {
+    "label": "凉皮",
+    "english": "Liangpi",
+    "recipes": [],
+    "approximate": false
+  },
+  "976": {
+    "label": "西班牙番茄面包冷汤",
+    "english": "Salmorejo",
+    "recipes": [],
+    "approximate": false
+  },
+  "981": {
+    "label": "臭豆腐",
+    "english": "Stinky tofu",
+    "recipes": [],
+    "approximate": false
+  },
+  "983": {
+    "label": "豉油鸡",
+    "english": "Soy sauce chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "984": {
+    "label": "鸡柳条",
+    "english": "Chicken fingers",
+    "recipes": [],
+    "approximate": false
+  },
+  "985": {
+    "label": "碧根果派",
+    "english": "Pecan pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "987": {
+    "label": "芭菲",
+    "english": "Parfait",
+    "recipes": [],
+    "approximate": false
+  },
+  "989": {
+    "label": "芝士三明治",
+    "english": "Cheese sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "994": {
+    "label": "木薯布丁",
+    "english": "Tapioca pudding",
+    "recipes": [],
+    "approximate": false
+  },
+  "995": {
+    "label": "意式蔬菜汤",
+    "english": "Minestrone",
+    "recipes": [],
+    "approximate": false
+  },
+  "997": {
+    "label": "韩式冷面",
+    "english": "Naengmyeon",
+    "recipes": [],
+    "approximate": false
+  },
+  "1000": {
+    "label": "威尔士炖汤",
+    "english": "Cawl",
+    "recipes": [],
+    "approximate": false
+  },
+  "1001": {
+    "label": "巧克力布丁",
+    "english": "Chocolate pudding",
+    "recipes": [],
+    "approximate": false
+  },
+  "1004": {
+    "label": "豆花",
+    "english": "Douhua",
+    "recipes": [],
+    "approximate": false
+  },
+  "1006": {
+    "label": "炸鱼",
+    "english": "Fried fish",
+    "recipes": [],
+    "approximate": false
+  },
+  "1007": {
+    "label": "苹果酥",
+    "english": "Apple crisp",
+    "recipes": [],
+    "approximate": false
+  },
+  "1009": {
+    "label": "鱼生",
+    "english": "Yusheng",
+    "recipes": [],
+    "approximate": false
+  },
+  "1012": {
+    "label": "威尔士小饼",
+    "english": "Welsh cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1014": {
+    "label": "肚汤",
+    "english": "Tripe soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1028": {
+    "label": "法式洋葱汤",
+    "english": "French onion soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1029": {
+    "label": "三奶蛋糕",
+    "english": "Tres leches cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1031": {
+    "label": "黑森林蛋糕",
+    "english": "Black Forest gateau",
+    "recipes": [],
+    "approximate": false
+  },
+  "1036": {
+    "label": "蒜香橄榄油意面",
+    "english": "Spaghetti aglio e olio",
+    "recipes": [
+      "mushroom-pasta"
+    ],
+    "approximate": true
+  },
+  "1038": {
+    "label": "马来红豆冰",
+    "english": "Ais kacang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1040": {
+    "label": "印尼加多加多沙拉",
+    "english": "Gado-gado",
+    "recipes": [],
+    "approximate": false
+  },
+  "1052": {
+    "label": "墨西哥烤牛肉",
+    "english": "Carne asada",
+    "recipes": [],
+    "approximate": false
+  },
+  "1055": {
+    "label": "荷兰糖浆华夫饼",
+    "english": "Stroopwafel",
+    "recipes": [],
+    "approximate": false
+  },
+  "1056": {
+    "label": "北欧腌三文鱼",
+    "english": "Gravlax",
+    "recipes": [],
+    "approximate": false
+  },
+  "1057": {
+    "label": "酥皮肉馅派",
+    "english": "Pot pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1059": {
+    "label": "海鲜牛排拼盘",
+    "english": "Surf and turf",
+    "recipes": [],
+    "approximate": false
+  },
+  "1069": {
+    "label": "日式生蛋拌饭",
+    "english": "Tamago kake gohan",
+    "recipes": [],
+    "approximate": false
+  },
+  "1071": {
+    "label": "菲律宾阿多波炖菜",
+    "english": "Philippine adobo",
+    "recipes": [
+      "intl-adobo"
+    ],
+    "approximate": true
+  },
+  "1072": {
+    "label": "胡辣汤",
+    "english": "Hulatang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1076": {
+    "label": "韩式牛排骨汤",
+    "english": "Galbi-tang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1085": {
+    "label": "韩式饺子汤",
+    "english": "Mandu-guk",
+    "recipes": [],
+    "approximate": false
+  },
+  "1088": {
+    "label": "韩式鸭汤",
+    "english": "Ori-tang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1091": {
+    "label": "日式豚汁",
+    "english": "Butajiru",
+    "recipes": [],
+    "approximate": false
+  },
+  "1094": {
+    "label": "希腊焗肉酱通心粉",
+    "english": "Pastitsio",
+    "recipes": [],
+    "approximate": false
+  },
+  "1100": {
+    "label": "苏格兰熏鱼浓汤",
+    "english": "Cullen skink",
+    "recipes": [],
+    "approximate": false
+  },
+  "1108": {
+    "label": "芝加哥式热狗",
+    "english": "Chicago-style hot dog",
+    "recipes": [],
+    "approximate": false
+  },
+  "1113": {
+    "label": "凉粉",
+    "english": "Liangfen",
+    "recipes": [],
+    "approximate": false
+  },
+  "1115": {
+    "label": "蒸蛤蜊",
+    "english": "Steamed clams",
+    "recipes": [],
+    "approximate": false
+  },
+  "1117": {
+    "label": "南亚甜米布丁",
+    "english": "Kheer",
+    "recipes": [],
+    "approximate": false
+  },
+  "1123": {
+    "label": "佛跳墙",
+    "english": "Buddha Jumps Over the Wall",
+    "recipes": [],
+    "approximate": false
+  },
+  "1125": {
+    "label": "火腿芝士三明治",
+    "english": "Ham and cheese sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "1133": {
+    "label": "包子",
+    "english": "Baozi",
+    "recipes": [],
+    "approximate": false
+  },
+  "1136": {
+    "label": "酒酿",
+    "english": "Jiuniang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1142": {
+    "label": "瑞士卷",
+    "english": "Swiss roll",
+    "recipes": [],
+    "approximate": false
+  },
+  "1147": {
+    "label": "通心粉沙拉",
+    "english": "Macaroni salad",
+    "recipes": [],
+    "approximate": false
+  },
+  "1152": {
+    "label": "越南包子",
+    "english": "Bánh bao",
+    "recipes": [],
+    "approximate": false
+  },
+  "1154": {
+    "label": "日式牛肉烩饭",
+    "english": "Hayashi rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1156": {
+    "label": "闪电泡芙",
+    "english": "Éclair",
+    "recipes": [],
+    "approximate": false
+  },
+  "1161": {
+    "label": "夏威夷汉堡排盖饭",
+    "english": "Loco moco",
+    "recipes": [],
+    "approximate": false
+  },
+  "1165": {
+    "label": "马卡龙",
+    "english": "Macaron",
+    "recipes": [],
+    "approximate": false
+  },
+  "1169": {
+    "label": "墨式辣汁煎蛋",
+    "english": "Huevos rancheros",
+    "recipes": [],
+    "approximate": false
+  },
+  "1170": {
+    "label": "意式番茄水牛奶酪沙拉",
+    "english": "Caprese salad",
+    "recipes": [
+      "intl-caprese"
+    ],
+    "approximate": false
+  },
+  "1172": {
+    "label": "酿豆腐",
+    "english": "Yong tau foo",
+    "recipes": [
+      "region-hakka-stuffed-tofu"
+    ],
+    "approximate": true
+  },
+  "1173": {
+    "label": "菜头粿",
+    "english": "Chai tow kway",
+    "recipes": [],
+    "approximate": false
+  },
+  "1176": {
+    "label": "西班牙墨鱼汁饭",
+    "english": "Arròs negre",
+    "recipes": [],
+    "approximate": false
+  },
+  "1177": {
+    "label": "泡菜炒饭",
+    "english": "Kimchi fried rice",
+    "recipes": [
+      "intl-kimchi-rice"
+    ],
+    "approximate": false
+  },
+  "1179": {
+    "label": "菲律宾什锦冰",
+    "english": "Halo-halo",
+    "recipes": [],
+    "approximate": false
+  },
+  "1188": {
+    "label": "印尼炸豆腐",
+    "english": "Tahu goreng",
+    "recipes": [],
+    "approximate": false
+  },
+  "1189": {
+    "label": "印尼鸡汤",
+    "english": "Soto ayam",
+    "recipes": [],
+    "approximate": false
+  },
+  "1191": {
+    "label": "潜艇三明治",
+    "english": "Submarine sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "1193": {
+    "label": "韩式泡菜汤",
+    "english": "Kimchi-jjigae",
+    "recipes": [],
+    "approximate": false
+  },
+  "1194": {
+    "label": "鱼丸",
+    "english": "Fish ball",
+    "recipes": [],
+    "approximate": false
+  },
+  "1197": {
+    "label": "俄式冷汤",
+    "english": "Okroshka",
+    "recipes": [],
+    "approximate": false
+  },
+  "1200": {
+    "label": "日式烧肉",
+    "english": "Yakiniku",
+    "recipes": [],
+    "approximate": false
+  },
+  "1205": {
+    "label": "墨西哥大卷饼",
+    "english": "Mission burrito",
+    "recipes": [],
+    "approximate": false
+  },
+  "1206": {
+    "label": "糖醋猪肉",
+    "english": "Sweet and sour pork",
+    "recipes": [
+      "world-guobaorou",
+      "world-fujian-lychee-pork"
+    ],
+    "approximate": true
+  },
+  "1211": {
+    "label": "纽约式披萨",
+    "english": "New York-style pizza",
+    "recipes": [],
+    "approximate": false
+  },
+  "1213": {
+    "label": "菲律宾酸汤",
+    "english": "Sinigang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1216": {
+    "label": "法式浓汤",
+    "english": "Bisque",
+    "recipes": [],
+    "approximate": false
+  },
+  "1220": {
+    "label": "加州式披萨",
+    "english": "California-style pizza",
+    "recipes": [],
+    "approximate": false
+  },
+  "1221": {
+    "label": "卷饼",
+    "english": "Wrap",
+    "recipes": [],
+    "approximate": false
+  },
+  "1223": {
+    "label": "西班牙火腿",
+    "english": "Jamón",
+    "recipes": [],
+    "approximate": false
+  },
+  "1225": {
+    "label": "勃艮第红酒炖牛肉",
+    "english": "Beef bourguignon",
+    "recipes": [],
+    "approximate": false
+  },
+  "1228": {
+    "label": "中东蚕豆泥",
+    "english": "Ful medames",
+    "recipes": [],
+    "approximate": false
+  },
+  "1231": {
+    "label": "川式怪味菜品",
+    "english": "Guaiwei",
+    "recipes": [],
+    "approximate": false
+  },
+  "1234": {
+    "label": "寿司",
+    "english": "Sushi",
+    "recipes": [],
+    "approximate": false
+  },
+  "1235": {
+    "label": "意式炸饭团",
+    "english": "Arancini",
+    "recipes": [],
+    "approximate": false
+  },
+  "1236": {
+    "label": "奶油玉米",
+    "english": "Creamed corn",
+    "recipes": [],
+    "approximate": false
+  },
+  "1237": {
+    "label": "炸马苏里拉芝士条",
+    "english": "Mozzarella sticks",
+    "recipes": [],
+    "approximate": false
+  },
+  "1241": {
+    "label": "红豆饭",
+    "english": "Red beans and rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1247": {
+    "label": "格鲁吉亚芝士饼",
+    "english": "Khachapuri",
+    "recipes": [],
+    "approximate": false
+  },
+  "1248": {
+    "label": "香蕉太妃派",
+    "english": "Banoffee pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1249": {
+    "label": "蚂蚁上树",
+    "english": "Ants climbing a tree",
+    "recipes": [],
+    "approximate": false
+  },
+  "1250": {
+    "label": "担担面",
+    "english": "Dandan noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "1251": {
+    "label": "酸辣抄手",
+    "english": "Suanla chaoshou",
+    "recipes": [],
+    "approximate": false
+  },
+  "1252": {
+    "label": "韩式参鸡汤",
+    "english": "Samgye-tang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1253": {
+    "label": "夏威夷午餐肉饭团",
+    "english": "Spam musubi",
+    "recipes": [],
+    "approximate": false
+  },
+  "1259": {
+    "label": "意大利细面",
+    "english": "Spaghetti",
+    "recipes": [
+      "world-bolognese",
+      "mushroom-pasta"
+    ],
+    "approximate": true
+  },
+  "1260": {
+    "label": "仙草冻",
+    "english": "Grass jelly",
+    "recipes": [],
+    "approximate": false
+  },
+  "1262": {
+    "label": "日式炸猪排丼",
+    "english": "Katsudon",
+    "recipes": [],
+    "approximate": false
+  },
+  "1266": {
+    "label": "回锅肉",
+    "english": "Twice-cooked pork",
+    "recipes": [
+      "world-twice-cooked-pork"
+    ],
+    "approximate": false
+  },
+  "1267": {
+    "label": "菲律宾花生炖肉",
+    "english": "Kare-kare",
+    "recipes": [],
+    "approximate": false
+  },
+  "1268": {
+    "label": "烙饼",
+    "english": "Laobing",
+    "recipes": [
+      "world-chinese-flatbread"
+    ],
+    "approximate": false
+  },
+  "1269": {
+    "label": "板面",
+    "english": "Banmian",
+    "recipes": [],
+    "approximate": false
+  },
+  "1270": {
+    "label": "蜂蜜蛋糕",
+    "english": "Honey cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1271": {
+    "label": "港式瑞士鸡翼",
+    "english": "Swiss wing",
+    "recipes": [],
+    "approximate": false
+  },
+  "1273": {
+    "label": "糖水",
+    "english": "Tong sui",
+    "recipes": [],
+    "approximate": false
+  },
+  "1274": {
+    "label": "塔可",
+    "english": "Taco",
+    "recipes": [],
+    "approximate": false
+  },
+  "1279": {
+    "label": "法式冷土豆韭葱汤",
+    "english": "Vichyssoise",
+    "recipes": [],
+    "approximate": false
+  },
+  "1280": {
+    "label": "日式年糕汤",
+    "english": "Zōni",
+    "recipes": [],
+    "approximate": false
+  },
+  "1287": {
+    "label": "韩式年糕汤",
+    "english": "Tteokguk",
+    "recipes": [],
+    "approximate": false
+  },
+  "1293": {
+    "label": "白灼虾",
+    "english": "White boiled shrimp",
+    "recipes": [
+      "world-poached-shrimp"
+    ],
+    "approximate": false
+  },
+  "1314": {
+    "label": "叉烧",
+    "english": "Char siu",
+    "recipes": [],
+    "approximate": false
+  },
+  "1319": {
+    "label": "陕西宽面",
+    "english": "Biangbiang noodles",
+    "recipes": [
+      "world-shaanxi-oil-noodles"
+    ],
+    "approximate": true
+  },
+  "1320": {
+    "label": "香蕉布丁",
+    "english": "Banana pudding",
+    "recipes": [],
+    "approximate": false
+  },
+  "1321": {
+    "label": "蟹肉饼",
+    "english": "Crab cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1322": {
+    "label": "腊肠",
+    "english": "Chinese sausage",
+    "recipes": [],
+    "approximate": false
+  },
+  "1324": {
+    "label": "日式咖喱面包",
+    "english": "Curry bread",
+    "recipes": [],
+    "approximate": false
+  },
+  "1326": {
+    "label": "焦糖布丁",
+    "english": "Crème caramel",
+    "recipes": [],
+    "approximate": false
+  },
+  "1338": {
+    "label": "冰淇淋蛋糕",
+    "english": "Ice cream cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1343": {
+    "label": "日式土豆炖肉",
+    "english": "Nikujaga",
+    "recipes": [],
+    "approximate": false
+  },
+  "1352": {
+    "label": "印度菠菜芝士咖喱",
+    "english": "Palak paneer",
+    "recipes": [],
+    "approximate": false
+  },
+  "1356": {
+    "label": "年糕",
+    "english": "Nian gao",
+    "recipes": [
+      "brown-sugar-niangao"
+    ],
+    "approximate": true
+  },
+  "1359": {
+    "label": "肉干",
+    "english": "Bakkwa",
+    "recipes": [],
+    "approximate": false
+  },
+  "1363": {
+    "label": "蛋花汤",
+    "english": "Egg drop soup",
+    "recipes": [
+      "world-egg-drop-soup"
+    ],
+    "approximate": false
+  },
+  "1364": {
+    "label": "烧饼",
+    "english": "Shaobing",
+    "recipes": [
+      "world-sesame-flatbread"
+    ],
+    "approximate": true
+  },
+  "1365": {
+    "label": "日式茶碗蒸",
+    "english": "Chawanmushi",
+    "recipes": [
+      "world-steamed-egg-custard"
+    ],
+    "approximate": true
+  },
+  "1369": {
+    "label": "韩式杂菜炒粉丝",
+    "english": "Japchae",
+    "recipes": [],
+    "approximate": false
+  },
+  "1373": {
+    "label": "小笼包",
+    "english": "Xiaolongbao",
+    "recipes": [],
+    "approximate": false
+  },
+  "1374": {
+    "label": "德尔莫尼科牛排",
+    "english": "Delmonico steak",
+    "recipes": [],
+    "approximate": false
+  },
+  "1380": {
+    "label": "印度鹰嘴豆咖喱",
+    "english": "Chana masala",
+    "recipes": [
+      "intl-chana-masala"
+    ],
+    "approximate": false
+  },
+  "1390": {
+    "label": "猪肉冻",
+    "english": "Pork jelly",
+    "recipes": [
+      "world-pork-aspic"
+    ],
+    "approximate": true
+  },
+  "1397": {
+    "label": "茶叶蛋",
+    "english": "Tea egg",
+    "recipes": [],
+    "approximate": false
+  },
+  "1399": {
+    "label": "日式咖喱",
+    "english": "Japanese curry",
+    "recipes": [
+      "chicken-curry"
+    ],
+    "approximate": true
+  },
+  "1401": {
+    "label": "鳗鱼",
+    "english": "Unagi",
+    "recipes": [],
+    "approximate": false
+  },
+  "1405": {
+    "label": "泰式绿咖喱",
+    "english": "Green curry",
+    "recipes": [],
+    "approximate": false
+  },
+  "1406": {
+    "label": "越南米纸鲜春卷",
+    "english": "Gỏi cuốn",
+    "recipes": [
+      "intl-summer-roll"
+    ],
+    "approximate": true
+  },
+  "1407": {
+    "label": "辣椒螃蟹",
+    "english": "Chilli crab",
+    "recipes": [],
+    "approximate": false
+  },
+  "1408": {
+    "label": "糯米鸡",
+    "english": "Lo mai gai",
+    "recipes": [],
+    "approximate": false
+  },
+  "1409": {
+    "label": "捞面",
+    "english": "Lo mein",
+    "recipes": [
+      "scallion-noodles"
+    ],
+    "approximate": true
+  },
+  "1412": {
+    "label": "西班牙风味米饭",
+    "english": "Spanish rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1415": {
+    "label": "马萨曼咖喱",
+    "english": "Massaman curry",
+    "recipes": [],
+    "approximate": false
+  },
+  "1417": {
+    "label": "龟苓膏",
+    "english": "Guilinggao",
+    "recipes": [],
+    "approximate": false
+  },
+  "1422": {
+    "label": "干炒牛河",
+    "english": "Beef chow fun",
+    "recipes": [],
+    "approximate": false
+  },
+  "1425": {
+    "label": "蒸水蛋",
+    "english": "Chinese steamed eggs",
+    "recipes": [
+      "world-steamed-egg-custard"
+    ],
+    "approximate": false
+  },
+  "1426": {
+    "label": "蚵仔煎",
+    "english": "Oyster omelette",
+    "recipes": [],
+    "approximate": false
+  },
+  "1427": {
+    "label": "什锦蔬菜沙拉",
+    "english": "Garden salad",
+    "recipes": [],
+    "approximate": false
+  },
+  "1428": {
+    "label": "尼斯沙拉",
+    "english": "Salade niçoise",
+    "recipes": [],
+    "approximate": false
+  },
+  "1431": {
+    "label": "蛋包饭",
+    "english": "Omurice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1432": {
+    "label": "泡菜",
+    "english": "Pao cai",
+    "recipes": [],
+    "approximate": false
+  },
+  "1435": {
+    "label": "木须肉",
+    "english": "Moo shu pork",
+    "recipes": [],
+    "approximate": false
+  },
+  "1436": {
+    "label": "玉米蟹肉羹",
+    "english": "Corn crab soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1445": {
+    "label": "拉面",
+    "english": "Ramen",
+    "recipes": [],
+    "approximate": false
+  },
+  "1446": {
+    "label": "美式煎土豆",
+    "english": "Home fries",
+    "recipes": [],
+    "approximate": false
+  },
+  "1450": {
+    "label": "沙河粉",
+    "english": "Shahe fen",
+    "recipes": [],
+    "approximate": false
+  },
+  "1452": {
+    "label": "咖喱鱼头",
+    "english": "Fish head curry",
+    "recipes": [],
+    "approximate": false
+  },
+  "1457": {
+    "label": "韩式雪浓汤",
+    "english": "Seolleongtang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1462": {
+    "label": "潘娜托妮面包",
+    "english": "Panettone",
+    "recipes": [],
+    "approximate": false
+  },
+  "1465": {
+    "label": "漂浮岛甜点",
+    "english": "Floating island",
+    "recipes": [],
+    "approximate": false
+  },
+  "1470": {
+    "label": "面薄",
+    "english": "Mee pok",
+    "recipes": [],
+    "approximate": false
+  },
+  "1471": {
+    "label": "韩式锅汤",
+    "english": "Jjigae",
+    "recipes": [],
+    "approximate": false
+  },
+  "1473": {
+    "label": "韩式年糕",
+    "english": "Tteok",
+    "recipes": [],
+    "approximate": false
+  },
+  "1477": {
+    "label": "匈牙利红椒炖鸡",
+    "english": "Chicken paprikash",
+    "recipes": [],
+    "approximate": false
+  },
+  "1478": {
+    "label": "汤圆",
+    "english": "Tangyuan",
+    "recipes": [
+      "world-sesame-tangyuan"
+    ],
+    "approximate": true
+  },
+  "1481": {
+    "label": "伊比利亚火腿",
+    "english": "Jamón ibérico",
+    "recipes": [],
+    "approximate": false
+  },
+  "1490": {
+    "label": "叉烧包",
+    "english": "Cha siu bao",
+    "recipes": [],
+    "approximate": false
+  },
+  "1505": {
+    "label": "越式煎饼",
+    "english": "Bánh xèo",
+    "recipes": [],
+    "approximate": false
+  },
+  "1511": {
+    "label": "炸虾",
+    "english": "Fried shrimp",
+    "recipes": [],
+    "approximate": false
+  },
+  "1516": {
+    "label": "韩式蒸蛋",
+    "english": "Gyeran-jjim",
+    "recipes": [
+      "world-steamed-egg-custard"
+    ],
+    "approximate": true
+  },
+  "1528": {
+    "label": "冲绳荞麦面",
+    "english": "Okinawa soba",
+    "recipes": [],
+    "approximate": false
+  },
+  "1529": {
+    "label": "拉面条",
+    "english": "Lamian",
+    "recipes": [],
+    "approximate": false
+  },
+  "1532": {
+    "label": "冲绳杂炒",
+    "english": "Chanpurū",
+    "recipes": [],
+    "approximate": false
+  },
+  "1536": {
+    "label": "扬州炒饭",
+    "english": "Yangzhou fried rice",
+    "recipes": [
+      "shrimp-fried-rice"
+    ],
+    "approximate": true
+  },
+  "1538": {
+    "label": "印度土豆咖喱",
+    "english": "Dum Aloo",
+    "recipes": [],
+    "approximate": false
+  },
+  "1542": {
+    "label": "淡菜薯条",
+    "english": "Moules-frites",
+    "recipes": [],
+    "approximate": false
+  },
+  "1546": {
+    "label": "西非番茄饭",
+    "english": "Jollof rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1554": {
+    "label": "鸡肉煲仔饭",
+    "english": "Claypot chicken rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1555": {
+    "label": "韩式辣鱼汤",
+    "english": "Maeun-tang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1556": {
+    "label": "粢饭团",
+    "english": "Cifantuan",
+    "recipes": [],
+    "approximate": false
+  },
+  "1559": {
+    "label": "虾饺",
+    "english": "Har gow",
+    "recipes": [],
+    "approximate": false
+  },
+  "1562": {
+    "label": "文昌鸡",
+    "english": "Wenchang chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "1569": {
+    "label": "圣诞树桩蛋糕",
+    "english": "Yule log",
+    "recipes": [],
+    "approximate": false
+  },
+  "1570": {
+    "label": "黄油饼干",
+    "english": "Butter cookie",
+    "recipes": [
+      "world-margaret-cookies"
+    ],
+    "approximate": true
+  },
+  "1573": {
+    "label": "炸可乐饼",
+    "english": "Croquette",
+    "recipes": [],
+    "approximate": false
+  },
+  "1575": {
+    "label": "炸鸡华夫饼",
+    "english": "Chicken and waffles",
+    "recipes": [],
+    "approximate": false
+  },
+  "1576": {
+    "label": "夏威夷波奇碗",
+    "english": "Poke",
+    "recipes": [],
+    "approximate": false
+  },
+  "1581": {
+    "label": "芒果布丁",
+    "english": "Mango pudding",
+    "recipes": [],
+    "approximate": false
+  },
+  "1590": {
+    "label": "天使蛋糕",
+    "english": "Angel food cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1592": {
+    "label": "烤乳猪",
+    "english": "Suckling pig",
+    "recipes": [],
+    "approximate": false
+  },
+  "1595": {
+    "label": "葡式蛋挞",
+    "english": "Pastel de nata",
+    "recipes": [
+      "world-custard-tart"
+    ],
+    "approximate": true
+  },
+  "1596": {
+    "label": "夏威夷刨冰",
+    "english": "Shave ice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1600": {
+    "label": "韩式五谷饭",
+    "english": "Ogok-bap",
+    "recipes": [],
+    "approximate": false
+  },
+  "1603": {
+    "label": "炸青番茄",
+    "english": "Fried green tomatoes",
+    "recipes": [],
+    "approximate": false
+  },
+  "1611": {
+    "label": "玉米浓汤",
+    "english": "Corn chowder",
+    "recipes": [],
+    "approximate": false
+  },
+  "1616": {
+    "label": "中东脆饼沙拉",
+    "english": "Fattoush",
+    "recipes": [],
+    "approximate": false
+  },
+  "1621": {
+    "label": "汉堡",
+    "english": "Hamburger",
+    "recipes": [],
+    "approximate": false
+  },
+  "1625": {
+    "label": "澳门免治",
+    "english": "Minchee",
+    "recipes": [
+      "world-macau-minchi"
+    ],
+    "approximate": true
+  },
+  "1628": {
+    "label": "辣肉酱热狗",
+    "english": "Chili dog",
+    "recipes": [],
+    "approximate": false
+  },
+  "1629": {
+    "label": "意式蛤蜊面",
+    "english": "Spaghetti alle vongole",
+    "recipes": [],
+    "approximate": false
+  },
+  "1630": {
+    "label": "巴伐利亚奶油冻",
+    "english": "Bavarian cream",
+    "recipes": [],
+    "approximate": false
+  },
+  "1633": {
+    "label": "浓汤杂烩",
+    "english": "Chowder",
+    "recipes": [],
+    "approximate": false
+  },
+  "1635": {
+    "label": "豌豆汤",
+    "english": "Pea soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1638": {
+    "label": "越南方粽",
+    "english": "Bánh chưng",
+    "recipes": [],
+    "approximate": false
+  },
+  "1639": {
+    "label": "顺化牛肉粉",
+    "english": "Bún bò Huế",
+    "recipes": [],
+    "approximate": false
+  },
+  "1641": {
+    "label": "越南碎米饭",
+    "english": "Cơm tấm",
+    "recipes": [],
+    "approximate": false
+  },
+  "1650": {
+    "label": "黑莓派",
+    "english": "Blackberry pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1651": {
+    "label": "英式果馅饼",
+    "english": "Mince pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1660": {
+    "label": "西班牙海鲜饭",
+    "english": "Paella",
+    "recipes": [],
+    "approximate": false
+  },
+  "1666": {
+    "label": "韩式泡菜煎饼",
+    "english": "Kimchi-buchimgae",
+    "recipes": [],
+    "approximate": false
+  },
+  "1667": {
+    "label": "芝麻鸡",
+    "english": "Sesame chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "1677": {
+    "label": "云吞面",
+    "english": "Wonton noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "1682": {
+    "label": "幸运饼干",
+    "english": "Fortune cookie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1690": {
+    "label": "墨西哥酱烤卷饼",
+    "english": "Enchilada",
+    "recipes": [],
+    "approximate": false
+  },
+  "1691": {
+    "label": "香肠三明治",
+    "english": "Sausage sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "1695": {
+    "label": "椰子蛋糕",
+    "english": "Coconut cake",
+    "recipes": [],
+    "approximate": false
+  },
+  "1699": {
+    "label": "韩式脊骨土豆汤",
+    "english": "Gamja-tang",
+    "recipes": [],
+    "approximate": false
+  },
+  "1705": {
+    "label": "泰式酱油炒河粉",
+    "english": "Phat si-io",
+    "recipes": [],
+    "approximate": false
+  },
+  "1706": {
+    "label": "泰式醉面",
+    "english": "Drunken noodles",
+    "recipes": [],
+    "approximate": false
+  },
+  "1707": {
+    "label": "京酱肉丝",
+    "english": "Jing Jiang Rou Si",
+    "recipes": [],
+    "approximate": false
+  },
+  "1713": {
+    "label": "黄豆芽",
+    "english": "Soybean sprout",
+    "recipes": [],
+    "approximate": false
+  },
+  "1725": {
+    "label": "印尼肉丸",
+    "english": "Bakso",
+    "recipes": [],
+    "approximate": false
+  },
+  "1729": {
+    "label": "蓝莓派",
+    "english": "Blueberry pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1730": {
+    "label": "腌黄瓜",
+    "english": "Pickled cucumber",
+    "recipes": [],
+    "approximate": false
+  },
+  "1748": {
+    "label": "日式炸猪排",
+    "english": "Tonkatsu",
+    "recipes": [],
+    "approximate": false
+  },
+  "1749": {
+    "label": "泰式炒饭",
+    "english": "Thai fried rice",
+    "recipes": [
+      "intl-pineapple-rice"
+    ],
+    "approximate": true
+  },
+  "1751": {
+    "label": "德式烤猪肘",
+    "english": "Schweinshaxe",
+    "recipes": [],
+    "approximate": false
+  },
+  "1767": {
+    "label": "红薯派",
+    "english": "Sweet potato pie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1774": {
+    "label": "酱油蛋",
+    "english": "Soy egg",
+    "recipes": [],
+    "approximate": false
+  },
+  "1775": {
+    "label": "川式水煮菜",
+    "english": "Shuizhu",
+    "recipes": [],
+    "approximate": false
+  },
+  "1777": {
+    "label": "西米",
+    "english": "Sago",
+    "recipes": [],
+    "approximate": false
+  },
+  "1785": {
+    "label": "果仁蜜饼",
+    "english": "Baklava",
+    "recipes": [],
+    "approximate": false
+  },
+  "1786": {
+    "label": "芝士热狗",
+    "english": "Cheese dog",
+    "recipes": [],
+    "approximate": false
+  },
+  "1790": {
+    "label": "黛安牛排",
+    "english": "Steak Diane",
+    "recipes": [],
+    "approximate": false
+  },
+  "1798": {
+    "label": "日式肉包",
+    "english": "Nikuman",
+    "recipes": [],
+    "approximate": false
+  },
+  "1802": {
+    "label": "芝麻糖",
+    "english": "Sesame seed candy",
+    "recipes": [],
+    "approximate": false
+  },
+  "1806": {
+    "label": "日式杂炊",
+    "english": "Zosui",
+    "recipes": [],
+    "approximate": false
+  },
+  "1811": {
+    "label": "黑胡椒螃蟹",
+    "english": "Black pepper crab",
+    "recipes": [],
+    "approximate": false
+  },
+  "1814": {
+    "label": "红烧肉",
+    "english": "Red braised pork belly",
+    "recipes": [
+      "world-red-braised-pork"
+    ],
+    "approximate": false
+  },
+  "1823": {
+    "label": "蛋白棒",
+    "english": "Protein bar",
+    "recipes": [],
+    "approximate": false
+  },
+  "1824": {
+    "label": "蓝带炸肉排",
+    "english": "Cordon bleu",
+    "recipes": [],
+    "approximate": false
+  },
+  "1831": {
+    "label": "中式饼",
+    "english": "Bing",
+    "recipes": [],
+    "approximate": false
+  },
+  "1834": {
+    "label": "印度土豆薄饼",
+    "english": "Aloo paratha",
+    "recipes": [],
+    "approximate": false
+  },
+  "1839": {
+    "label": "英式水果奶油蛋糕杯",
+    "english": "Trifle",
+    "recipes": [],
+    "approximate": false
+  },
+  "1845": {
+    "label": "底特律披萨",
+    "english": "Detroit-style pizza",
+    "recipes": [],
+    "approximate": false
+  },
+  "1846": {
+    "label": "茯苓夹饼",
+    "english": "Fuling jiabing",
+    "recipes": [],
+    "approximate": false
+  },
+  "1852": {
+    "label": "花生酱饼干",
+    "english": "Peanut butter cookie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1860": {
+    "label": "日式炊饭",
+    "english": "Takikomi gohan",
+    "recipes": [
+      "world-salmon-rice"
+    ],
+    "approximate": true
+  },
+  "1861": {
+    "label": "日式釜饭",
+    "english": "Kamameshi",
+    "recipes": [],
+    "approximate": false
+  },
+  "1862": {
+    "label": "意面沙拉",
+    "english": "Pasta salad",
+    "recipes": [],
+    "approximate": false
+  },
+  "1878": {
+    "label": "面包汤",
+    "english": "Bread soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1882": {
+    "label": "焦糖",
+    "english": "Caramel",
+    "recipes": [],
+    "approximate": false
+  },
+  "1888": {
+    "label": "番茄蛋花汤",
+    "english": "Tomato and egg soup",
+    "recipes": [
+      "world-egg-drop-soup"
+    ],
+    "approximate": true
+  },
+  "1892": {
+    "label": "墨西哥玉米粽",
+    "english": "Tamale",
+    "recipes": [],
+    "approximate": false
+  },
+  "1897": {
+    "label": "鸭血粉丝汤",
+    "english": "Duck blood and vermicelli soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1901": {
+    "label": "酥点",
+    "english": "Pastry",
+    "recipes": [],
+    "approximate": false
+  },
+  "1905": {
+    "label": "番茄炒蛋",
+    "english": "Stir-fried tomato and scrambled eggs",
+    "recipes": [
+      "tomato-eggs"
+    ],
+    "approximate": false
+  },
+  "1907": {
+    "label": "叫花鸡",
+    "english": "Beggar's Chicken",
+    "recipes": [],
+    "approximate": false
+  },
+  "1910": {
+    "label": "酿瓜",
+    "english": "Stuffed squash",
+    "recipes": [],
+    "approximate": false
+  },
+  "1918": {
+    "label": "印度烤奶酪",
+    "english": "Paneer tikka",
+    "recipes": [],
+    "approximate": false
+  },
+  "1923": {
+    "label": "秘鲁柑橘腌鱼",
+    "english": "Ceviche",
+    "recipes": [],
+    "approximate": false
+  },
+  "1924": {
+    "label": "卷心菜汤",
+    "english": "Cabbage soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1926": {
+    "label": "西班牙番茄面包",
+    "english": "Pa amb tomàquet",
+    "recipes": [],
+    "approximate": false
+  },
+  "1933": {
+    "label": "那不勒斯披萨",
+    "english": "Neapolitan pizza",
+    "recipes": [],
+    "approximate": false
+  },
+  "1934": {
+    "label": "甜甜圈",
+    "english": "Doughnut",
+    "recipes": [],
+    "approximate": false
+  },
+  "1935": {
+    "label": "鹰嘴豆泥",
+    "english": "Hummus",
+    "recipes": [
+      "intl-hummus"
+    ],
+    "approximate": false
+  },
+  "1937": {
+    "label": "巧克力豆饼干",
+    "english": "Chocolate chip cookie",
+    "recipes": [],
+    "approximate": false
+  },
+  "1940": {
+    "label": "香肠",
+    "english": "Sausage",
+    "recipes": [],
+    "approximate": false
+  },
+  "1945": {
+    "label": "辣子鸡",
+    "english": "Laziji",
+    "recipes": [
+      "world-guizhou-chili-chicken",
+      "world-chili-chicken-dice"
+    ],
+    "approximate": true
+  },
+  "1947": {
+    "label": "茶泡饭",
+    "english": "Chazuke",
+    "recipes": [],
+    "approximate": false
+  },
+  "1948": {
+    "label": "三明治",
+    "english": "Sandwich",
+    "recipes": [],
+    "approximate": false
+  },
+  "1949": {
+    "label": "培根生菜番茄三明治",
+    "english": "BLT",
+    "recipes": [],
+    "approximate": false
+  },
+  "1951": {
+    "label": "墨西哥鲜番茄莎莎酱",
+    "english": "Pico de gallo",
+    "recipes": [],
+    "approximate": false
+  },
+  "1952": {
+    "label": "关东煮",
+    "english": "Oden",
+    "recipes": [],
+    "approximate": false
+  },
+  "1953": {
+    "label": "墨西哥脆玉米饼",
+    "english": "Tostada",
+    "recipes": [],
+    "approximate": false
+  },
+  "1969": {
+    "label": "广式点心",
+    "english": "Dim sum",
+    "recipes": [],
+    "approximate": false
+  },
+  "1972": {
+    "label": "水牛城鸡翅",
+    "english": "Buffalo wing",
+    "recipes": [],
+    "approximate": false
+  },
+  "1982": {
+    "label": "花生汤",
+    "english": "Peanut soup",
+    "recipes": [],
+    "approximate": false
+  },
+  "1995": {
+    "label": "鸭肉饭",
+    "english": "Duck rice",
+    "recipes": [],
+    "approximate": false
+  },
+  "1999": {
+    "label": "印尼炸鱼",
+    "english": "Ikan goreng",
+    "recipes": [],
+    "approximate": false
+  },
+  "2002": {
+    "label": "印尼烤鸡",
+    "english": "Ayam bakar",
+    "recipes": [],
+    "approximate": false
+  },
+  "2017": {
+    "label": "福建炒饭",
+    "english": "Hokkien fried rice",
+    "recipes": [],
+    "approximate": false
+  }
+}

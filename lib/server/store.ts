@@ -2,7 +2,7 @@ import { database, HttpError, imageUrl } from "./http";
 
 export type PostRow = {
   id: string; user_id: string; author_name: string; title: string; body: string;
-  image_key: string | null; recipe_id: string | null; kcal: number | null;
+  image_key: string | null; recipe_id: string | null; kcal: number | null; meal_estimate?:string|null;
   visibility: "private" | "community"; created_at: string; likes?: number; liked_by_me?: number;
 };
 
@@ -10,7 +10,7 @@ export function serializePost(row: PostRow, userId: string) {
   return {
     id: row.id, title: row.title, body: row.body,
     imageUrl: row.image_key ? imageUrl(row.image_key) : null,
-    recipeId: row.recipe_id, kcal: row.kcal, visibility: row.visibility,
+    recipeId: row.recipe_id, kcal: row.kcal, mealEstimate: row.meal_estimate?JSON.parse(row.meal_estimate):null, visibility: row.visibility,
     authorName: row.author_name, createdAt: row.created_at,
     likes: Number(row.likes || 0), likedByMe: Boolean(row.liked_by_me), isMine: row.user_id === userId,
   };

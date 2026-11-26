@@ -36,3 +36,19 @@ test('weather handles live readings, caching, coarse coordinates, backup and out
   upstream.mock.mockImplementation(async()=>new Response(null,{status:503}));
   assert.equal((await request('city=london')).status,503);
 });
+test('three full holiday kitchens have wide windows, separate illustrations, and correctly positioned effects',async()=>{
+ const geometry=JSON.parse(await readFile('lib/palace-scenes.json','utf8'));
+ const credits=JSON.parse(await readFile('docs/sources/palace-v7.json','utf8'));
+ const {createHash}=await import('node:crypto');
+ for(const [room,layout] of Object.entries(geometry)){
+   const frame=await readFile('public/images/palace/'+room+'.webp');
+   assert.equal(createHash('sha256').update(frame).digest('hex'),credits.find(x=>x.file===room+'.webp').sha256);
+   assert.ok(frame.includes(Buffer.from('ALPH')));
+   assert.ok(layout.window.width>=465&&layout.window.height>=340);
+   assert.ok(layout.flame.x>layout.window.x+layout.window.width);
+   assert.ok(layout.visibleWindowFraction>.2);
+ }
+ assert.equal(new Set(credits.map(x=>x.sha256)).size,3);
+ assert.ok(geometry.christmas.lights.length>12);
+ assert.equal(geometry.lunar.lanterns.length,2);
+});

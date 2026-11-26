@@ -1,0 +1,6 @@
+Food classifier: Google AIY vision-classifier-food-v1, TFLite release 1, Google LLC.
+Apache License 2.0 (LICENSE.txt). Original weights SHA-256: 03dd6d9129501f97be00775d9e17b5d9ad13be730149352adb8f4ca953b7a650
+https://www.kaggle.com/models/google/aiy/tfLite/vision-classifier-food-v1/1
+Modified by 食来运转: 28 trained convolution kernels are stored in float16, with standard TFLite dequantization. Input and label order are unchanged. Modified model SHA-256: a030526054ac197ef856076eeece5a03154ee391e25460e005fd7cc52d2d4770.
+Runtime: @litertjs/core 2.6.0 and @litertjs/wasm-utils 2.6.0, Google LLC, Apache License 2.0, bundled locally for CPU/WASM inference. No inference endpoint or remote asset service is used.
+Nutrition: USDA FoodData Central SR Legacy (2018), CC0 1.0; individual references in app, plus the site's own recipe ingredient/serving estimates.

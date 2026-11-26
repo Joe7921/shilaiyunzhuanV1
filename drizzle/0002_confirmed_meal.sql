@@ -1,0 +1,1 @@
+ALTER TABLE `kitchen_posts` ADD `meal_estimate` text;
