@@ -18,10 +18,12 @@ export function Feed({ scope, user, refreshKey, onRecord, onLogin, onOpen }: { s
   const [deleteId, setDeleteId] = useState<string | null>(null);
   useEffect(() => {
     let valid = true;
-    setLoading(true); setError('');
+    setPosts([]); setError(''); setDeleteId(null);
+    if (!user?.id) { setLoading(false); return; }
+    setLoading(true);
     api<{posts: Post[]}>('?resource=posts&scope=' + scope).then(r => { if (valid) setPosts(r.posts); }).catch(e => { if (valid) setError(e.message); }).finally(() => { if (valid) setLoading(false); });
     return () => { valid = false; };
-  }, [scope, refreshKey, version]);
+  }, [scope, refreshKey, version, user?.id]);
   async function toggleLike(id: string) {
     if (!user) return onLogin();
     setPending(id); setError('');
@@ -36,6 +38,7 @@ export function Feed({ scope, user, refreshKey, onRecord, onLogin, onOpen }: { s
     finally { setPending(null); }
   }
   if (scope === 'mine' && !user) return <Empty icon={<NotebookPen size={42}/>} title="你的美食故事，从这里开始" text="登录后，把收藏和饭饭日记放在一起，下次回来还能接着看。"><button className="primary-button" onClick={onLogin}>登录，开启我的饭本</button></Empty>;
+  if (!user) return <Empty icon={<Users size={42}/>} title="登录后逛小饭圈" text="看看饭搭子分享了什么，给喜欢的一餐点个赞。"><button className="primary-button" onClick={onLogin}>登录小饭圈</button></Empty>;
   if (loading) return <div className="loading-state"><LoaderCircle className="spin" size={25}/><p>端上热乎乎的日常…</p></div>;
   if (error && !posts.length) return <Empty title="小厨房暂时没连上" text={error}><button className="secondary-button" onClick={() => setVersion(v => v + 1)}><RefreshCw size={17}/>重新加载</button></Empty>;
   if (!posts.length) return <Empty icon={<Camera size={43}/>} title={scope === 'mine' ? '每一餐，都值得留下来' : '第一份烟火气，等你来晒'} text={scope === 'mine' ? '做了什么、吃了什么，拍张照片记下来吧。' : '今天的拿手菜，或是路边的小惊喜，都可以分享在这里。'}><button className="primary-button" onClick={onRecord}><Plus size={18}/>记录我的一餐</button></Empty>;

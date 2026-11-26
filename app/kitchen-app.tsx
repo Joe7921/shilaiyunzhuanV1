@@ -5,6 +5,7 @@ import { Sparkles, Search, Camera, ChefHat, BookOpen, Heart, Users, SlidersHoriz
 import { recipes, personalities, type Recipe } from '@/lib/recipes';
 import { api, dayKey, matchesPrefs, defaultPrefs, type Preferences, type User } from '@/lib/client';
 import { Tomato, Modal, RecipeCard, Empty } from '@/components/ui';
+import ShareButton from '@/components/share-button';
 import RecipeDetail from '@/components/recipe-detail';
 import {CookBadge} from '@/components/planner/cook-badge';
 import BlindBox from '@/components/blindbox';
@@ -152,7 +153,7 @@ export default function KitchenApp() {
   return <div className="app-shell">
     <header className="site-header"><div className="header-inner"><button className="brand" onClick={()=>goTo('home')} aria-label="食来运转首页"><img src="/images/brand/picnic-mark.webp" alt="" width="51" height="51"/><span>食来运转</span></button>
       <nav className="desktop-nav" aria-label="主导航">{navigation.map(n=><button key={n.id} className={page===n.id?'active':''} onClick={()=>goTo(n.id)} aria-current={page===n.id?'page':undefined}>{n.label}</button>)}</nav>
-      <div className="header-actions"><button className="icon-button" onClick={()=>setDialog('preferences')} aria-label="饮食偏好"><SlidersHorizontal size={19}/></button><button className="header-record" onClick={()=>goTo('book')}><BookOpen size={18}/> 我的饭本</button></div></div></header>
+      <div className="header-actions"><ShareButton/><button className="icon-button" onClick={()=>setDialog('preferences')} aria-label="饮食偏好"><SlidersHorizontal size={19}/></button><button className="header-record" aria-label="我的饭本" onClick={()=>goTo('book')}><BookOpen size={18}/><span>我的饭本</span></button></div></div></header>
     <main>
       {profileError && <div className="profile-load-error" role="alert"><span>账号饭本暂未加载：{profileError}</span><button className="text-button" onClick={retryProfile} disabled={profileLoading}>重新加载</button></div>}
       {page==='home'&&<Home pool={candidates} renderCard={renderCard} day={today} birthday={birth.date} go={goTo} tool={setDialog} onOpen={openRecipe} onPhoto={()=>record()}/>}
@@ -177,7 +178,7 @@ export default function KitchenApp() {
     {dialog === 'preferences' && <Modal title="好吃，也要合你的口味" subtitle="这些偏好会用于幸运抽签、转盘和菜谱筛选，保存在当前设备。" onClose={closeDialog}><PreferencesForm value={prefs} onChange={savePrefs} onDone={() => { closeDialog(); setToast('记住啦！接下来按你的口味选菜'); }} count={candidates.length}/></Modal>}
     {dialog === 'recipe' && selectedRecipe && <Modal title={selectedRecipe.title} onClose={closeDialog} wide><RecipeDetail key={selectedRecipe.id} recipe={selectedRecipe} restricted={!!(prefs.vegetarian||prefs.excluded.length||prefs.avoid?.length||page==='planner'||page==='table'||page==='dessert')} favorite={favorites.includes(selectedRecipe.id)} onFavorite={() => toggleFavorite(selectedRecipe.id)} onRecord={() => record(selectedRecipe)} onAlternative={id=>{const r=recipes.find(r=>r.id===id);if(r)openRecipe(r)}}/></Modal>}
     {dialog === 'record' && <Modal title="记下这一餐的小幸福" subtitle="照片、心情，还有认真吃饭的你。" onClose={closeDialog}><RecordForm user={user} initialRecipe={recordRecipe} onLogin={() => setDialog('login')} onSaved={() => {closeDialog();setRefreshKey(k => k+1);setPage('book');setBookTab('diary');setToast('这一餐，已经好好收进饭本啦');}}/></Modal>}
-    {dialog === 'login' && <Modal title="给你的饭本，留一个专属位置" onClose={closeDialog}><Empty icon={<Tomato size={76}/>} title="登录后，把美味好好收藏" text="保存照片日记、发起朋友投票，都需要先登录。"><a className="primary-button" href={'/signin-with-chatgpt?return_to=' + encodeURIComponent(typeof window === 'undefined' ? '/' : window.location.pathname + window.location.search)} target="_top"><LogIn size={18}/>使用 ChatGPT 登录</a></Empty></Modal>}
+    {dialog === 'login' && <Modal title="给你的饭本，留一个专属位置" onClose={closeDialog}><Empty icon={<Tomato size={76}/>} title="登录后，把美味好好收藏" text="保存照片日记、发起朋友投票，都需要先登录。"><a className="primary-button" href={'/signin-with-chatgpt?return_to=' + encodeURIComponent(typeof window === 'undefined' ? '/' : window.location.pathname + window.location.search + window.location.hash)} target="_top"><LogIn size={18}/>使用 ChatGPT 登录</a></Empty></Modal>}
     {toast && <div className="toast" role="status"><Check size={18}/>{toast}</div>}
   </div>;
 }

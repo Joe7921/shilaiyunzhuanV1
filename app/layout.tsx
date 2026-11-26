@@ -4,6 +4,7 @@ import "./journal.css";
 import "./palace.css";
 import "./planner.css";
 import "./table.css";
+import "./sharing.css";
 
 export const metadata: Metadata = {
   title: "食来运转 · 今天一起好好吃饭",

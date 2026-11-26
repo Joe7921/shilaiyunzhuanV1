@@ -26,6 +26,9 @@ test('D1 and R2 preserve the V1 profile, voting, photo diary, sharing and deleti
     assert(res.ok,await res.clone().text());return res.json();
   }
   const mine='fixture-a',peer='fixture-b';
+  assert.equal((await get(null,'?resource=me')).user,null);
+  for(const query of ['?resource=posts&scope=mine','?resource=posts&scope=community','?resource=profile'])
+    assert.equal((await req(null,'/api/kitchen'+query)).status,401);
   assert.equal((await get(mine,'?resource=me')).user.id,mine);
   await post(mine,{action:'save-profile',favorites:['season-yam-ribs']});
   await post(mine,{action:'save-profile',personality:'fresh'});
@@ -46,6 +49,7 @@ test('D1 and R2 preserve the V1 profile, voting, photo diary, sharing and deleti
   const priv=(await post(mine,{...entry,visibility:'private'})).post;
   assert.equal((await get(mine,'?resource=posts&scope=mine')).posts[0].id,priv.id);
   assert.equal((await get(peer,'?resource=posts&scope=community')).posts.length,0);
+  assert.equal((await req(null,imageUrl)).status,401);
   assert.equal((await req(peer,imageUrl)).status,404);
   const pub=(await post(mine,{...entry,visibility:'community'})).post;
   assert.equal((await get(peer,'?resource=posts&scope=community')).posts[0].id,pub.id);
