@@ -1,0 +1,1016 @@
+[
+  {
+    "id": "dessert-mango-pudding",
+    "title": "港式芒果布甸",
+    "aliases": [
+      "港式芒果布丁",
+      "芒果布甸"
+    ],
+    "cuisine": "粤菜",
+    "category": "甜品",
+    "tastes": [
+      "果香",
+      "奶香"
+    ],
+    "seasons": [
+      "夏",
+      "秋"
+    ],
+    "festivals": [],
+    "color": "orange",
+    "colorName": "芒果橙",
+    "luckyIngredient": "芒果",
+    "time": 380,
+    "difficulty": "简单",
+    "servings": 3,
+    "kcal": 422,
+    "tags": [
+      "甜品盲盒",
+      "免烤",
+      "冷藏甜品"
+    ],
+    "allergens": [
+      "奶",
+      "芒果"
+    ],
+    "tools": [
+      "料理机",
+      "小锅",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "熟芒果果肉",
+        "amount": 280,
+        "unit": "克"
+      },
+      {
+        "name": "无糖淡奶",
+        "amount": 120,
+        "unit": "毫升"
+      },
+      {
+        "name": "白砂糖",
+        "amount": 18,
+        "unit": "克"
+      },
+      {
+        "name": "牛源吉利丁粉",
+        "amount": 6,
+        "unit": "克"
+      },
+      {
+        "name": "冷饮用水",
+        "amount": 35,
+        "unit": "毫升"
+      }
+    ],
+    "steps": [
+      "芒果去核去皮，约五分之一切小丁装盒冷藏，其余放进料理机，加一半淡奶打细。纤维多的芒果可过筛。",
+      "在碗里倒入冷水，将吉利丁粉均匀撒在水面，静置 5 分钟。小锅里放剩余淡奶和糖，小火搅至糖化、锅边微冒汽就离火。",
+      "将泡软的吉利丁拨进温淡奶，搅到没有颗粒。先舀一勺芒果泥进锅拌匀，再倒回其余芒果泥中混合，分装进小玻璃杯。",
+      "放到不烫手后盖好，冷藏至少 6 小时。轻晃杯子，布甸整体颤动且没有液体晃出即可。吃前放上预留的芒果丁。"
+    ],
+    "tip": "用无糖淡奶，不要换成甜炼乳。牛源吉利丁取自动物，不适合素食者。",
+    "description": "橙黄色的小布甸配上现切果肉，晃一下杯子会轻轻颤动。",
+    "image": "/images/dessert/dessert-mango-pudding.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": false,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 422 千卡，再按 3 人均分；具体品牌会有差异。",
+    "activeMinutes": 16,
+    "recipeSource": "https://christieathome.com/blog/mango-pudding/",
+    "recipePublisher": "Christie at Home"
+  },
+  {
+    "id": "dessert-mango-pomelo-sago",
+    "title": "杨枝甘露",
+    "aliases": [
+      "芒果西柚西米露",
+      "芒果柚子西米露"
+    ],
+    "cuisine": "粤菜",
+    "category": "糖水",
+    "tastes": [
+      "果香",
+      "椰香"
+    ],
+    "seasons": [
+      "夏",
+      "秋"
+    ],
+    "festivals": [],
+    "color": "yellow",
+    "colorName": "芒果金",
+    "luckyIngredient": "芒果",
+    "time": 50,
+    "difficulty": "简单",
+    "servings": 3,
+    "kcal": 564,
+    "tags": [
+      "甜品盲盒",
+      "港式糖水",
+      "免烤"
+    ],
+    "allergens": [
+      "椰子",
+      "芒果"
+    ],
+    "tools": [
+      "煮锅",
+      "料理机",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "熟芒果果肉",
+        "amount": 300,
+        "unit": "克"
+      },
+      {
+        "name": "柚子果肉",
+        "amount": 75,
+        "unit": "克"
+      },
+      {
+        "name": "小粒干西米",
+        "amount": 35,
+        "unit": "克"
+      },
+      {
+        "name": "无糖椰浆",
+        "amount": 100,
+        "unit": "毫升"
+      },
+      {
+        "name": "饮用水",
+        "amount": 820,
+        "unit": "毫升"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 10,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "留出约六分之一饮用水冷藏备用，其余倒入锅中煮开。冲入干西米搅散，保持小滚，按包装时间煮约 12–18 分钟，中途搅几次。",
+      "颗粒只剩针尖大小的白点时关火盖盖，焖 5–10 分钟。中心仍硬就加少许热水继续煮；用细筛沥出，用可直接饮用的冷水冲去表面淀粉。",
+      "芒果留四分之一切丁。把余下果肉、椰浆、糖和预留的冷水打成果浆；柚子去籽和白色外膜，轻轻掰成果粒。",
+      "西米拌入果浆，冷藏约 15 分钟。分碗后铺芒果丁和柚粒再上桌，保留柚粒入口爆开的口感。"
+    ],
+    "tip": "西米直接下开水，预先浸泡容易散碎。甜度可以跟着芒果成熟度下调。",
+    "description": "细西米藏在芒果椰浆里，最后一把柚粒带出一点微酸和清香。",
+    "image": "/images/dessert/dessert-mango-pomelo-sago.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 564 千卡，再按 3 人均分；具体品牌会有差异。",
+    "activeMinutes": 20,
+    "recipeSource": "https://thewoksoflife.com/mango-sago/",
+    "recipePublisher": "The Woks of Life"
+  },
+  {
+    "id": "dessert-hanami-dango",
+    "title": "三色花见团子",
+    "aliases": [
+      "花见团子",
+      "三色团子",
+      "花見団子"
+    ],
+    "cuisine": "日本料理",
+    "category": "甜品",
+    "tastes": [
+      "米香",
+      "微甜"
+    ],
+    "seasons": [
+      "春"
+    ],
+    "festivals": [],
+    "color": "green",
+    "colorName": "抹茶绿",
+    "luckyIngredient": "糯米粉",
+    "time": 40,
+    "difficulty": "简单",
+    "servings": 4,
+    "kcal": 444,
+    "tags": [
+      "甜品盲盒",
+      "和果子",
+      "免烤"
+    ],
+    "allergens": [],
+    "tools": [
+      "煮锅",
+      "搅拌盆",
+      "细筛"
+    ],
+    "ingredients": [
+      {
+        "name": "糯米粉",
+        "amount": 50,
+        "unit": "克"
+      },
+      {
+        "name": "粘米粉",
+        "amount": 50,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 18,
+        "unit": "克"
+      },
+      {
+        "name": "温饮用水",
+        "amount": 82,
+        "unit": "毫升"
+      },
+      {
+        "name": "冻干草莓粉",
+        "amount": 2,
+        "unit": "克"
+      },
+      {
+        "name": "抹茶粉",
+        "amount": 0.6,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "两种米粉和糖拌匀，先加约八成温水。用手将粉团揉成光滑、捏边不开裂的软团，剩余水逐滴补。",
+      "分成三等份，一份保持白色，一份揉进冻干草莓粉，一份揉进抹茶粉。出现干纹时手指蘸水再揉；把每种颜色均分成相同数量的小球，直径约 2 厘米。",
+      "水滚后从白、粉到绿分批煮，轻推防粘。团子全部浮起后再小火煮约 2–3 分钟，捞一颗切开确认中间没有干粉芯。",
+      "捞出放入可饮用的冷水中约 1 分钟，沥干。按绿、白、粉的顺序串起；也可以直接放在小碟里。"
+    ],
+    "tip": "糯米团黏韧，幼童及吞咽困难者应避免整颗食用；给孩子吃时取下竹签并切小。",
+    "description": "三种颜色来自米粉、草莓和抹茶，圆滚滚的团子是春天小碟里的风景。",
+    "image": "/images/dessert/dessert-hanami-dango.webp",
+    "imageCredit": "摄影：Maakun · CC BY-SA 3.0 · 裁切及 WebP 转码",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 444 千卡，再按 4 人均分；具体品牌会有差异。",
+    "activeMinutes": 30,
+    "recipeSource": "https://www.justonecookbook.com/hanami-dango/",
+    "recipePublisher": "Just One Cookbook",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Hanami_Dango.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "id": "dessert-dorayaki",
+    "title": "红豆铜锣烧",
+    "aliases": [
+      "铜锣烧",
+      "红豆夹心松饼",
+      "どら焼き"
+    ],
+    "cuisine": "日本料理",
+    "category": "甜品",
+    "tastes": [
+      "豆香",
+      "香甜"
+    ],
+    "seasons": [
+      "春",
+      "秋",
+      "冬"
+    ],
+    "festivals": [],
+    "color": "orange",
+    "colorName": "蜂蜜琥珀",
+    "luckyIngredient": "熟红豆沙",
+    "time": 45,
+    "difficulty": "简单",
+    "servings": 4,
+    "kcal": 798,
+    "tags": [
+      "甜品盲盒",
+      "平底锅甜点",
+      "和菓子"
+    ],
+    "allergens": [
+      "蛋",
+      "小麦"
+    ],
+    "tools": [
+      "平底锅",
+      "搅拌盆",
+      "打蛋器"
+    ],
+    "ingredients": [
+      {
+        "name": "低筋小麦粉",
+        "amount": 80,
+        "unit": "克"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "amount": 80,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 28,
+        "unit": "克"
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 10,
+        "unit": "克"
+      },
+      {
+        "name": "泡打粉",
+        "amount": 2,
+        "unit": "克"
+      },
+      {
+        "name": "饮用水",
+        "amount": 12,
+        "unit": "毫升"
+      },
+      {
+        "name": "玉米油",
+        "amount": 2,
+        "unit": "克"
+      },
+      {
+        "name": "熟红豆沙（红豆、糖）",
+        "amount": 96,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "鸡蛋与糖、蜂蜜搅到糖粒基本融化。筛入低筋粉与泡打粉，轻拌到看不见干粉，盖住静置 12 分钟。",
+      "加水调到面糊从勺边连续落下、落痕慢慢消失。平底锅小火预热，蘸油的厨房纸薄擦锅面，擦掉明显油珠。",
+      "一勺面糊从同一点倒下，让它自己摊圆。一面小火煎约 1–2 分钟，表面密布破开的小泡、边缘略干时翻面，再煎约半分钟至中心熟透。逐张煎到面糊用完。",
+      "饼皮放到温热，按大小配对。浅色一面抹熟豆沙，中间厚一点，覆上另一片，轻压边缘即可。"
+    ],
+    "tip": "旺火会让蜂蜜面糊提前变黑。面饼表面有生面糊光泽时继续加热，不要尝生面糊。一岁以内宝宝不食用蜂蜜。",
+    "description": "把两张蜂蜜松饼轻轻合上，从中间切开就是厚厚的红豆夹心。",
+    "image": "/images/dessert/dessert-dorayaki.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 798 千卡，再按 4 人均分；具体品牌会有差异。",
+    "activeMinutes": 25,
+    "recipeSource": "https://www.justonecookbook.com/dorayaki-japanese-red-bean-pancake/",
+    "recipePublisher": "Just One Cookbook"
+  },
+  {
+    "id": "dessert-eton-mess",
+    "title": "草莓伊顿杯",
+    "aliases": [
+      "伊顿麦斯",
+      "草莓蛋白霜奶油杯",
+      "Eton mess"
+    ],
+    "cuisine": "英国菜",
+    "category": "甜品",
+    "tastes": [
+      "酸甜",
+      "奶香"
+    ],
+    "seasons": [
+      "春",
+      "夏"
+    ],
+    "festivals": [
+      "情人节"
+    ],
+    "color": "red",
+    "colorName": "草莓红",
+    "luckyIngredient": "草莓",
+    "time": 15,
+    "difficulty": "简单",
+    "servings": 3,
+    "kcal": 674,
+    "tags": [
+      "甜品盲盒",
+      "免烤",
+      "可提前备料"
+    ],
+    "allergens": [
+      "蛋",
+      "奶"
+    ],
+    "tools": [
+      "打蛋器",
+      "搅拌盆"
+    ],
+    "ingredients": [
+      {
+        "name": "草莓",
+        "amount": 240,
+        "unit": "克"
+      },
+      {
+        "name": "冷藏淡奶油（脂肪约35%）",
+        "amount": 120,
+        "unit": "毫升"
+      },
+      {
+        "name": "成品蛋白霜糖（蛋清、糖）",
+        "amount": 45,
+        "unit": "克"
+      },
+      {
+        "name": "糖粉",
+        "amount": 5,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "草莓洗净擦干后去蒂，取三分之一用叉子粗压出汁，其余切成适口的小块。将买来的烤熟蛋白霜糖轻轻掰成不规则小块。",
+      "冷藏淡奶油倒入冷盆，加糖粉，用打蛋器打到提起有柔软的弯钩；搅动后仍然顺滑就停。",
+      "留几块草莓和蛋白霜作装饰，其余与奶油轻翻两三下，保留红白纹路。分杯时舀一点草莓泥夹在中层。",
+      "最后放上预留的蛋白霜和草莓块，马上用长勺从底部一起舀。"
+    ],
+    "tip": "蛋白霜糖选已烘熟的即食款。带去聚餐时分盒冷藏奶油和草莓，吃前再拌蛋白霜，脆感会好很多。",
+    "description": "红白相间的奶油里有一口草莓汁，也有还没化掉的脆蛋白霜。",
+    "image": "/images/dessert/dessert-eton-mess.webp",
+    "imageCredit": "摄影：Jennifer Lyons · CC BY-SA 3.0 · 裁切及 WebP 转码",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 674 千卡，再按 3 人均分；具体品牌会有差异。",
+    "activeMinutes": 15,
+    "recipeSource": "https://www.bbcgoodfood.com/recipes/eton-mess",
+    "recipePublisher": "Good Food",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Eton_Mess.jpeg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "id": "dessert-lemon-posset",
+    "title": "柠檬奶油凝露",
+    "aliases": [
+      "英式柠檬凝露",
+      "Lemon posset"
+    ],
+    "cuisine": "英国菜",
+    "category": "甜品",
+    "tastes": [
+      "酸甜",
+      "奶香"
+    ],
+    "seasons": [
+      "春",
+      "夏"
+    ],
+    "festivals": [
+      "情人节"
+    ],
+    "color": "yellow",
+    "colorName": "奶油柠檬黄",
+    "luckyIngredient": "柠檬汁",
+    "time": 230,
+    "difficulty": "简单",
+    "servings": 4,
+    "kcal": 1076,
+    "tags": [
+      "甜品盲盒",
+      "免烤",
+      "冷藏甜品"
+    ],
+    "allergens": [
+      "奶"
+    ],
+    "tools": [
+      "小锅",
+      "细筛",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "淡奶油（乳脂至少35%）",
+        "amount": 240,
+        "unit": "毫升"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 63,
+        "unit": "克"
+      },
+      {
+        "name": "鲜榨柠檬汁",
+        "amount": 30,
+        "unit": "毫升"
+      },
+      {
+        "name": "柠檬皮屑（黄色部分）",
+        "amount": 2,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "柠檬刷洗擦干，先刨少许细黄皮，再榨汁、滤去籽。备好小杯，淡奶油与糖倒入留有余量的深口小锅。",
+      "中小火搅拌至糖完全溶解；奶油刚沸就调小火，维持细泡约 2 分钟，盯住锅避免溢出。",
+      "离火静置半分钟，分次搅进柠檬汁和一半皮屑。用细筛滤入杯中，分成较浅的一层，让每杯冷却均匀。",
+      "杯子略降温后加盖，冷藏至少 3 小时，勺尖轻压表面能留下浅痕即可。吃前撒剩余柠檬皮屑。"
+    ],
+    "tip": "酸和高脂奶油是凝固的关键，普通牛奶不适合等量代换。奶油即使冷藏后仍偏软，也可直接用勺舀着吃。",
+    "description": "只用奶油、糖和柠檬就能凝成细腻的一杯，最后那点果皮特别提香。",
+    "image": "/images/dessert/dessert-lemon-posset.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 1076 千卡，再按 4 人均分；具体品牌会有差异。",
+    "activeMinutes": 15,
+    "recipeSource": "https://www.bbcgoodfood.com/recipes/lemon-posset-sugared-almond-shortbread",
+    "recipePublisher": "Good Food"
+  },
+  {
+    "id": "dessert-apple-crumble",
+    "title": "肉桂苹果酥粒",
+    "aliases": [
+      "燕麦苹果脆",
+      "苹果酥粒",
+      "Apple crisp"
+    ],
+    "cuisine": "美国菜",
+    "category": "甜品",
+    "tastes": [
+      "果香",
+      "肉桂香"
+    ],
+    "seasons": [
+      "秋",
+      "冬"
+    ],
+    "festivals": [
+      "感恩节",
+      "圣诞节"
+    ],
+    "color": "yellow",
+    "colorName": "烤燕麦金",
+    "luckyIngredient": "苹果",
+    "time": 65,
+    "difficulty": "简单",
+    "servings": 3,
+    "kcal": 755,
+    "tags": [
+      "甜品盲盒",
+      "烤箱甜点",
+      "水果甜品"
+    ],
+    "allergens": [
+      "小麦",
+      "奶",
+      "燕麦"
+    ],
+    "tools": [
+      "烤箱",
+      "烤盘",
+      "搅拌盆"
+    ],
+    "ingredients": [
+      {
+        "name": "去核苹果果肉",
+        "amount": 340,
+        "unit": "克"
+      },
+      {
+        "name": "原味燕麦片",
+        "amount": 34,
+        "unit": "克"
+      },
+      {
+        "name": "中筋小麦粉",
+        "amount": 28,
+        "unit": "克"
+      },
+      {
+        "name": "冷藏无盐黄油",
+        "amount": 32,
+        "unit": "克"
+      },
+      {
+        "name": "红糖",
+        "amount": 30,
+        "unit": "克"
+      },
+      {
+        "name": "肉桂粉",
+        "amount": 1,
+        "unit": "克"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 8,
+        "unit": "毫升"
+      }
+    ],
+    "steps": [
+      "烤箱预热至 180℃。苹果切成约 1.5 厘米的小块，和柠檬汁、肉桂粉及三分之一红糖拌匀，装入浅烤皿，厚约两三层。",
+      "冷黄油切小丁，和面粉、燕麦片及余下红糖放进碗里。用指尖搓成带颗粒的松散碎屑，别把它捏成一个面团。",
+      "把酥粒松松撒在苹果上，烤皿放烤箱中层烤 32–40 分钟。顶层变金黄、果汁从边缘冒泡，叉子能轻松扎透苹果就可以出炉。",
+      "放在隔热垫上静置约 10 分钟，让果汁稍微收稠，再用勺子从底部连酥粒一起分碗。"
+    ],
+    "tip": "若顶层先上色而苹果还硬，用锡纸松盖表面继续烤。刚出炉的果汁特别烫，先放凉片刻。",
+    "description": "一勺舀到肉桂软苹果和烤得松脆的燕麦，最适合趁温热吃。",
+    "image": "/images/dessert/dessert-apple-crumble.webp",
+    "imageCredit": "摄影：Douglas Perkins · CC BY 4.0 · 裁切及 WebP 转码",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 755 千卡，再按 3 人均分；具体品牌会有差异。",
+    "activeMinutes": 15,
+    "recipeSource": "https://www.allrecipes.com/recipe/12409/apple-crisp-ii/",
+    "recipePublisher": "Allrecipes",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Apple_Crisp.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "id": "dessert-cocoa-mug-cake",
+    "title": "可可马克杯蛋糕",
+    "aliases": [
+      "巧克力杯子蛋糕",
+      "微波炉马克杯蛋糕",
+      "巧克力马克杯蛋糕"
+    ],
+    "cuisine": "美国菜",
+    "category": "甜品",
+    "tastes": [
+      "可可香",
+      "微苦甜"
+    ],
+    "seasons": [
+      "春",
+      "夏",
+      "秋",
+      "冬"
+    ],
+    "festivals": [
+      "情人节"
+    ],
+    "color": "orange",
+    "colorName": "可可棕",
+    "luckyIngredient": "无糖可可粉",
+    "time": 10,
+    "difficulty": "简单",
+    "servings": 1,
+    "kcal": 311,
+    "tags": [
+      "甜品盲盒",
+      "微波炉",
+      "一人份",
+      "免打发"
+    ],
+    "allergens": [
+      "小麦",
+      "奶"
+    ],
+    "tools": [
+      "微波炉",
+      "微波适用杯"
+    ],
+    "ingredients": [
+      {
+        "name": "中筋小麦粉",
+        "amount": 30,
+        "unit": "克"
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 6,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 18,
+        "unit": "克"
+      },
+      {
+        "name": "无铝泡打粉",
+        "amount": 1,
+        "unit": "克"
+      },
+      {
+        "name": "全脂牛奶",
+        "amount": 45,
+        "unit": "毫升"
+      },
+      {
+        "name": "玉米油",
+        "amount": 10,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "用容量至少 350 毫升、无金属描边的微波适用杯。将面粉、可可、糖和泡打粉倒进杯里，先用叉子打散结块。",
+      "加牛奶和油，用叉子沿杯壁和杯底彻底搅匀。刮净杯壁，面糊高度不超过杯子的一半，以免膨胀时溢出。",
+      "微波炉约 800 瓦先加热 70 秒。若表面或中心仍有流动的生面糊，每次追加 10 秒再检查，至整体膨起、中心凝固，插入竹签带湿碎屑但无黏糊。",
+      "戴隔热手套取杯，静置 2 分钟让内部热度均匀，稍放凉后直接用勺吃。增加人数时请按杯分装，逐杯加热。"
+    ],
+    "tip": "不同杯径和微波功率会改变时间，别一次加很久；含生面粉的糊必须熟透。",
+    "description": "临时想吃巧克力时，用一只杯子拌好，几分钟后就能挖到松软的可可蛋糕。",
+    "image": "/images/dessert/dessert-cocoa-mug-cake.webp",
+    "imageCredit": "摄影：Mimschka · CC BY-SA 4.0 · 裁切及 WebP 转码",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 311 千卡，再按 1 人均分；具体品牌会有差异。",
+    "activeMinutes": 5,
+    "recipeSource": "https://www.allrecipes.com/recipe/241038/microwave-chocolate-mug-cake/",
+    "recipePublisher": "Allrecipes",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Tassenkuchen_.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "id": "dessert-coconut-macaroon",
+    "title": "金边椰蓉球",
+    "aliases": [
+      "椰蓉蛋白球",
+      "椰丝小球",
+      "Coconut macaroons"
+    ],
+    "cuisine": "美国菜",
+    "category": "甜品",
+    "tastes": [
+      "椰香",
+      "香甜"
+    ],
+    "seasons": [
+      "春",
+      "夏",
+      "秋",
+      "冬"
+    ],
+    "festivals": [
+      "圣诞节"
+    ],
+    "color": "white",
+    "colorName": "椰蓉白",
+    "luckyIngredient": "椰蓉",
+    "time": 50,
+    "difficulty": "简单",
+    "servings": 4,
+    "kcal": 709,
+    "tags": [
+      "甜品盲盒",
+      "三种材料",
+      "小份烘焙"
+    ],
+    "allergens": [
+      "蛋",
+      "椰子"
+    ],
+    "tools": [
+      "烤箱",
+      "烤盘",
+      "打蛋器"
+    ],
+    "ingredients": [
+      {
+        "name": "无糖干椰蓉",
+        "amount": 80,
+        "unit": "克"
+      },
+      {
+        "name": "蛋清",
+        "amount": 55,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "amount": 38,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "烤箱预热至 165℃，烤盘垫烘焙纸。蛋清和糖用手动打蛋器搅到糖粒大致溶解、表面出现细泡，保持能流动的状态。",
+      "倒入椰蓉拌匀，静置 5 分钟让椰蓉吸收蛋液。用勺背将混合物压紧在勺里，再扣成约 3 厘米的小堆，留出约 2 厘米间隔。",
+      "烤箱中层烤约 15–20 分钟，中途转盘一次。尖顶和边缘呈浅金色、轻碰表面已定型时取出。",
+      "在烤盘上放 5 分钟，再轻轻移到网架放凉。凉后外壳会变脆，内里仍有椰丝的韧性。"
+    ],
+    "tip": "选择干燥的无糖椰蓉。粗长椰丝先切短，更容易抱团；别尝含生蛋清的混合物。",
+    "description": "雪白椰蓉烤出浅金边，外面薄脆，掰开能看见柔软的椰丝。",
+    "image": "/images/dessert/dessert-coconut-macaroon.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 709 千卡，再按 4 人均分；具体品牌会有差异。",
+    "activeMinutes": 15,
+    "recipeSource": "https://sallysbakingaddiction.com/coconut-macaroons/",
+    "recipePublisher": "Sally’s Baking"
+  },
+  {
+    "id": "dessert-strawberry-yogurt-bark",
+    "title": "草莓酸奶冰片",
+    "aliases": [
+      "冻酸奶脆片",
+      "草莓酸奶冻片",
+      "Frozen yogurt bark"
+    ],
+    "cuisine": "西式家常",
+    "category": "甜品",
+    "tastes": [
+      "酸甜",
+      "奶香"
+    ],
+    "seasons": [
+      "春",
+      "夏"
+    ],
+    "festivals": [],
+    "color": "white",
+    "colorName": "酸奶白",
+    "luckyIngredient": "草莓",
+    "time": 250,
+    "difficulty": "简单",
+    "servings": 4,
+    "kcal": 362,
+    "tags": [
+      "甜品盲盒",
+      "免烤",
+      "冷冻甜品"
+    ],
+    "allergens": [
+      "奶"
+    ],
+    "tools": [
+      "冰箱",
+      "烤盘",
+      "搅拌盆"
+    ],
+    "ingredients": [
+      {
+        "name": "原味全脂过滤酸奶",
+        "amount": 300,
+        "unit": "克"
+      },
+      {
+        "name": "草莓",
+        "amount": 100,
+        "unit": "克"
+      },
+      {
+        "name": "枫糖浆",
+        "amount": 15,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "找一个能放进冷冻室的平盘，铺好烘焙纸。草莓洗净擦干，去蒂切成 2–3 毫米厚的片。",
+      "酸奶和枫糖浆拌匀，摊在纸上约半厘米厚。把草莓片错落地铺在上面，用指背轻压，让果片贴紧酸奶。",
+      "放入冷冻室平放至少 4 小时，直到中心也冻硬。轻提纸边将整片取出，掰成手掌一半大的不规则薄片。",
+      "暂时吃不完的薄片用烘焙纸隔开装入密封盒，随吃随取。入口前放一两分钟，让边缘稍微软一点。"
+    ],
+    "tip": "用浓稠过滤酸奶，薄片的冰碴感更少。水果表面先擦干，否则容易结霜脱落。",
+    "description": "草莓薄片贴在雪白酸奶上，从纸上掀起整片，再掰开和朋友分。",
+    "image": "/images/dessert/dessert-strawberry-yogurt-bark.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 362 千卡，再按 4 人均分；具体品牌会有差异。",
+    "activeMinutes": 10,
+    "recipeSource": "https://feelgoodfoodie.net/recipe/frozen-yogurt-bark/",
+    "recipePublisher": "Feel Good Foodie"
+  },
+  {
+    "id": "dessert-banana-oat-cookie",
+    "title": "香蕉燕麦软饼",
+    "aliases": [
+      "香蕉燕麦饼干",
+      "巧克力豆香蕉燕麦饼"
+    ],
+    "cuisine": "美国菜",
+    "category": "甜品",
+    "tastes": [
+      "果香",
+      "燕麦香"
+    ],
+    "seasons": [
+      "春",
+      "夏",
+      "秋",
+      "冬"
+    ],
+    "festivals": [],
+    "color": "yellow",
+    "colorName": "燕麦金",
+    "luckyIngredient": "香蕉",
+    "time": 35,
+    "difficulty": "简单",
+    "servings": 4,
+    "kcal": 633,
+    "tags": [
+      "甜品盲盒",
+      "三种材料",
+      "熟香蕉消耗"
+    ],
+    "allergens": [
+      "燕麦",
+      "大豆"
+    ],
+    "tools": [
+      "烤箱",
+      "烤盘",
+      "搅拌盆"
+    ],
+    "ingredients": [
+      {
+        "name": "去皮熟香蕉",
+        "amount": 180,
+        "unit": "克"
+      },
+      {
+        "name": "原味快熟燕麦片",
+        "amount": 90,
+        "unit": "克"
+      },
+      {
+        "name": "无奶黑巧克力豆（含大豆卵磷脂）",
+        "amount": 24,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "烤箱预热 175℃，烤盘垫纸。香蕉选表皮有褐点、果肉柔软的，剥皮称重后用叉子压成粗泥。",
+      "倒入快熟燕麦片和大部分巧克力豆，拌至没有干片，静置 5 分钟，让燕麦吸足水分。",
+      "挖成约核桃大的小团排上烤盘，每团用勺背压成不到 1 厘米厚的小饼，把留出的巧克力豆按在表面。",
+      "中层烤 15–18 分钟，边缘略深、底面能完整揭起即可。在盘上放约 5 分钟再移出，温热或凉吃都可以。"
+    ],
+    "tip": "它主要靠香蕉黏合，口感本来就偏软。若要避开小麦，购买有相应无麸质标识的燕麦并核对巧克力配料。",
+    "description": "不用打蛋器，熟香蕉负责香甜，燕麦留住嚼劲，几颗黑巧克力豆点在表面。",
+    "image": "/images/dessert/dessert-banana-oat-cookie.webp",
+    "imageCredit": "摄影：Keith McDuffee · CC BY 2.0 · 裁切及 WebP 转码",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 633 千卡，再按 4 人均分；具体品牌会有差异。",
+    "activeMinutes": 10,
+    "recipeSource": "https://www.skinnytaste.com/healthy-cookies/",
+    "recipePublisher": "Skinnytaste",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Banana_oatmeal_chocolate_chip_cookies.jpg",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "id": "dessert-brigadeiro",
+    "title": "巴西可可炼乳球",
+    "aliases": [
+      "巴西巧克力球",
+      "巴西松露球",
+      "Brigadeiro"
+    ],
+    "cuisine": "巴西菜",
+    "category": "甜品",
+    "tastes": [
+      "可可香",
+      "奶香"
+    ],
+    "seasons": [
+      "春",
+      "夏",
+      "秋",
+      "冬"
+    ],
+    "festivals": [
+      "生日",
+      "情人节"
+    ],
+    "color": "orange",
+    "colorName": "深可可棕",
+    "luckyIngredient": "无糖可可粉",
+    "time": 100,
+    "difficulty": "简单",
+    "servings": 6,
+    "kcal": 803,
+    "tags": [
+      "甜品盲盒",
+      "免烤",
+      "派对甜点"
+    ],
+    "allergens": [
+      "奶",
+      "大豆"
+    ],
+    "tools": [
+      "小锅",
+      "刮刀",
+      "冰箱"
+    ],
+    "ingredients": [
+      {
+        "name": "甜炼乳",
+        "amount": 190,
+        "unit": "克"
+      },
+      {
+        "name": "无糖可可粉",
+        "amount": 10,
+        "unit": "克"
+      },
+      {
+        "name": "无盐黄油",
+        "amount": 7,
+        "unit": "克"
+      },
+      {
+        "name": "巧克力米（含大豆卵磷脂）",
+        "amount": 25,
+        "unit": "克"
+      }
+    ],
+    "steps": [
+      "留一点黄油薄擦浅盘。把可可粉筛进厚底小锅，先用一小勺炼乳调开成光滑的糊，再把剩余炼乳、剩余黄油拌进去。",
+      "开中小火，持续用耐热刮刀扫过锅底和边角，约 8–14 分钟。刮开一条路，能短暂看见锅底，倾斜锅时糖糊能聚成一团移动即可关火。",
+      "倒到抹过油的浅盘摊平。放至不烫手后覆盖，冷藏约 1 小时，直到能捏起来而不流淌。",
+      "用两把小勺分出一口大的等份，手心沾一点盘中的黄油搓成球，滚上巧克力米。放进小纸托中，冷藏到上桌前再取出。"
+    ],
+    "tip": "炼乳糖糊粘身时温度很高，放凉再接触。巧克力米的奶与大豆成分依品牌而异，请核对包装。",
+    "description": "一口大小的巴西派对甜点，外面的巧克力米有点脆，里面像细软的可可奶糖。",
+    "image": "/images/dessert/dessert-brigadeiro.webp",
+    "imageCredit": "AI 生成 · 写实甜品示意图",
+    "vegetarian": true,
+    "kcalBasis": "按所列可食部分的常见单位能量，合计整份约 803 千卡，再按 6 人均分；具体品牌会有差异。",
+    "activeMinutes": 25,
+    "recipeSource": "https://www.allrecipes.com/recipe/24052/brigadeiro/",
+    "recipePublisher": "Allrecipes"
+  }
+]

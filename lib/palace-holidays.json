@@ -1,0 +1,194 @@
+{
+  "dragonboat": {
+    "window": {
+      "x": 222,
+      "y": 13,
+      "width": 546,
+      "height": 356
+    },
+    "aperture": {
+      "x": 227,
+      "y": 40,
+      "width": 536,
+      "height": 304
+    },
+    "flame": {
+      "x": 869,
+      "y": 292,
+      "width": 107,
+      "height": 73
+    },
+    "steam": [
+      [
+        865,
+        412
+      ]
+    ],
+    "lights": [
+      [
+        125,
+        259
+      ],
+      [
+        202,
+        109
+      ]
+    ],
+    "visibleWindowFraction": 0.205
+  },
+  "midautumn": {
+    "window": {
+      "x": 236,
+      "y": 0,
+      "width": 548,
+      "height": 368
+    },
+    "aperture": {
+      "x": 241,
+      "y": 20,
+      "width": 538,
+      "height": 323
+    },
+    "flame": {
+      "x": 879,
+      "y": 291,
+      "width": 98,
+      "height": 76
+    },
+    "steam": [
+      [
+        479,
+        354
+      ],
+      [
+        599,
+        357
+      ],
+      [
+        937,
+        442
+      ]
+    ],
+    "lights": [
+      [
+        146,
+        100
+      ],
+      [
+        92,
+        355
+      ],
+      [
+        846,
+        65
+      ],
+      [
+        159,
+        149
+      ]
+    ],
+    "visibleWindowFraction": 0.2183
+  },
+  "qixi": {
+    "window": {
+      "x": 203,
+      "y": 0,
+      "width": 593,
+      "height": 370
+    },
+    "aperture": {
+      "x": 208,
+      "y": 8,
+      "width": 583,
+      "height": 337
+    },
+    "flame": {
+      "x": 884,
+      "y": 309,
+      "width": 96,
+      "height": 77
+    },
+    "steam": [
+      [
+        168,
+        489
+      ],
+      [
+        807,
+        489
+      ]
+    ],
+    "lights": [
+      [
+        51,
+        83
+      ],
+      [
+        159,
+        144
+      ],
+      [
+        193,
+        112
+      ],
+      [
+        77,
+        426
+      ],
+      [
+        808,
+        94
+      ]
+    ],
+    "visibleWindowFraction": 0.2495
+  },
+  "halloween": {
+    "window": {
+      "x": 220,
+      "y": 32,
+      "width": 542,
+      "height": 373
+    },
+    "aperture": {
+      "x": 225,
+      "y": 59,
+      "width": 532,
+      "height": 321
+    },
+    "flame": {
+      "x": 871,
+      "y": 309,
+      "width": 99,
+      "height": 75
+    },
+    "steam": [
+      [
+        807,
+        447
+      ],
+      [
+        301,
+        453
+      ]
+    ],
+    "lights": [
+      [
+        89,
+        326
+      ],
+      [
+        101,
+        310
+      ],
+      [
+        127,
+        309
+      ],
+      [
+        923,
+        178
+      ]
+    ],
+    "visibleWindowFraction": 0.2091
+  }
+}

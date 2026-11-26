@@ -7,6 +7,8 @@ import { api, dayKey, matchesPrefs, defaultPrefs, type Preferences, type User } 
 import { Tomato, Modal, RecipeCard, Empty } from '@/components/ui';
 import RecipeDetail from '@/components/recipe-detail';
 import {CookBadge} from '@/components/planner/cook-badge';
+import BlindBox from '@/components/blindbox';
+import TablePage from '@/components/table';
 import PlannerDesk from '@/components/planner';
 import { Feed, RecordForm } from '@/components/social';
 import { FortuneTool, WheelTool, PersonalityTool, PollTool } from '@/components/selection-tools';
@@ -15,7 +17,7 @@ import {Home,Catalogue,FoodCalendar,type Page} from '@/components/kitchen-sectio
 import MagicRoom,{emptyNotebook,type Notebook} from '@/components/magic-room';
 import {zodiac,type Birth} from '@/lib/astro';
 const navigation=[{id:'home',label:'今日灵感'},{id:'magic',label:'星座魔法屋'},{id:'recipes',label:'环球菜谱'},{id:'season',label:'食养馆'},{id:'calendar',label:'节日食历'},{id:'planner',label:'计划室'},{id:'community',label:'小饭圈'}] as const;
-const pageIds=new Set<string>([...navigation.map(n=>n.id),'book']);
+const pageIds=new Set<string>([...navigation.map(n=>n.id),'book','table','dessert','blindbox']);
 type Dialog = 'fortune' | 'wheel' | 'personality' | 'poll' | 'preferences' | 'record' | 'login' | 'recipe' | null;
 
 const allergens = Array.from(new Set(['蛋','奶','小麦','大豆','花生','坚果','鱼','虾','甲壳类','贝类','芝麻',...recipes.flatMap(r=>r.allergens)]));
@@ -153,6 +155,8 @@ export default function KitchenApp() {
     <main>
       {profileError && <div className="profile-load-error" role="alert"><span>账号饭本暂未加载：{profileError}</span><button className="text-button" onClick={retryProfile} disabled={profileLoading}>重新加载</button></div>}
       {page==='home'&&<Home pool={candidates} renderCard={renderCard} day={today} birthday={birth.date} go={goTo} tool={setDialog} onOpen={openRecipe} onPhoto={()=>record()}/>}
+      {(page==='dessert'||page==='blindbox')&&<BlindBox key={page} dessert={page==='dessert'} candidates={candidates} open={openRecipe} onPrefs={()=>setDialog('preferences')}/>}
+      {page==='table'&&<TablePage key={profileLoading?'loading':user?.id||'guest'} prefs={prefs} identity={user?.id||'guest'} open={openRecipe} onPrefs={()=>setDialog('preferences')}/>}
       {page==='planner'&&<PlannerDesk key={profileLoading?'loading':user?.id||'guest'} day={today||dayKey()} prefs={prefs} user={user} profileLoading={profileLoading} open={openRecipe} onPrefs={()=>setDialog('preferences')}/>}
       {page==='magic'&&<MagicRoom day={today} birth={birth} onBirth={setBirth} notebook={notebook} onSave={saveNotebook} candidates={candidates} tastes={prefs.tastes||[]} onOpen={openRecipe} onPrefs={()=>setDialog('preferences')} onToast={setToast} ready={loadedNotebook===notebookKey}/>}
       {(page==='season'||page==='recipes')&&<Catalogue key={page} seasonal={page==='season'} pool={candidates} renderCard={renderCard} onPrefs={()=>setDialog('preferences')}/>}
@@ -166,11 +170,11 @@ export default function KitchenApp() {
     <nav className="mobile-nav" aria-label="手机导航">{([{id:'home',label:'今日灵感',icon:Sparkles},{id:'magic',label:'占卜',icon:Sparkles},{id:'recipes',label:'菜谱',icon:ChefHat},{id:'planner',label:'计划室',icon:NotebookPen},{id:'community',label:'小饭圈',icon:Users},{id:'book',label:'我的饭本',icon:BookOpen}] as const).map(({id,label,icon:Icon}) => <button key={id} className={page === id ? 'active' : ''} onClick={() => goTo(id)} aria-current={page === id ? 'page' : undefined}><Icon size={22}/><span>{label}</span></button>)}</nav>
 
     {dialog === 'fortune' && <Modal title="今天的美味，藏在哪张牌里？" subtitle="凭第一感觉选一张，拆开你的今日幸运菜。" onClose={closeDialog}><FortuneTool candidates={candidates} seed={(today || dayKey()) + ':' + (user?.id || visitorId)} onOpen={openRecipe} onPrefs={() => setDialog('preferences')}/></Modal>}
-    {dialog === 'wheel' && <Modal title="今天吃什么大转盘" subtitle="选择困难到此结束。转一圈，认真吃一餐。" onClose={closeDialog}><WheelTool candidates={candidates} onOpen={openRecipe} onPrefs={() => setDialog('preferences')}/></Modal>}
+    {dialog === 'wheel' && <Modal title="今天吃什么大转盘" subtitle="选择困难到此结束。转一圈，认真吃一餐。" onClose={closeDialog}><a className="wheel-team-link" href="#table/wheel"><Users size={16}/>和好友一起转</a><WheelTool candidates={candidates} onOpen={openRecipe} onPrefs={() => setDialog('preferences')}/></Modal>}
     {dialog === 'personality' && <Modal title="每一口，都是你的美食人格" subtitle="没有标准答案，选最像你的那一个。" onClose={closeDialog}><PersonalityTool onResult={savePersonality} onOpen={openRecipe} allowedRecipeIds={candidates.map(r => r.id)}/></Modal>}
     {dialog === 'poll' && <Modal title="让饭搭子来决定" subtitle="自己纠结的事，让朋友一起选。" onClose={closeDialog}><PollTool user={user} candidates={candidates} initialId={initialPoll} onLogin={() => setDialog('login')} onOpen={openRecipe} onToast={setToast}/></Modal>}
     {dialog === 'preferences' && <Modal title="好吃，也要合你的口味" subtitle="这些偏好会用于幸运抽签、转盘和菜谱筛选，保存在当前设备。" onClose={closeDialog}><PreferencesForm value={prefs} onChange={savePrefs} onDone={() => { closeDialog(); setToast('记住啦！接下来按你的口味选菜'); }} count={candidates.length}/></Modal>}
-    {dialog === 'recipe' && selectedRecipe && <Modal title={selectedRecipe.title} onClose={closeDialog} wide><RecipeDetail key={selectedRecipe.id} recipe={selectedRecipe} restricted={!!(prefs.vegetarian||prefs.excluded.length||prefs.avoid?.length||page==='planner')} favorite={favorites.includes(selectedRecipe.id)} onFavorite={() => toggleFavorite(selectedRecipe.id)} onRecord={() => record(selectedRecipe)} onAlternative={id=>{const r=recipes.find(r=>r.id===id);if(r)openRecipe(r)}}/></Modal>}
+    {dialog === 'recipe' && selectedRecipe && <Modal title={selectedRecipe.title} onClose={closeDialog} wide><RecipeDetail key={selectedRecipe.id} recipe={selectedRecipe} restricted={!!(prefs.vegetarian||prefs.excluded.length||prefs.avoid?.length||page==='planner'||page==='table'||page==='dessert')} favorite={favorites.includes(selectedRecipe.id)} onFavorite={() => toggleFavorite(selectedRecipe.id)} onRecord={() => record(selectedRecipe)} onAlternative={id=>{const r=recipes.find(r=>r.id===id);if(r)openRecipe(r)}}/></Modal>}
     {dialog === 'record' && <Modal title="记下这一餐的小幸福" subtitle="照片、心情，还有认真吃饭的你。" onClose={closeDialog}><RecordForm user={user} initialRecipe={recordRecipe} onLogin={() => setDialog('login')} onSaved={() => {closeDialog();setRefreshKey(k => k+1);setPage('book');setBookTab('diary');setToast('这一餐，已经好好收进饭本啦');}}/></Modal>}
     {dialog === 'login' && <Modal title="给你的饭本，留一个专属位置" onClose={closeDialog}><Empty icon={<Tomato size={76}/>} title="登录后，把美味好好收藏" text="保存照片日记、发起朋友投票，都需要先登录。"><a className="primary-button" href={'/signin-with-chatgpt?return_to=' + encodeURIComponent(typeof window === 'undefined' ? '/' : window.location.pathname + window.location.search)} target="_top"><LogIn size={18}/>使用 ChatGPT 登录</a></Empty></Modal>}
     {toast && <div className="toast" role="status"><Check size={18}/>{toast}</div>}

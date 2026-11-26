@@ -5,9 +5,10 @@ import type {Recipe} from '@/lib/recipes';
 import {recipes} from '@/lib/recipes';
 import {calendarYear,upcomingEvents,CALENDAR_SOURCE,CALENDAR_YEARS} from '@/lib/calendar/calendar.mjs';
 import {Empty,FoodImage} from './ui';
+import {tableLinks} from './table';
 import PalaceKitchen from './palace-kitchen';
 
-export type Page='planner'|'home'|'magic'|'recipes'|'season'|'calendar'|'book'|'community';
+export type Page='blindbox'|'table'|'dessert'|'planner'|'home'|'magic'|'recipes'|'season'|'calendar'|'book'|'community';
 export type Tool='fortune'|'wheel'|'personality'|'poll'|'preferences';
 type CardProps={pool:Recipe[];renderCard:(r:Recipe)=>ReactNode};
 type Occasion={id:string;name:string;date:string;kind:string;menu:string[];theme:string;isFestival:boolean;daysUntil?:number};
@@ -31,6 +32,8 @@ export function Home({day,birthday,pool,renderCard,go,tool,onOpen,onPhoto}:{day:
     <PalaceKitchen day={day} recipes={()=>go('recipes')} fortune={()=>go('magic')}/>
     <div className="discovery-strip">{[{label:'美食大转盘',desc:'转出一桌好味',icon:Dices,act:()=>tool('wheel')},{label:'四季食养馆',desc:'汤水与暖饮',icon:Soup,act:()=>go('season')},{label:'节日限定菜单',desc:near?near.name+' · '+near.date.slice(5):'全年食历',icon:CalendarDays,act:()=>go('calendar')},{label:'好友帮选',desc:'请饭搭子投一票',icon:Users,act:()=>tool('poll')}].map(({label,desc,icon:Icon,act})=><button onClick={act} key={label}><i><Icon size={24}/></i><span><b>{label}</b><small>{desc}</small></span></button>)}</div>
     <div className="home-planner"><div><p className="overline"><ChefHat size={16}/> 我的厨房工具</p><h2>厨房计划室</h2></div><div><a href="#planner/pantry">用冰箱配菜</a><a href="#planner/diet">安排三餐</a><a href="#planner/party">搭一桌家宴</a><button className="text-button" onClick={onPhoto}>拍照估热量</button><a href="#planner">全部工具</a></div></div>
+    <div className="home-table"><h2>饭搭子小馆</h2><nav aria-label="饭搭子小馆">{tableLinks.map(({id,title,icon:Icon})=><a key={id} href={'#table/'+id}><Icon size={19}/>{title}</a>)}</nav></div>
+    <div className="home-box"><img src="/images/brand/dessert-mark.webp" alt="" width="80" height="80"/><div><h2>今天开个盲盒</h2><p>晚饭和饭后甜点，各抽一份。</p></div><nav><a href="#blindbox">美食盲盒</a><a href="#dessert">甜品盲盒</a></nav></div>
     {thisTerm&&<a className="home-term-note" href="#planner/seasonal"><Flower2 size={16}/>{thisTerm.name}到了，看看本期菜篮子</a>}
     <section className="editor-picks"><div className="sectitle"><div><p className="overline"><ChefHat size={15}/> 厨房手记</p><h2>今天端上桌</h2></div><button className="flat-button" onClick={()=>go('recipes')}>浏览全部 {recipes.length} 道 <BookOpen size={16}/></button></div><div className="paper-tabs">{['编辑精选','半小时开饭','一碗热汤','饭后甜点'].map(f=><button className={filter===f?'active':''} key={f} onClick={()=>setFilter(f)}>{f}</button>)}</div>
     {featured.length?<div className="recipe-grid">{featured.map(renderCard)}</div>:<Empty title="这个栏目暂时没有匹配的菜" text="可以看看其他分类，或调整选菜偏好。"/>}</section>

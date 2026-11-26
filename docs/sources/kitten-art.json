@@ -1,0 +1,47 @@
+[
+  {
+    "file": "kitten-everyday.webp",
+    "alt": "橘猫厨师戴着蓝格头巾，笑眼里映着窗光。",
+    "source": "OpenAI ImageGen · 本项目原创生成插画",
+    "width": 440,
+    "height": 440,
+    "bytes": 17040,
+    "sha256": "fd035be5d77bd0cb24353525d5467fc419edc4f7c00191e1f360cf21f0b5e19a"
+  },
+  {
+    "file": "kitten-christmas.webp",
+    "alt": "圣诞厨房里戴着红格头巾的琥珀眼小橘猫。",
+    "source": "OpenAI ImageGen · 本项目原创生成插画",
+    "width": 440,
+    "height": 440,
+    "bytes": 18506,
+    "sha256": "958e6e86a5aa49b106994154528d0034c59d17b8c5d9e25a145e8231a5cd4a2b"
+  },
+  {
+    "file": "kitten-lunar.webp",
+    "alt": "新春厨房里系着绿格头巾的圆脸橘猫。",
+    "source": "OpenAI ImageGen · 本项目原创生成插画",
+    "width": 440,
+    "height": 440,
+    "bytes": 17250,
+    "sha256": "0facf6203dbb6ccade9c2935c47128997217df324c49a5471ba812294fce42aa"
+  },
+  {
+    "file": "dessert-tea.webp",
+    "alt": "身穿淡蓝围裙、戴厨师帽的橘猫和小鸭一起打开草莓色的甜品盒。",
+    "source": "OpenAI ImageGen · 本项目原创生成插画",
+    "width": 1296,
+    "height": 864,
+    "bytes": 222876,
+    "sha256": "e6781fdd8b4dc61c162ff4777b53fda283a4e5848ee4ab480166acb776ff7c8f"
+  },
+  {
+    "file": "dessert-mark.webp",
+    "alt": "橘猫小厨师和小鸭守着系粉色丝带的甜品盒。",
+    "source": "OpenAI ImageGen · 本项目原创生成插画",
+    "width": 512,
+    "height": 512,
+    "bytes": 78932,
+    "sha256": "678b4b890edc872dadfd7066a6c93eb1ac17494c1b7137df39bd3d99b29e4dad"
+  }
+]

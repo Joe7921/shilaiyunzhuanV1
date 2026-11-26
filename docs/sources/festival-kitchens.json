@@ -1,0 +1,58 @@
+[
+  {
+    "file": "dragonboat.webp",
+    "title": "龙舟厨房里的粽叶香",
+    "alt": "暖绿端午厨房，软萌小橘猫和小鸭在龙舟摆件旁裹粽子，一笼青粽摆上木桌。",
+    "source": "OpenAI ImageGen，为食来运转创作的原创节日厨房插画",
+    "usage": "本项目内作为品牌场景使用，已保留透明窗洞并压缩为 WebP",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "a8ba93576aabc27b181444c648bf00567e56ab23c19451846722081c3aa89ea3",
+    "externalStock": false
+  },
+  {
+    "file": "midautumn.webp",
+    "title": "兔灯下的团圆月饼",
+    "alt": "桂花与兔子灯点亮中秋厨房，圆脸小猫压着月饼木模，小鸭端起茶杯。",
+    "source": "OpenAI ImageGen，为食来运转创作的原创节日厨房插画",
+    "usage": "本项目内作为品牌场景使用，已保留透明窗洞并压缩为 WebP",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "bdb431d564852520e6a14bb5e153d0178636c1fe1b64ae1384d65b3ccf186df2",
+    "externalStock": false
+  },
+  {
+    "file": "qixi.webp",
+    "title": "喜鹊和草莓的双人餐桌",
+    "alt": "粉蓝丝带缠着喜鹊小桥，橘猫给礼盒系上蝴蝶结，小鸭和两客草莓爱心挞相伴。",
+    "source": "OpenAI ImageGen，为食来运转创作的原创节日厨房插画",
+    "usage": "本项目内作为品牌场景使用，已保留透明窗洞并压缩为 WebP",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "ec2cd6e5c2399d1ef991c4aeab221f3f97a082d5e4b082fa646f291a78887e24",
+    "externalStock": false
+  },
+  {
+    "file": "halloween.webp",
+    "title": "南瓜灯烘焙小屋",
+    "alt": "南瓜灯和紫色格纹帘装点万圣厨房，小橘猫和小鸭给纸杯蛋糕挤奶油，刚烤好的南瓜派摆在桌边。",
+    "source": "OpenAI ImageGen，为食来运转创作的原创节日厨房插画",
+    "usage": "本项目内作为品牌场景使用，已保留透明窗洞并压缩为 WebP",
+    "mediaType": "image/webp",
+    "dimensions": [
+      1586,
+      992
+    ],
+    "sha256": "17aaa5b5850c205c602e98e22b092c77f8d24e6752d7a797eaece6a941aa97ab",
+    "externalStock": false
+  }
+]

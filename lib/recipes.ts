@@ -3,6 +3,7 @@
  * 人均热量 = kcal / servings；实际结果随品牌、去骨方式与烹饪损耗变化。
  * 调味品配方可能不同，过敏者仍需检查所用包装的配料和过敏原标识。
  */
+import desserts from "./catalog/desserts.json";
 import additions from "./catalog/recipes.json";
 
 export type OriginalRecipe = {
@@ -532,7 +533,7 @@ const originalRecipes: OriginalRecipe[] = [
 
 export type Recipe = OriginalRecipe & {
   aliases: string[]; cuisine: string; category: string; tastes: string[]; seasons: string[];
-  festivals: string[]; tools: string[]; image: string; imageCredit: string; kcalBasis?:string; imageSource?:string;
+  festivals: string[]; tools: string[]; image: string; imageCredit: string; kcalBasis?:string; imageSource?:string; imageLicenseUrl?:string; activeMinutes?:number; recipeSource?:string; recipePublisher?:string;
   vegetarian: boolean; series?: string; tradition?: string; alcohol?: boolean; alternativeId?: string;
 };
 const originalDetails: Record<string, [string, string, string, string, string[]]> = {
@@ -561,7 +562,8 @@ export const recipes: Recipe[] = [
     return {...r,vegetarian,allergens,cuisine,category,aliases,tastes:[taste],tools:tool.split('、'),seasons:['春','夏','秋','冬'],
       festivals:[],image:'/images/dishes/'+r.id+'.webp',imageCredit:'AI 生成 · 写实美食配图'};
   }),
-  ...(additions as Recipe[])
+  ...(additions as Recipe[]),
+  ...(desserts as Recipe[])
 ];
 export type Personality = {
   id: 'cozy' | 'bold' | 'fresh' | 'quick';

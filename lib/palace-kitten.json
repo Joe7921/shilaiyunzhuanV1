@@ -1,0 +1,23 @@
+{
+  "everyday": {
+    "file": "kitten-everyday.webp",
+    "x": 504.414,
+    "y": 220.514,
+    "width": 277.427,
+    "height": 277.218
+  },
+  "christmas": {
+    "file": "kitten-christmas.webp",
+    "x": 482.346,
+    "y": 236.265,
+    "width": 277.427,
+    "height": 277.218
+  },
+  "lunar": {
+    "file": "kitten-lunar.webp",
+    "x": 163.934,
+    "y": 229.965,
+    "width": 277.427,
+    "height": 277.218
+  }
+}

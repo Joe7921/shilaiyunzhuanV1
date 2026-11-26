@@ -1,7 +1,7 @@
 import {calendarYear} from './calendar/calendar.mjs';
 
 export const seasons = {spring:'春',summer:'夏',autumn:'秋',winter:'冬'} as const;
-export const festivals = {plain:'日常',christmas:'圣诞',lunar:'春节'} as const;
+export const festivals = {plain:'日常',christmas:'圣诞',lunar:'春节',dragonboat:'端午',qixi:'七夕',midautumn:'中秋',halloween:'万圣'} as const;
 export const skies = {clear:'晴',cloud:'多云',rain:'雨',snow:'雪',fog:'雾',storm:'雷雨'} as const;
 export type Season = keyof typeof seasons;
 export type Festival = keyof typeof festivals;
@@ -25,7 +25,11 @@ export function seasonFor(date:string,latitude:number):Season {
 }
 export function festivalFor(date:string):Festival {
   if(date.endsWith('-12-24')||date.endsWith('-12-25'))return 'christmas';
-  const start=calendarYear(Number(date.slice(0,4))).find(event=>event.id==='spring-festival')?.date;
+  const events=calendarYear(Number(date.slice(0,4)));
+  const themes:Partial<Record<string,Festival>>={'dragon-boat':'dragonboat',qixi:'qixi','mid-autumn':'midautumn',halloween:'halloween'};
+  const themed=events.find(e=>e.date===date&&themes[e.id]);
+  if(themed)return themes[themed.id]!;
+  const start=events.find(event=>event.id==='spring-festival')?.date;
   const delta=(Date.parse(date+'T12:00:00Z')-Date.parse(start+'T12:00:00Z'))/86400000;
   return delta>=-1&&delta<7?'lunar':'plain';
 }

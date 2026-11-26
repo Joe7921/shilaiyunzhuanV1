@@ -7,7 +7,7 @@ const entry="export * from './lib/planner/local';export * from './lib/planner/se
 const bundle=await build({stdin:{contents:entry,resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false});
 const api=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].contents).toString('base64'));
 const {recipes,buildShoppingList,planMenu,availableStock,periodSummary,assessNutrition,makeWish,assessCook,predictCookIssue,pitfallsFor,cookLevels,seasonalGuide}=api;
-test('pantry measures quantities, aliases, deadlines, shortages and prices across all 232 recipes',()=>{
+test('pantry measures quantities, aliases, deadlines, shortages and prices across the entire recipe catalog',()=>{
  const r=recipes.find(r=>r.id==='tomato-eggs'),pantry=r.ingredients.map(i=>({...i,expires:'2026-12-01'}));
  assert.deepEqual(buildShoppingList([{recipe:r,people:r.servings}],availableStock(pantry,'2026-11-26')).items.filter(i=>i.toBuy>0),[]);
  assert(availableStock(pantry,'2026-12-02').length===0);

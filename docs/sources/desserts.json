@@ -1,0 +1,466 @@
+{
+  "dessert-mango-pudding": {
+    "title": "港式芒果布甸",
+    "publisher": "Christie at Home",
+    "url": "https://christieathome.com/blog/mango-pudding/",
+    "rating": 4.95,
+    "ratingCount": 20,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "改为淡奶配芒果的杯装版本，配方注明牛源吉利丁；采用冷藏凝固法。",
+    "activeMinutes": 16,
+    "totalMinutes": 380,
+    "energyBasis": [
+      {
+        "name": "熟芒果果肉",
+        "kcalPerUnit": 0.6,
+        "unit": "克"
+      },
+      {
+        "name": "无糖淡奶",
+        "kcalPerUnit": 1.35,
+        "unit": "毫升"
+      },
+      {
+        "name": "白砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      },
+      {
+        "name": "牛源吉利丁粉",
+        "kcalPerUnit": 3.4,
+        "unit": "克"
+      },
+      {
+        "name": "冷饮用水",
+        "kcalPerUnit": 0,
+        "unit": "毫升"
+      }
+    ]
+  },
+  "dessert-mango-pomelo-sago": {
+    "title": "杨枝甘露",
+    "publisher": "The Woks of Life",
+    "url": "https://thewoksoflife.com/mango-sago/",
+    "rating": 4.96,
+    "ratingCount": 45,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "芒果椰浆西米法另加柚子果肉；用少量糖替代炼乳。带柚版本另参考 Omnivore’s Cookbook。",
+    "activeMinutes": 20,
+    "totalMinutes": 50,
+    "energyBasis": [
+      {
+        "name": "熟芒果果肉",
+        "kcalPerUnit": 0.6,
+        "unit": "克"
+      },
+      {
+        "name": "柚子果肉",
+        "kcalPerUnit": 0.38,
+        "unit": "克"
+      },
+      {
+        "name": "小粒干西米",
+        "kcalPerUnit": 3.58,
+        "unit": "克"
+      },
+      {
+        "name": "无糖椰浆",
+        "kcalPerUnit": 1.9,
+        "unit": "毫升"
+      },
+      {
+        "name": "饮用水",
+        "kcalPerUnit": 0,
+        "unit": "毫升"
+      },
+      {
+        "name": "细砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      }
+    ],
+    "additionalSource": "https://omnivorescookbook.com/mango-sago/"
+  },
+  "dessert-hanami-dango": {
+    "title": "三色花见团子",
+    "publisher": "Just One Cookbook",
+    "url": "https://www.justonecookbook.com/hanami-dango/",
+    "rating": 4.8,
+    "ratingCount": 34,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "用冻干草莓粉为粉团着色；采用短粒粳米粉、糯米粉的混合煮制思路。",
+    "activeMinutes": 30,
+    "totalMinutes": 40,
+    "energyBasis": [
+      {
+        "name": "糯米粉",
+        "kcalPerUnit": 3.61,
+        "unit": "克"
+      },
+      {
+        "name": "粘米粉",
+        "kcalPerUnit": 3.66,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      },
+      {
+        "name": "温饮用水",
+        "kcalPerUnit": 0,
+        "unit": "毫升"
+      },
+      {
+        "name": "冻干草莓粉",
+        "kcalPerUnit": 3.5,
+        "unit": "克"
+      },
+      {
+        "name": "抹茶粉",
+        "kcalPerUnit": 3.2,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-dorayaki": {
+    "title": "红豆铜锣烧",
+    "publisher": "Just One Cookbook",
+    "url": "https://www.justonecookbook.com/dorayaki-japanese-red-bean-pancake/",
+    "rating": 4.7,
+    "ratingCount": 210,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "采用预制熟红豆沙和小份蜂蜜面糊，按本配方重算用量和热量。",
+    "activeMinutes": 25,
+    "totalMinutes": 45,
+    "energyBasis": [
+      {
+        "name": "低筋小麦粉",
+        "kcalPerUnit": 3.64,
+        "unit": "克"
+      },
+      {
+        "name": "去壳鸡蛋",
+        "kcalPerUnit": 1.44,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      },
+      {
+        "name": "蜂蜜",
+        "kcalPerUnit": 3.04,
+        "unit": "克"
+      },
+      {
+        "name": "泡打粉",
+        "kcalPerUnit": 0.53,
+        "unit": "克"
+      },
+      {
+        "name": "饮用水",
+        "kcalPerUnit": 0,
+        "unit": "毫升"
+      },
+      {
+        "name": "玉米油",
+        "kcalPerUnit": 8.84,
+        "unit": "克"
+      },
+      {
+        "name": "熟红豆沙（红豆、糖）",
+        "kcalPerUnit": 2.4,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-eton-mess": {
+    "title": "草莓伊顿杯",
+    "publisher": "Good Food",
+    "url": "https://www.bbcgoodfood.com/recipes/eton-mess",
+    "rating": 4.5,
+    "ratingCount": 49,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "本站采用成品烤蛋白霜，缩短至 15 分钟；公开评分来自原站自制蛋白霜版本。",
+    "activeMinutes": 15,
+    "totalMinutes": 15,
+    "energyBasis": [
+      {
+        "name": "草莓",
+        "kcalPerUnit": 0.32,
+        "unit": "克"
+      },
+      {
+        "name": "冷藏淡奶油（脂肪约35%）",
+        "kcalPerUnit": 3.4,
+        "unit": "毫升"
+      },
+      {
+        "name": "成品蛋白霜糖（蛋清、糖）",
+        "kcalPerUnit": 3.75,
+        "unit": "克"
+      },
+      {
+        "name": "糖粉",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-lemon-posset": {
+    "title": "柠檬奶油凝露",
+    "publisher": "Good Food",
+    "url": "https://www.bbcgoodfood.com/recipes/lemon-posset-sugared-almond-shortbread",
+    "rating": 4.9,
+    "ratingCount": 103,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "仅参考柠檬凝露部分，不添加原作配套的杏仁饼干。",
+    "activeMinutes": 15,
+    "totalMinutes": 230,
+    "energyBasis": [
+      {
+        "name": "淡奶油（乳脂至少35%）",
+        "kcalPerUnit": 3.4,
+        "unit": "毫升"
+      },
+      {
+        "name": "细砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      },
+      {
+        "name": "鲜榨柠檬汁",
+        "kcalPerUnit": 0.22,
+        "unit": "毫升"
+      },
+      {
+        "name": "柠檬皮屑（黄色部分）",
+        "kcalPerUnit": 0.47,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-apple-crumble": {
+    "title": "肉桂苹果酥粒",
+    "publisher": "Allrecipes",
+    "url": "https://www.allrecipes.com/recipe/12409/apple-crisp-ii/",
+    "rating": 4.8,
+    "ratingCount": 7929,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "为小烤皿调整用量，按实际规格加入柠檬汁、冷黄油燕麦酥粒。",
+    "activeMinutes": 15,
+    "totalMinutes": 65,
+    "energyBasis": [
+      {
+        "name": "去核苹果果肉",
+        "kcalPerUnit": 0.52,
+        "unit": "克"
+      },
+      {
+        "name": "原味燕麦片",
+        "kcalPerUnit": 3.79,
+        "unit": "克"
+      },
+      {
+        "name": "中筋小麦粉",
+        "kcalPerUnit": 3.64,
+        "unit": "克"
+      },
+      {
+        "name": "冷藏无盐黄油",
+        "kcalPerUnit": 7.17,
+        "unit": "克"
+      },
+      {
+        "name": "红糖",
+        "kcalPerUnit": 3.8,
+        "unit": "克"
+      },
+      {
+        "name": "肉桂粉",
+        "kcalPerUnit": 2.47,
+        "unit": "克"
+      },
+      {
+        "name": "柠檬汁",
+        "kcalPerUnit": 0.22,
+        "unit": "毫升"
+      }
+    ]
+  },
+  "dessert-cocoa-mug-cake": {
+    "title": "可可马克杯蛋糕",
+    "publisher": "Allrecipes",
+    "url": "https://www.allrecipes.com/recipe/241038/microwave-chocolate-mug-cake/",
+    "rating": 4.6,
+    "ratingCount": 2491,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "不加蛋、不加小苏打与坚果，采用少量泡打粉，提供逐杯微波与中心熟度检查。",
+    "activeMinutes": 5,
+    "totalMinutes": 10,
+    "energyBasis": [
+      {
+        "name": "中筋小麦粉",
+        "kcalPerUnit": 3.64,
+        "unit": "克"
+      },
+      {
+        "name": "无糖可可粉",
+        "kcalPerUnit": 2.28,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      },
+      {
+        "name": "无铝泡打粉",
+        "kcalPerUnit": 0.53,
+        "unit": "克"
+      },
+      {
+        "name": "全脂牛奶",
+        "kcalPerUnit": 0.61,
+        "unit": "毫升"
+      },
+      {
+        "name": "玉米油",
+        "kcalPerUnit": 8.84,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-coconut-macaroon": {
+    "title": "金边椰蓉球",
+    "publisher": "Sally’s Baking",
+    "url": "https://sallysbakingaddiction.com/coconut-macaroons/",
+    "rating": 4.6,
+    "ratingCount": 83,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "改用无糖干椰蓉与普通砂糖，不蘸巧克力，也不使用杏仁香精。",
+    "activeMinutes": 15,
+    "totalMinutes": 50,
+    "energyBasis": [
+      {
+        "name": "无糖干椰蓉",
+        "kcalPerUnit": 6.6,
+        "unit": "克"
+      },
+      {
+        "name": "蛋清",
+        "kcalPerUnit": 0.52,
+        "unit": "克"
+      },
+      {
+        "name": "细砂糖",
+        "kcalPerUnit": 4,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-strawberry-yogurt-bark": {
+    "title": "草莓酸奶冰片",
+    "publisher": "Feel Good Foodie",
+    "url": "https://feelgoodfoodie.net/recipe/frozen-yogurt-bark/",
+    "rating": 5,
+    "ratingCount": 1356,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "配料缩减为原味过滤酸奶、草莓及枫糖浆。",
+    "activeMinutes": 10,
+    "totalMinutes": 250,
+    "energyBasis": [
+      {
+        "name": "原味全脂过滤酸奶",
+        "kcalPerUnit": 0.97,
+        "unit": "克"
+      },
+      {
+        "name": "草莓",
+        "kcalPerUnit": 0.32,
+        "unit": "克"
+      },
+      {
+        "name": "枫糖浆",
+        "kcalPerUnit": 2.6,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-banana-oat-cookie": {
+    "title": "香蕉燕麦软饼",
+    "publisher": "Skinnytaste",
+    "url": "https://www.skinnytaste.com/healthy-cookies/",
+    "rating": 4.7,
+    "ratingCount": 262,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "基础香蕉燕麦饼用黑巧克力豆替换原配方的核桃，按本站配料重算热量。",
+    "activeMinutes": 10,
+    "totalMinutes": 35,
+    "energyBasis": [
+      {
+        "name": "去皮熟香蕉",
+        "kcalPerUnit": 0.89,
+        "unit": "克"
+      },
+      {
+        "name": "原味快熟燕麦片",
+        "kcalPerUnit": 3.79,
+        "unit": "克"
+      },
+      {
+        "name": "无奶黑巧克力豆（含大豆卵磷脂）",
+        "kcalPerUnit": 5.5,
+        "unit": "克"
+      }
+    ]
+  },
+  "dessert-brigadeiro": {
+    "title": "巴西可可炼乳球",
+    "publisher": "Allrecipes",
+    "url": "https://www.allrecipes.com/recipe/24052/brigadeiro/",
+    "rating": 4.6,
+    "ratingCount": 356,
+    "scale": 5,
+    "checked": "2026-11-26",
+    "adaptation": "使用小锅的半罐配方，补上浅盘降温、冷藏和巧克力米装饰。",
+    "activeMinutes": 25,
+    "totalMinutes": 100,
+    "energyBasis": [
+      {
+        "name": "甜炼乳",
+        "kcalPerUnit": 3.21,
+        "unit": "克"
+      },
+      {
+        "name": "无糖可可粉",
+        "kcalPerUnit": 2.28,
+        "unit": "克"
+      },
+      {
+        "name": "无盐黄油",
+        "kcalPerUnit": 7.17,
+        "unit": "克"
+      },
+      {
+        "name": "巧克力米（含大豆卵磷脂）",
+        "kcalPerUnit": 4.8,
+        "unit": "克"
+      }
+    ]
+  }
+}
