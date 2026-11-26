@@ -55,3 +55,18 @@ export const votes = sqliteTable("kitchen_votes", {
   optionId: text("option_id").notNull(),
   updatedAt: text("updated_at").notNull(),
 }, (table) => [primaryKey({ columns: [table.pollId, table.userId] })]);
+
+export const pitfalls = sqliteTable("kitchen_pitfalls", {
+  recipeId: text("recipe_id").notNull(),
+  userId: text("user_id").notNull(),
+  topic: text("topic").notNull(),
+  updatedAt: text("updated_at").notNull(),
+}, table => [primaryKey({columns:[table.recipeId,table.userId,table.topic]})]);
+
+export const plannerState = sqliteTable("kitchen_planner_state", {
+  userId: text("user_id").notNull(),
+  section: text("section").notNull(),
+  data: text("data").notNull(),
+  revision: integer("revision").notNull(),
+  updatedAt: text("updated_at").notNull(),
+}, table => [primaryKey({columns:[table.userId,table.section]})]);

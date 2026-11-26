@@ -1,0 +1,72 @@
+{
+  "set": "holdout.tsv",
+  "total": 64,
+  "correct": 57,
+  "counts": {
+    "糊焦": {
+      "correct": 6,
+      "total": 8
+    },
+    "过咸": {
+      "correct": 8,
+      "total": 8
+    },
+    "夹生": {
+      "correct": 8,
+      "total": 8
+    },
+    "过熟干柴": {
+      "correct": 5,
+      "total": 8
+    },
+    "不成型或分离": {
+      "correct": 6,
+      "total": 8
+    },
+    "成品成功": {
+      "correct": 8,
+      "total": 8
+    },
+    "拒判": {
+      "correct": 16,
+      "total": 16
+    }
+  },
+  "errors": [
+    {
+      "expected": "糊焦",
+      "actual": "拒判",
+      "outcome": "鸡翅上色过了头，锅底那层发黑发苦。"
+    },
+    {
+      "expected": "糊焦",
+      "actual": "拒判",
+      "outcome": "中途去拿盘子，葱油直接冒出焦糊味。"
+    },
+    {
+      "expected": "过熟干柴",
+      "actual": "拒判",
+      "outcome": "蘑菇片烤得干巴巴，挤不出水分。"
+    },
+    {
+      "expected": "过熟干柴",
+      "actual": "拒判",
+      "outcome": "嚼鸡胸的时候像在吃干木屑。"
+    },
+    {
+      "expected": "过熟干柴",
+      "actual": "拒判",
+      "outcome": "牛排煎过火，里面又干又硬。"
+    },
+    {
+      "expected": "不成型或分离",
+      "actual": "拒判",
+      "outcome": "丸子下水一煮，全都散开。"
+    },
+    {
+      "expected": "不成型或分离",
+      "actual": "拒判",
+      "outcome": "脱模一扣，糕直接塌成一团。"
+    }
+  ]
+}

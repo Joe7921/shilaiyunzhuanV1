@@ -1,0 +1,69 @@
+/** Browser-only six-class logistic regression. Generated from corpus.txt with train.py. */
+type LinearModel = {labels: string[], intercept: number[], features: Record<string, number[]>}
+const model: LinearModel = /*TRAINED_MODEL*/
+export type CookIssuePrediction = {label: string | null, advice: string, basis: string}
+
+const tips: Record<string, string> = {
+  '糊焦': '先关小火，把上层未焦的部分盛到干净的锅里，别刮锅底。下一锅炒香葱蒜时用中小火，上色后尽快加入其他食材。',
+  '过咸': '汤汁可以先取出一部分，再用无盐清汤或水分次补回。干菜可搭配不加盐的同种食材；下次把盐分两次放，在收汁后尝味。',
+  '夹生': '先暂停食用。米饭可沿锅边补少量热水，盖好继续焖；肉、蛋或鱼则继续加热，按对应菜谱核实熟度，肉类用食品温度计确认。',
+  '过熟干柴': '这次可以切薄片搭配无盐汤汁。下次减小单块厚度的差异、缩短保温时间，在安全熟度范围内及时离火。',
+  '不成型或分离': '若是饼或丸子，下次先用一小份试煎或试煮，待底部定形再翻。若是油水分离的酱汁，先离火，再少量分次补液、搅拌。',
+  '成品成功': '记下这次的用量、切块大小和出锅时机。下回想调整口感时，只改一个条件，比较起来更清楚。'
+}
+const abstain = (reason: string): CookIssuePrediction => ({
+  label:null, advice:'写下一条实际观察，例如翻面时的状态、切开后的样子，或尝过之后的咸淡。',basis:reason
+})
+const cues = /焦|煳|烧糊|烤糊|炒糊|煎糊|糊底|糊锅|糊了|黑渣|煎黑|烤黑|咸|齁|盐味|盐.{0,3}(?:多|过量)|夹生|硬[芯心]|白芯|生粉|生面|不够熟|不熟|半熟|没.{0,3}(?:透|熟)|还是生的|生生的|发柴|干柴|太柴|好柴|柴得|很柴|干硬|干巴巴|太干|太老|发干|炒老|煮老|火候老|过熟|过火|干又硬|又干又|没.{0,2}汁水|木柴|木屑|锯末|咬不[动烂]|分离|分层|两层|分开|不成[型形团]|不.{0,1}凝|没.{0,3}(?:凝|定型)|散[开架碎了掉]|就散|就碎|塌|垮|团不起来|成不了形|好吃|喜欢|可口|成功|好评|光盘|吃光|满意|刚好|刚刚好|正好|正合|合胃口|很棒|很赞|酥脆|多汁/
+const question = /[?？]|怎么(?:办|避免|防止|判断|知道|看出)|如何|是不是|会不会|熟不熟|要不要|能不能|分不出|没法分|看不出|没(?:有)?(?:开(?:始|火)|动锅|试过|尝过|尝|吃过)|还没吃/
+const hypothetic = /害怕|怕.{0,3}(?:糊|焦|夹生|咸|干|老|散)|担心|如果|假如|万一|以为|怀疑|估计|说不定|可能(?:会|要)|预防|避免|希望|下次|下回|下一锅|打算|应该不|不要(?:太|煮|炒|烤)/
+const offTopic = /照片|图片|体温|过敏|身体|嗓子痛|肚子疼|皮肤|心慌|难呼吸|腹泻|呕吐|过期|异味|发霉/
+const negative = /(?:并没有|也没有|并不|算不上|谈不上|称不上|不是|一点(?:儿)?(?:都|也)?不|未曾|没有|不曾|没|不|未)(?:有|算|怎么说得上|觉得|觉得很|那么|怎么|再|再那么|太|特别|明显|很|很明显(?:的)?|变得|炒|烤|烧|蒸|煎|煮){0,3}(?:好吃|满意|成功|合胃口|可口|多汁|正好|刚好|油水分离|过咸|夹生|烧焦|烧糊|糊锅|发柴|过熟|发干|变干|变老|太干|熟过头|散开|塌陷|焦黑|焦味|[咸糊焦煳柴干老散塌碎苦])(?:了|味)?/g
+const normal = (s:string) => s.normalize('NFKC').toLowerCase().trim().slice(0,1000)
+const split = /[，,。.!！；;\n、]|不过|可是|但是|结果|却|但/
+
+function classify(text: string) {
+  const scores = model.intercept.map(v=>v / 100)
+  const seen = new Set<string>()
+  const chars=Array.from(text.replace(/\s+/g,''))
+  let multiHits=0
+  for (let pos=0; pos<chars.length; pos++) {
+    for (let length=1; length<=3 && pos+length<=chars.length; length++) {
+      const token=chars.slice(pos,pos+length).join('')
+      if (seen.has(token)) continue
+      seen.add(token)
+      const ws=model.features[token]
+      if (!ws) continue
+      if (length>1) multiHits++
+      for (let k=0; k<scores.length; k++) scores[k]+=ws[k]/100
+    }
+  }
+  const rank=scores.map((score,i)=>({score,i})).sort((a,b)=>b.score-a.score)
+  const margin=rank[0].score-rank[1].score
+  return {label:model.labels[rank[0].i],margin,multiHits}
+}
+
+export function predictCookIssue(method:string,outcome:string): CookIssuePrediction {
+  const result=normal(outcome||'')
+  if (!result || offTopic.test(result) || question.test(result)) return abstain('缺少可判定的文字结果，或输入超出家常做菜成品分类。')
+  const observations=result.split(split).map(s=>s.trim()).filter(Boolean)
+  const candidates=new Map<string,{margin:number,clause:string}>()
+  for (const clause of observations) {
+    if (hypothetic.test(clause)) continue
+    const evidence=clause.replace(negative,' ').trim()
+    if (!evidence || !cues.test(evidence)) continue
+    const vote=classify(evidence)
+    if (vote.margin<0.60 || vote.multiHits<1) continue
+    const previous=candidates.get(vote.label)
+    if (!previous || previous.margin<vote.margin) candidates.set(vote.label,{margin:vote.margin,clause})
+  }
+  // In a mixed recap a concrete problem takes precedence over a generic compliment.
+  if (candidates.size>1) candidates.delete('成品成功')
+  if (candidates.size!==1) return abstain(candidates.size?'同时读到几种现象，请先描述最想复盘的一种。':'现有文字没有足够证据归入六个成品类别。')
+  const [label,hit]=[...candidates][0]
+  let advice=tips[label]
+  const context=normal(method||'')
+  if(label==='糊焦' && /烤箱|烘烤|空气炸锅/.test(context)) advice='先暂停加热并检查受焦的部分。下回把食物移离上方热源，在预计出炉前提前查看颜色，记下本次上色的用时。'
+  if(label==='不成型或分离' && /酱|乳化|搅打/.test(hit.clause)) advice='先暂停加热，让酱液温度回落。另取一只碗，用少量原配方的水相打底，再把分离的酱液细细加入并搅匀。'
+  return {label,advice,basis:'本地文字模型依据「'+hit.clause.slice(0,60)+'」作出判断。'}
+}

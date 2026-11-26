@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { Heart, Clock3, Users, ChefHat, Minus, Plus, Check, Camera, Flame } from 'lucide-react';
 import type { Recipe } from '@/lib/recipes';
 import { FoodImage } from './ui';
+import {RecipePitfalls} from './planner/pitfalls';
 
-export default function RecipeDetail({ recipe, favorite, onFavorite, onRecord, onAlternative }: { recipe: Recipe; favorite: boolean; onFavorite: () => void; onRecord: () => void; onAlternative: (id:string)=>void }) {
+export default function RecipeDetail({ recipe, restricted, favorite, onFavorite, onRecord, onAlternative }: { recipe: Recipe; restricted:boolean; favorite: boolean; onFavorite: () => void; onRecord: () => void; onAlternative: (id:string)=>void }) {
   const [servings, setServings] = useState(recipe.servings);
   const [steps, setSteps] = useState<number[]>([]);
   const factor = servings / recipe.servings;
@@ -21,6 +22,7 @@ export default function RecipeDetail({ recipe, favorite, onFavorite, onRecord, o
     <div className="cooking-heading"><h3>跟着做，好吃不慌张</h3><span>{steps.length} / {recipe.steps.length} 步</span></div><div className="step-progress"><span style={{width: steps.length / recipe.steps.length * 100 + '%'}}/></div>
     <ol className="cooking-steps">{recipe.steps.map((step, i) => <li key={i} className={steps.includes(i) ? 'step-done' : ''}><button className="step-check" onClick={() => setSteps(s => s.includes(i) ? s.filter(n => n !== i) : [...s, i])} aria-label={(steps.includes(i) ? '取消完成' : '完成') + '第' + (i + 1) + '步'} aria-pressed={steps.includes(i)}>{steps.includes(i) ? <Check size={18}/> : i + 1}</button><p>{step}</p></li>)}</ol>
     <div className="chef-tip"><ChefHat size={23}/><div><strong>小厨房悄悄话</strong><p>{recipe.tip}</p></div></div>
+    <RecipePitfalls recipe={recipe} restricted={restricted}/>
     <p className="muted calorie-note">{recipe.kcalBasis || '热量按整份原料和用油粗估，再按人数均分。实际会随品牌、用量和烹饪方式变化。'}</p>
     <button className="primary-button full-width" onClick={onRecord}><Camera size={19}/>{steps.length === recipe.steps.length ? '做好啦！记录这一餐' : '记录我的这一餐'}</button>
   </div>;
