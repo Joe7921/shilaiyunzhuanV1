@@ -29,7 +29,8 @@
       ]
     ],
     "lights": [],
-    "visibleWindowFraction": 0.2343
+    "visibleWindowFraction": 0.2343,
+    "file": "everyday.webp"
   },
   "christmas": {
     "window": {
@@ -130,7 +131,8 @@
         239
       ]
     ],
-    "visibleWindowFraction": 0.2048
+    "visibleWindowFraction": 0.2059,
+    "file": "christmas-gingerbread.webp"
   },
   "lunar": {
     "window": {
@@ -191,6 +193,7 @@
         54
       ]
     ],
-    "visibleWindowFraction": 0.2328
+    "visibleWindowFraction": 0.2329,
+    "file": "lunar-dumplings.webp"
   }
 }

@@ -14,9 +14,9 @@
     "externalStock": false
   },
   {
-    "file": "midautumn.webp",
+    "file": "midautumn-mooncakes.webp",
     "title": "兔灯下的团圆月饼",
-    "alt": "桂花与兔子灯点亮中秋厨房，圆脸小猫压着月饼木模，小鸭端起茶杯。",
+    "alt": "桂花与兔子灯装点着团圆桌，橘猫双爪压月饼模，小鸭举着一杯桂花茶。",
     "source": "OpenAI ImageGen，为食来运转创作的原创节日厨房插画",
     "usage": "本项目内作为品牌场景使用，已保留透明窗洞并压缩为 WebP",
     "mediaType": "image/webp",
@@ -24,7 +24,7 @@
       1586,
       992
     ],
-    "sha256": "bdb431d564852520e6a14bb5e153d0178636c1fe1b64ae1384d65b3ccf186df2",
+    "sha256": "77e2e7fb26009960bb5f9fee9413a7fe637c6530233a120136175636c53637ce",
     "externalStock": false
   },
   {

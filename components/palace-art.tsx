@@ -6,12 +6,12 @@ import {seasons,skies,type Season,type Festival,type Sky} from '@/lib/palace';
 
 const descriptions={
   dragonboat:'橘猫和小鸭在粽叶旁包粽子，桌边摆着龙舟装饰',
-  midautumn:'月饼和桂花装点着团圆餐桌，兔子灯映着橘猫的笑脸',
+  midautumn:'兔子灯旁，橘猫双爪压月饼模，小鸭举着桂花茶',
   qixi:'蓝粉丝带和鹊鸟围着双人晚餐，橘猫把草莓甜点端上桌',
   halloween:'南瓜灯围着温暖的厨房，橘猫和小鸭忙着招待万圣节客人',
   everyday:'玫瑰色窗帘下，橘猫正给小鸭盛南瓜汤',
-  christmas:'一棵挂满彩灯的大圣诞树，树下堆着礼物，桌上摆着姜饼',
-  lunar:'两盏大红灯笼照着团圆饭桌，家人们在蒸鱼旁包饺子',
+  christmas:'挂满彩灯的圣诞树旁，小橘猫双爪推着擀面杖做姜饼',
+  lunar:'两盏大红灯笼下，小橘猫双爪捏着一只饺子，小鸭守着年夜饭',
 };
 
 function Firework({x,y,color,delay}:{x:number;y:number;color:string;delay:number}) {
@@ -40,8 +40,8 @@ export default function PalaceArt({season,theme,sky,night,fire,fireworks}:{seaso
   const id=useId().replace(/[^a-z0-9_-]/gi,'');
   const ref=(key:string)=>'url(#'+id+'-'+key+')';
   const room=theme==='plain'?'everyday':theme;
-  const {window:win,flame,lights,steam}=({...scenes,...holiday})[room];
-  const face=room==='everyday'||room==='lunar'||room==='christmas'?kitten[room]:null;
+  const {window:win,flame,lights,steam,file}=({...scenes,...holiday})[room];
+  const face=room==='everyday'?kitten.everyday:null;
   return <figure className="palace-art" data-season={season} data-theme={theme} data-sky={sky} data-night={night} data-fire={fire} data-fireworks={fireworks}>
     <svg viewBox="0 0 1000 625" role="img" aria-label={seasons[season]+'季的城堡厨房，'+descriptions[room]+'。窗外'+skies[sky]+(night?'夜':'天')+(fire?'，壁炉正燃烧':'')+(fireworks?'，天空绽放烟花':'')}>
       <defs>
@@ -55,7 +55,7 @@ export default function PalaceArt({season,theme,sky,night,fire,fireworks}:{seaso
         <Atmosphere season={season} sky={sky} night={night}/>
         {fireworks&&<><Firework x={125} y={101} color="#ffdd9e" delay={0}/><Firework x={292} y={76} color="#ffc5d7" delay={-2.1}/></>}
       </svg>
-      <image href={'/images/palace/'+room+'.webp'} width="1000" height="625" preserveAspectRatio="none"/>
+      <image href={'/images/palace/'+file} width="1000" height="625" preserveAspectRatio="none"/>
       {face&&<image href={'/images/palace/'+face.file} x={face.x} y={face.y} width={face.width} height={face.height} preserveAspectRatio="none"/>}
       {night&&<rect width="1000" height="625" fill="#684655" opacity=".085"/>}
       {lights.map(([x,y],i)=><g key={i} className="palace-fairy-light" style={{animationDelay:-(i%6)*.64+'s'}}><circle cx={x} cy={y} r={room==='lunar'?12:7} fill={ref('glow')}/><circle cx={x} cy={y} r="1.45" fill="#fff4bc"/></g>)}

@@ -63,9 +63,9 @@ test('all twelve researched desserts and four new kitchens have verified unique 
  const geo=JSON.parse(await readFile('lib/palace-holidays.json','utf8'));
  const credits=JSON.parse(await readFile('docs/sources/festival-kitchens.json','utf8'));
  assert.equal(credits.length,4);
- for(const [name,g] of Object.entries(geo)){
+ for(const g of Object.values(geo)){
    assert(g.aperture.width>=500&&g.flame.x>g.aperture.x+g.aperture.width);
-   const bytes=await readFile('public/images/palace/'+name+'.webp');assert(bytes.includes(Buffer.from('ALPH')));
-   assert.equal(createHash('sha256').update(bytes).digest('hex'),credits.find(x=>x.file===name+'.webp').sha256);
+   const bytes=await readFile('public/images/palace/'+g.file);assert(bytes.includes(Buffer.from('ALPH')));
+   assert.equal(createHash('sha256').update(bytes).digest('hex'),credits.find(x=>x.file===g.file).sha256);
  }
 });

@@ -13,29 +13,29 @@
     "externalStock": false
   },
   {
-    "file": "christmas.webp",
+    "file": "christmas-gingerbread.webp",
     "title": "圣诞厨房的姜饼餐桌",
-    "alt": "落地圣诞树缀满小灯，树下堆着礼物，橘猫和小鸭在餐桌上准备姜饼。",
+    "alt": "圣诞树旁，圆脸橘猫用两只前爪推着擀面杖，把姜饼面团擀平。",
     "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
     "mediaType": "image/webp",
     "dimensions": [
       1586,
       992
     ],
-    "sha256": "3e18c7e4308cd323729d955fc16b3625915e64e31d92dca3577957dcfeb1bbf4",
+    "sha256": "4a108225c80f864f8e00af909a32f2b6119a03a013e9c536d05d9ee8d10da2af",
     "externalStock": false
   },
   {
-    "file": "lunar.webp",
+    "file": "lunar-dumplings.webp",
     "title": "新春厨房的团圆饭",
-    "alt": "两盏大红灯笼映着梅枝和金桔，橘猫和小鸭在蒸鱼、饺子与笼屉旁预备年夜饭。",
+    "alt": "大红灯笼下，穿红背心的小橘猫用两只前爪捏好一只饺子，小鸭守着年夜饭。",
     "source": "OpenAI ImageGen，为食来运转生成的原创品牌场景",
     "mediaType": "image/webp",
     "dimensions": [
       1586,
       992
     ],
-    "sha256": "a5adcafd96e2fac63492161bb0cf98d879260293c74c2129415d27164104b545",
+    "sha256": "b409ad030f62ee277caba8c526f3a6cbb11b69b1100991e3bfe50b232eddfe25",
     "externalStock": false
   }
 ]

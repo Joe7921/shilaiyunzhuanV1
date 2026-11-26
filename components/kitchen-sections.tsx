@@ -38,7 +38,7 @@ export function Home({day,birthday,pool,renderCard,go,tool,onOpen,onPhoto}:{day:
     <section className="editor-picks"><div className="sectitle"><div><p className="overline"><ChefHat size={15}/> 厨房手记</p><h2>今天端上桌</h2></div><button className="flat-button" onClick={()=>go('recipes')}>浏览全部 {recipes.length} 道 <BookOpen size={16}/></button></div><div className="paper-tabs">{['编辑精选','半小时开饭','一碗热汤','饭后甜点'].map(f=><button className={filter===f?'active':''} key={f} onClick={()=>setFilter(f)}>{f}</button>)}</div>
     {featured.length?<div className="recipe-grid">{featured.map(renderCard)}</div>:<Empty title="这个栏目暂时没有匹配的菜" text="可以看看其他分类，或调整选菜偏好。"/>}</section>
     <div className="paper-spread">{seasonal[0]&&<button onClick={()=>go('season')}><FoodImage recipe={seasonal[0]}/><span><small>四季食养馆</small><b>给自己煲一锅汤</b></span></button>}{feature&&near&&<button onClick={()=>go('calendar')}><FoodImage recipe={feature}/><span><small>{near.date.slice(5)} · {near.name}</small><b>{feature.title}</b></span></button>}</div>
-    <section className="other-tools"><h2>饭后玩一会儿</h2><div><button onClick={()=>tool('fortune')}><ScrollText/>今日美食抽签</button><button onClick={()=>tool('personality')}><Flower2/>五题美食人格</button><button onClick={()=>go('community')}><Users/>逛逛小饭圈</button><button onClick={()=>tool('preferences')}><SlidersHorizontal/>我的选菜偏好</button></div></section>
+    <section className="other-tools"><h2>饭后玩一会儿</h2><div><button onClick={()=>tool('fortune')}><ScrollText/>今日美食抽签</button><button onClick={()=>tool('personality')}><Flower2/>美食人格测试</button><button onClick={()=>go('community')}><Users/>逛逛小饭圈</button><button onClick={()=>tool('preferences')}><SlidersHorizontal/>我的选菜偏好</button></div></section>
   </div>;
 }
 function matchesSearch(r:Recipe,s:string){

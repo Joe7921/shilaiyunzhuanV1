@@ -35,3 +35,16 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 @media(max-width:620px){.cover-copy{background:#fbeae3}.cover h1 br{display:none}.cover h1{font-size:clamp(28px,6.8vw,37px)}.cover-links{margin-top:13px;gap:10px}.hero-fortune{min-height:40px;padding:7px 10px;font-size:14px}.discovery-strip button{gap:8px;padding-inline:7px}}
 
 .meal-workflow{border:0;padding:0;margin:0;min-width:0}.scan-bar{display:flex;gap:.7rem;margin:.7rem 0}.meal-confirm{margin:1rem 0;padding:1rem;background:#fff9f0;border:1px solid #ebd9c9;border-radius:10px}.meal-confirm h3{font-size:1.08rem;margin:0 0 .8rem}.meal-search,.meal-select{display:block;margin:.65rem 0;font-size:.92rem;font-weight:650}.meal-search svg{vertical-align:middle}.meal-select select,.meal-search input{display:block;width:100%;margin-top:.3rem}.dish-candidates{border-left:3px solid #c88a7d;padding-left:.8rem}.dish-candidates p{margin:.4rem 0}.dish-candidates small,.meal-confirm small{display:block;font-size:.82rem;color:#655858}.meal-chips{display:flex;gap:.4rem;flex-wrap:wrap;margin:.38rem 0}.meal-chips button{padding:.38rem .63rem;border:1px solid #cdaea2;background:#fffdf9;border-radius:6px}.meal-lines{padding:0;list-style:none;margin:.65rem 0}.meal-lines li{padding:.6rem .1rem;border-bottom:1px solid #e4d5c5}.meal-line-name{display:flex;align-items:center;justify-content:space-between}.meal-line-name button{font-weight:650}.meal-line-name [aria-pressed=true]{color:#87505f}.measure-field{display:flex;align-items:center;gap:.5rem;margin:.5rem 0}.measure-field input{width:6em;padding:.35rem;border:1px solid #cfb8a8;background:white;border-radius:5px}.confirm-meal{margin:.5rem 0;display:flex}.meal-result{padding:.8rem;background:#edf4e8;margin-top:.4rem;border-radius:6px}.meal-result strong{font-size:1.12rem}.meal-result small,.meal-ledger p{margin:.3rem 0}.meal-ledger{margin:.7rem 0}.meal-confirm a{text-decoration:underline}
+
+.taste-report .taste-chapter{text-align:left;padding:1.15rem 0;border-top:1px solid #ecdbd5;margin-top:.9rem}
+.taste-report .taste-chapter h4{display:flex;align-items:center;gap:.55rem;color:#69495b;font-size:1.05rem;margin:0 0 .65rem}
+.taste-report .taste-chapter>p,.taste-report .balance-notes li p{line-height:1.8;margin:.35rem 0;font-size:1rem;color:#534b47}
+.taste-report .balance-notes ul{margin:0;padding:0;list-style:none}
+.taste-report .balance-notes li{border-left:3px solid #c7d7bd;padding-left:.8rem;margin:.85rem 0 1rem}
+.taste-report .balance-notes strong{font-size:.9rem;color:#51644e}
+.taste-report .balance-notes a{font-size:.85rem;color:#67516c;text-decoration:underline}
+.taste-report .personality-recipe{display:grid;grid-template-columns:58px minmax(0,1fr) 18px;gap:.65rem;align-items:center;width:100%;min-width:0;text-align:left}
+.taste-report .personality-recipe>img{width:58px;height:58px;object-fit:cover;border-radius:.55rem}
+.taste-report .personality-recipe span{min-width:0}
+.taste-report .personality-recipe small{line-height:1.45;margin-top:.16rem}
+.quiz-question legend:focus,.taste-report h3:focus{outline:none}

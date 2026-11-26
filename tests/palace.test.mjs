@@ -40,9 +40,9 @@ test('three full holiday kitchens have wide windows, separate illustrations, and
  const geometry=JSON.parse(await readFile('lib/palace-scenes.json','utf8'));
  const credits=JSON.parse(await readFile('docs/sources/palace-v7.json','utf8'));
  const {createHash}=await import('node:crypto');
- for(const [room,layout] of Object.entries(geometry)){
-   const frame=await readFile('public/images/palace/'+room+'.webp');
-   assert.equal(createHash('sha256').update(frame).digest('hex'),credits.find(x=>x.file===room+'.webp').sha256);
+ for(const layout of Object.values(geometry)){
+   const frame=await readFile('public/images/palace/'+layout.file);
+   assert.equal(createHash('sha256').update(frame).digest('hex'),credits.find(x=>x.file===layout.file).sha256);
    assert.ok(frame.includes(Buffer.from('ALPH')));
    assert.ok(layout.window.width>=465&&layout.window.height>=340);
    assert.ok(layout.flame.x>layout.window.x+layout.window.width);

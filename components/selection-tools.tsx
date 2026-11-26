@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Check, Copy, Dice5, RefreshCw, Sparkles, Star, Users, Utensils } from 'lucide-react';
-import { recipes, quizQuestions, personalities, type Recipe } from '@/lib/recipes';
+import { recipes, type Recipe } from '@/lib/recipes';
 import {FoodIcon} from './food-icons';
-import {Sun,Moon,Flower2,Soup,Flame,Leaf,Zap} from 'lucide-react';
+import {Sun,Moon,Flower2} from 'lucide-react';
 import {arrangeWheel} from '@/lib/wheel';
 import { api, hash, type Poll, type User } from '@/lib/client';
 import { Empty, FoodImage } from '@/components/ui';
@@ -114,35 +114,6 @@ export function WheelTool({ candidates, onOpen, onPrefs }: {
     <div className="wheel-options">{options.map((recipe, index) => <span key={recipe.id} className={'wheel-option' + (result?.id === recipe.id ? ' is-selected' : '')}><i style={{ background: fills[index % fills.length] }}>{index + 1}</i>{recipe.title}</span>)}</div>
     {result && <div className="wheel-result" aria-live="polite"><span>转盘替你选好了</span><h3><FoodIcon recipe={result}/> {result.title}</h3><button className="secondary-button" onClick={() => onOpen(result)}>查看这道菜的做法</button></div>}
   </div>;
-}
-
-export function PersonalityTool({ onResult, onOpen, allowedRecipeIds }: {
-  onResult: (id: string) => void;
-  onOpen: (recipe: Recipe) => void;
-  allowedRecipeIds: string[];
-}) {
-  const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<number[]>([]);
-  const [resultId, setResultId] = useState<string | null>(null);
-  const question = quizQuestions[step];
-  const result = personalities.find((personality) => personality.id === resultId);
-  function next() {
-    if (answers[step] === undefined) return;
-    if (step < quizQuestions.length - 1) { setStep(step + 1); return; }
-    const scores = new Map(personalities.map((personality) => [personality.id, 0]));
-    quizQuestions.forEach((item, index) => {
-      const type = item.options[answers[index]]?.type;
-      if (type) scores.set(type, (scores.get(type) || 0) + 1);
-    });
-    // Stable ordering breaks ties, so identical answers always produce the same result.
-    const winner = personalities.reduce((best, item) => (scores.get(item.id) || 0) > (scores.get(best.id) || 0) ? item : best, personalities[0]);
-    setResultId(winner.id); onResult(winner.id);
-  }
-  if (result) {
-    const recommendations = recipes.filter((recipe) => result.recipeIds.includes(recipe.id) && allowedRecipeIds.includes(recipe.id)).slice(0, 3);
-    return <div className="personality-result"><div className="personality-badge" aria-hidden="true">{result.id==='cozy'?<Soup size={45}/>:result.id==='bold'?<Flame size={45}/>:result.id==='fresh'?<Leaf size={45}/>:<Zap size={45}/>}</div><p className="muted">你的美食人格是</p><h3>{result.title}</h3><p className="personality-description">{result.description}</p><div className="personality-tags">{result.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div><div className="personality-recommendations"><h4>适合你的味道</h4>{recommendations.length ? recommendations.map((recipe) => <button className="personality-recipe" key={recipe.id} onClick={() => onOpen(recipe)}><FoodImage recipe={recipe}/><span><strong>{recipe.title}</strong><small>{recipe.time} 分钟 · {recipe.difficulty}</small></span><Utensils size={18}/></button>) : <p className="muted">这类人格推荐的菜暂时不符合你的饮食偏好，可以去菜谱里看看其他选择。</p>}</div><p className="muted personality-note">按你对 5 道题的选择匹配口味，仅作趣味参考，不是心理测评。</p><button className="secondary-button" onClick={() => { setAnswers([]); setStep(0); setResultId(null); }}><RefreshCw size={16}/>重新测一测</button></div>;
-  }
-  return <div className="personality-tool"><div className="quiz-progress-label"><span><Star size={16}/> 寻找你的美食人格</span><span>{step + 1} / {quizQuestions.length}</span></div><progress className="quiz-progress" value={step + 1} max={quizQuestions.length} aria-label={`第 ${step + 1} 题，共 ${quizQuestions.length} 题`}/><fieldset className="quiz-question"><legend>{question.question}</legend><div className="quiz-options">{question.options.map((option, index) => <label key={option.type} className={'quiz-option' + (answers[step] === index ? ' is-selected' : '')}><input type="radio" name={'personality-question-' + step} checked={answers[step] === index} onChange={() => setAnswers((previous) => { const nextAnswers = [...previous]; nextAnswers[step] = index; return nextAnswers; })}/><span className="quiz-option-letter">{String.fromCharCode(65 + index)}</span><span>{option.label}</span>{answers[step] === index && <Check size={18}/>}</label>)}</div></fieldset><div className="quiz-actions"><button className="text-button" disabled={step === 0} onClick={() => setStep(step - 1)}>上一题</button><button className="primary-button" onClick={next} disabled={answers[step] === undefined}>{step === quizQuestions.length - 1 ? '看看我的美食人格' : '下一题'}</button></div></div>;
 }
 
 export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast }: {

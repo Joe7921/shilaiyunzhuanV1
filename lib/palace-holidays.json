@@ -34,7 +34,8 @@
         109
       ]
     ],
-    "visibleWindowFraction": 0.205
+    "visibleWindowFraction": 0.205,
+    "file": "dragonboat.webp"
   },
   "midautumn": {
     "window": {
@@ -57,11 +58,7 @@
     },
     "steam": [
       [
-        479,
-        354
-      ],
-      [
-        599,
+        545,
         357
       ],
       [
@@ -87,7 +84,8 @@
         149
       ]
     ],
-    "visibleWindowFraction": 0.2183
+    "visibleWindowFraction": 0.2187,
+    "file": "midautumn-mooncakes.webp"
   },
   "qixi": {
     "window": {
@@ -140,7 +138,8 @@
         94
       ]
     ],
-    "visibleWindowFraction": 0.2495
+    "visibleWindowFraction": 0.2495,
+    "file": "qixi.webp"
   },
   "halloween": {
     "window": {
@@ -189,6 +188,7 @@
         178
       ]
     ],
-    "visibleWindowFraction": 0.2091
+    "visibleWindowFraction": 0.2091,
+    "file": "halloween.webp"
   }
 }
