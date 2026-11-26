@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 import {Miniflare} from 'miniflare';
 import {readFile} from 'node:fs/promises';
-const entry="export * from './lib/planner/local';export * from './lib/planner/cost';export * from './lib/planner/menu';export * from './lib/planner/coach';export * from './lib/planner/cook-model';export * from './lib/planner/nutrition';export * from './lib/planner/wish';export {recipes} from './lib/recipes';";
+const entry="export * from './lib/planner/local';export * from './lib/planner/season';export * from './lib/planner/cost';export * from './lib/planner/menu';export * from './lib/planner/coach';export * from './lib/planner/cook-model';export * from './lib/planner/nutrition';export * from './lib/planner/wish';export {recipes} from './lib/recipes';";
 const bundle=await build({stdin:{contents:entry,resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',write:false});
 const api=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].contents).toString('base64'));
 const {recipes,buildShoppingList,planMenu,availableStock,periodSummary,assessNutrition,makeWish,assessCook,predictCookIssue,pitfallsFor,cookLevels,seasonalGuide}=api;
@@ -51,4 +51,23 @@ test('additive D1 migration keeps V1 rows, isolates private planner entries and 
  await req('a',path,body);await req('a',path,body);await req('b',path,body);
  const r=await (await req('a',path)).json();assert.deepEqual(r.counts,[{topic:'salt',n:2}]);assert.equal(r.contributors,2);assert.deepEqual(r.mine,['salt']);
  assert.equal((await (await req('a',path,{...body,topics:[]})).json()).contributors,1);
+});
+test('term boundaries, eligible seasonal foods, traditional groups and personal calendar invitations',()=>{
+ assert.equal(api.seasonalContext('2026-11-26').season,'冬');
+ assert.equal(api.seasonalContext('2026-11-26').term.name,'小雪');
+ assert.equal(api.seasonalContext('2026-11-06').season,'秋');
+ assert.equal(api.seasonalContext('2026-11-07').season,'冬');
+ const veg=recipes.filter(r=>assessNutrition(r,['素食']).eligible);
+ for(const group of ['清热','润燥','温补'])assert(api.traditionalDishes(veg,group).every(r=>r.vegetarian&&!r.alcohol));
+ assert.deepEqual(api.seasonalFoods([],'夏'),[]);
+ const cal=api.seasonCalendar('2026-11-26',veg,'https://example.org');
+ assert.equal(cal.count,24);assert.equal((cal.content.match(/BEGIN:VALARM/g)||[]).length,24);
+ assert.equal((cal.content.match(/BEGIN:VEVENT/g)||[]).length,24);
+ assert(cal.content.includes('DTSTART:20261207T090000'));assert(cal.content.split('\r\n').every(line=>Buffer.byteLength(line)<=75));
+ assert.equal(api.seasonCalendar('2026-11-26',[],'https://example.org').count,0);
+});
+test('original recipes and substitutions observe dietary constraints before ranking',()=>{
+ const reviewed=new Set();const w=makeWish({text:'小朋友想吃不上火的清爽小吃',budget:35,people:2,tools:[],avoid:[]},r=>{if(r.allergens.includes('奶')||!r.ingredients.some(i=>i.name.includes('番茄')))return false;reviewed.add(r.id);return true});
+ assert.equal(w.status,'ok');for(const r of w.recipes){assert(reviewed.has(r.id));assert(r.substitutions.every(s=>reviewed.has(s.recipeId)))}
+ assert.equal(makeWish({text:'宿舍无锅',budget:20,people:1,tools:[],avoid:[]},()=>false).status,'unavailable');
 });

@@ -92,9 +92,9 @@ function drafts(people:number):Draft[]{
   return all;
 }
 const themes:Record<string,RegExp>={
-  '开胃':/开胃|胃口|酸香|酸爽/,'清爽':/清爽|清新|解腻|清淡/,'宿舍':/宿舍|寝室/,
+  '开胃':/开胃|胃口|酸香|酸爽/,'清爽':/清爽|清新|解腻|清淡|不上火/,'宿舍':/宿舍|寝室/,
   '免火':/不用火|免火|无火|不开火|不做热食|无锅|没锅|没有锅|不加热|无需加热/,
-  '亲子':/亲子|孩子|小孩|儿童/,'下酒':/下酒|佐酒/,
+  '亲子':/亲子|孩子|小孩|儿童|小朋友/,'下酒':/下酒|佐酒/,
   '素食':/素食|吃素|全素|纯素|无肉|不吃肉|素菜/,'低预算':/低预算|省钱|便宜|预算紧|经济实惠/
 };
 const preferencePatterns:Record<string,RegExp>={
@@ -155,7 +155,7 @@ function recipe(d:Draft,n:number,kitchen:string[]):WishRecipe{
     image:'',aliases:[],cuisine:'原创家常',category:d.category,tastes:d.tastes,seasons:['春','夏','秋','冬'],festivals:[],tools:[appliance],
     vegetarian:true,imageCredit:'原创文字配方，无成品图',kcalBasis:'按原料可食部、所列份量与用油估算整份热量。',estimatedCost:price(d,n),wishTags:d.tags,source:'wish',substitutions:[]};
 }
-export function makeWish(input:WishInput):WishResult {
+export function makeWish(input:WishInput,accept?:(r:WishRecipe)=>boolean):WishResult {
   if(!input||typeof input.text!=='string'||!Array.isArray(input.avoid)||!Array.isArray(input.tools))return fail('请提供愿望、总预算、人数、忌口和可用厨具。');
   const {text,budget,people}=input;
   if(!text.trim())return fail('请写下你想要的口味、食材或做饭场景。');
@@ -212,7 +212,7 @@ export function makeWish(input:WishInput):WishResult {
   const eligible=all.filter(d=>!excluded.has(id(d))&&!excluded.has(d.title)&&!terms.some(k=>restrict(d,k))&&method.has(d.method)
     &&(!electricRiceOnly||d.method!=='pot'||d.family==='congee')
     &&required.every(t=>d.portions.some(([key])=>[foods[key].name,foods[key].short,...foods[key].aliases].some(v=>v.includes(t))))
-    &&asked.every(t=>d.tags.includes(t))&&(!limit||recipe(d,people,appliances).time<=Number(limit[1])));
+    &&(!accept||accept(recipe(d,people,appliances)))&&asked.every(t=>d.tags.includes(t))&&(!limit||recipe(d,people,appliances).time<=Number(limit[1])));
   if(!eligible.length)return fail('现有原创配方无法同时满足'+[...asked,...required,...terms,...appliances,...(limit?[limit[0]]:[])].join('、')+'。请保留过敏与忌口，调整其他条件或选用菜谱库。');
   const affordable=eligible.filter(d=>price(d,people)<=budget);
   if(!affordable.length)return fail('满足这些口味、厨具和忌口的配方，'+people+' 人最低预计 ¥'+Math.min(...eligible.map(d=>price(d,people))).toFixed(2)+'，已高于总预算。');

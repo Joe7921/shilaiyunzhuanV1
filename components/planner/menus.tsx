@@ -6,7 +6,7 @@ import {assessNutrition,type NutritionCondition} from '@/lib/planner/nutrition';
 import {buildShoppingList,estimateRecipe,priceKey,type ShoppingResult,type PriceOverrides} from '@/lib/planner/cost';
 import {planMenu,type MenuMode} from '@/lib/planner/menu';
 import {availableStock,money,amountText,periodSummary,type Constraints} from '@/lib/planner/local';
-import {seasonOf} from '@/lib/astro';
+import {seasonalContext} from '@/lib/planner/season';
 import type {PlannerStore} from './use-planner-data';
 
 function Shopping({list,prices,onPrice}:{list:ShoppingResult;prices:PriceOverrides;onPrice:(key:string,value:string)=>void}){
@@ -19,7 +19,8 @@ export function MenuDesk({kind,conditions,pool,store,today,open}:{kind:'diet'|'p
  const [share,setShare]=useState(false),[copied,setCopied]=useState('');
  const mode:MenuMode=kind==='party'?'party':kind==='saving'?(weekly?'saveWeek':'saveDay'):(weekly?'week':'day');
  const inventory=useMemo(()=>availableStock(store.data.pantry,today),[store.data.pantry,today]);
- const result=useMemo(()=>made?planMenu({mode,people:conditions.people,budget:conditions.budget,inventory,tastes:conditions.tastes,wants,pool,prices,season:seasonOf(today)}):null,[made,mode,conditions,inventory,wants,pool,prices,today]);
+ const nutritionScores=useMemo(()=>Object.fromEntries(pool.map(r=>[r.id,assessNutrition(r,conditions.conditions as NutritionCondition[]).score])),[pool,conditions.conditions]);
+ const result=useMemo(()=>made?planMenu({mode,people:conditions.people,budget:conditions.budget,inventory,tastes:conditions.tastes,wants,pool,prices,season:seasonalContext(today).season,nutritionScores}):null,[made,mode,conditions,inventory,wants,pool,prices,today,nutritionScores]);
  const title=kind==='party'?'饭局菜单':kind==='saving'?'省钱厨房':'我的定制食谱';
  const poster=result?['食来运转 · 今晚一起开饭',conditions.people+' 位入席',...result.serveOrder,'预计食材补购 '+money(result.totalCost),'开席前先做 '+(result.prepOrder[0]||'备料')].join('\n'):'';
  function onPrice(key:string,value:string){setPrices(prev=>{const next={...prev};if(!value)delete next[key];else if(Number(value)>=0&&Number.isFinite(Number(value)))next[key]=Number(value);return next})}
@@ -29,10 +30,11 @@ export function MenuDesk({kind,conditions,pool,store,today,open}:{kind:'diet'|'p
  <p className="desk-foot">{conditions.people} 人 · {kind==='party'?'本次饭局':weekly?'七天总':'当天'}预算 {money(conditions.budget)} · 已扣除可用库存。</p>
  <button className="desk-action" onClick={()=>setMade(true)}><ClipboardList size={17}/>{kind==='party'?'搭配饭局菜单':kind==='saving'?'按预算配餐':'生成定制食谱'}</button>
  {result&&<><p className={'menu-total '+(result.status==='ready'?'':'needs-work')}><b>{result.status==='ready'?'这份菜单在预算内':result.status==='overBudget'?'这份搭配超过预算':'部分条件尚未满足'}</b> 预计补购 {money(result.totalCost)}{result.shortfall? ' · 差额 '+money(result.shortfall):''}</p>{result.reasons.map((r,i)=><p key={i}>{r}</p>)}
+ {kind==='saving'&&result.shopping.items.some(i=>i.toBuy>0)&&<div className="desk-aside"><h4>这次买菜怎么省</h4>{result.shopping.items.filter(i=>i.toBuy>0&&i.storage).slice(0,3).map(i=><p key={i.name}><b>{i.name}</b>　按缺口约 {amountText(i.toBuy)}{i.unit} 比价。{i.storage}</p>)}</div>}
  {result.days.map(d=><details className="desk-day" key={d.day} open={!weekly||d.day===1}><summary>{kind==='party'?'这一桌吃什么':'第 '+d.day+' 天'}</summary>{d.meals.map(m=><section className="desk-meal" key={m.name}><h4>{m.name}</h4>{m.items.map((item,index)=>{
  const r=item.recipe,assessment=assessNutrition(r,conditions.conditions as NutritionCondition[]),cost=estimateRecipe(r,item.people,prices),tastes=r.tastes.filter(t=>conditions.tastes.some(p=>p.includes(t)||t.includes(p)));
  return <div className="menu-dish" key={r.id+index}><div><button className="desk-link" onClick={()=>open(r)}>{r.title}</button><small> {item.role} · {amountText(item.people)} 人份 · {r.time} 分钟 · 食材约 {money(cost.totalCost)}</small></div>
- {kind!=='party'&&<details><summary>适合理由与提醒{conditions.conditions.includes('减脂')?' · 约 '+Math.round(r.kcal/r.servings)+' 千卡/标准人份':''}</summary><p>{tastes.length?'合你偏爱的'+tastes.join('、')+'口味。':'以'+r.luckyIngredient+'搭配'+r.tastes[0]+'口味。'}{assessment.highlights.join(' ')||'这道'+r.category+'可以和本餐其他菜品搭配。'}</p><p>{assessment.cautions.join(' ')||r.tip}</p><p>可少放一部分咸味调料，另外蘸取；喜欢浓香时保留本菜的{r.tastes[0]}做法。</p></details>}</div>
+ {kind!=='party'&&<details><summary>适合理由与提醒{conditions.conditions.includes('减脂')?' · 约 '+Math.round(r.kcal/r.servings)+' 千卡/标准人份':''}</summary><p>{tastes.length?'合你偏爱的'+tastes.join('、')+'口味。':'以'+r.luckyIngredient+'搭配'+r.tastes[0]+'口味。'}{assessment.highlights.join(' ')||'这道'+r.category+'可以和本餐其他菜品搭配。'}</p><p>{assessment.cautions.join(' ')||r.tip}</p><p>调味时先留出一部分咸味调料，熟后再尝。{(()=>{const alt=pool.find(a=>a.id!==r.id&&a.category===r.category&&a.tastes[0]!==r.tastes[0]&&!a.alcohol&&a.vegetarian===r.vegetarian&&estimateRecipe(a,item.people,prices).totalCost<=cost.totalCost);return alt?<span> 想换成{alt.tastes[0]}口味，可以试<button className="desk-link" onClick={()=>open(alt)}>{alt.title}</button>。两道菜的采购缺口分别核算。</span>:null})()}</p></details>}</div>
  })}{m.note&&<small>{m.note}</small>}</section>)}</details>)}
  {kind==='party'&&<><h3>开工与上菜顺序</h3><p>先做 {result.prepOrder.join(' → ')||'暂无可排菜品'}</p><p>上桌 {result.serveOrder.join(' → ')||'暂无可排菜品'}</p>{result.status==='ready'&&<><button className="desk-button" onClick={()=>setShare(!share)}><Share2 size={16}/>聚餐邀请海报</button>{share&&<div className="party-poster"><span>食来运转 · 家宴请柬</span><h3>今晚，一起开饭。</h3><p>{conditions.people} 位入席</p>{result.serveOrder.map(x=><p key={x}>{x}</p>)}<button className="desk-button" onClick={copy}>复制海报文案</button>{copied&&<span role="status">{copied}</span>}</div>}</>}</>}
  <Shopping list={result.shopping} prices={prices} onPrice={onPrice}/></>}

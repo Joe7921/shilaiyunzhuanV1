@@ -48,6 +48,6 @@ export default function PlannerDesk({day,prefs,user,profileLoading,open,onPrefs}
  {tab==='pantry'&&<Pantry pool={pool} people={c.people} today={day} store={store} open={open} restricted={!!(health.length||combined.vegetarian||combined.excluded.length||combined.avoid?.length)}/>}
  {(tab==='diet'||tab==='party'||tab==='saving')&&<MenuDesk key={tab} kind={tab} conditions={{...c,tastes:combined.tastes||[]}} pool={pool} today={day} store={store} open={open}/>}
  {tab==='wish'&&<WishDesk c={c} prefs={combined}/>}
- {tab==='seasonal'&&<SeasonalDesk day={day} pool={pool} open={open} reminder={reminder} onReminder={setSeasonReminder}/>}
+ {tab==='seasonal'&&<SeasonalDesk conditions={health} day={day} pool={pool} open={open} reminder={reminder} onReminder={setSeasonReminder}/>}
  {(tab==='coach'||tab==='pitfalls')&&<PracticeDesk key={tab} kind={tab} pool={pool} store={store} open={open} restricted={!!(health.length||combined.vegetarian||combined.excluded.length||combined.avoid?.length)}/>}</section>}</div>
 }

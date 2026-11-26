@@ -149,9 +149,9 @@ export function cookStanding(progress?:CookProgress) {
 }
 export function nextChallenge(pool:Recipe[],progress:CookProgress,currentId:string) {
   const done=new Set(progress.completed.map(r=>r.recipeId));
-  const {level}=cookStanding(progress);
+  const {level,completed,advanced}=cookStanding(progress);
   const candidates=pool.filter(r=>r.id!==currentId&&!done.has(r.id));
-  const difficulty=level<3?'简单':'进阶';
+  const difficulty=level>=3||(level===2&&completed>=4&&advanced===0)?'进阶':'简单';
   const targetMinutes=[15,30,40,65,90][level-1];
   return candidates.filter(r=>r.difficulty===difficulty).sort((a,b)=>Math.abs(a.time-targetMinutes)-Math.abs(b.time-targetMinutes))[0]||candidates[0];
 }
@@ -177,7 +177,9 @@ export function assessCook(input:CookInput,previous?:CookProgress):CookReport {
   const raw=methodPoints+outcomePoints+controlPoints+logPoints;
   const failed=input.failed===true||underdone;
   const score=failed?Math.min(59,raw):raw;
-  const qualifies=input.independent!==false&&!failed&&score>=65&&procedural&&observations.length>=1&&methods.length>0&&minutes>0;
+  const advancedDish=recipe.difficulty==='进阶';
+  const minimum=advancedDish?75:65;
+  const qualifies=input.independent!==false&&!failed&&score>=minimum&&procedural&&observations.length>=(advancedDish?2:1)&&methods.length>0&&minutes>0;
   const completed=repertoire(previous);
   const existing=completed.find(e=>e.recipeId===recipe.id);
   const credited=qualifies&&!existing;
@@ -201,11 +203,12 @@ export function assessCook(input:CookInput,previous?:CookProgress):CookReport {
   if(input.independent===false) advice.push('今天和搭档一起练成了。下次试着独立做一次，再来点亮这道菜。');
   if (failed) advice.push('这次作为练习复盘，先选一个环节重做。');
   if (!procedural) advice.push('补写一道实际操作，包括处理了哪种食材、按什么顺序下锅。');
+  if(advancedDish&&observations.length<2) advice.push('进阶菜再补一条不同的成品线索，例如外观之外，切开后中心的熟度。');
   if (!observations.length) advice.push('记下成品的颜色、口感或熟度，例如最厚的一块切开后是什么样。');
   if (!minutes) advice.push('记录从开始备料到出锅的实际分钟数。');
   if (!reflection) advice.push('留一条具体调整，例如下次在哪一步提前调小火，或把切块改多厚。');
   if (qualifies && existing) advice.unshift('这道菜已计入能力记录。再选一道新菜，把同一项技法迁移过去。');
   if (!advice.length) advice.push(credited?'本次新菜与技法已计入，下一次试一款不同做法。':'继续围绕原菜谱的状态判断练习。');
   return {score,level,levelName:cookLevels[level-1].name,dimensions,advice,progress,credited,nextLevel,
-    basis:'按自述与菜谱步骤匹配的练习评分。实际口感、火候和熟度需要你自行核实。'+(failed?' 本次自报翻车或描述含夹生信号，练习总分上限为59分。':'')};
+    basis:recipe.difficulty+'菜的独立通关线为'+minimum+'分。实际口感、火候和熟度需要你自行核实。'+(failed?' 本次自报翻车或描述含夹生信号，练习总分上限为59分。':'')};
 }

@@ -111,7 +111,7 @@ export function assessNutrition(recipe:Recipe, conditions: readonly NutritionCon
   if(selected.has('痛风')) result.score+=Number(hasVeg)*2+Number(hasBeans);
   if(selected.has('经期')){
     result.score+=Number(hasIron)*3+Number(hasIron && hasC)*2;
-    if(hasIron) result.highlights.push(hasC?'含铁食材与含维生素C的蔬果在同一份配方中。':'这道菜有含铁食材，可配番茄、西兰花或鲜橙。');
+    if(hasIron) result.highlights.push(hasC?'含铁食材与含维生素C的蔬果在同一份配方中。':'这道菜有含铁食材，可配你能吃的富含维生素C的蔬果。');
   }
   if(selected.has('素食')) result.score+=Number(hasBeans)*2+Number(hasGrain);
   if(selected.has('清真')) result.cautions.push('仅按配料初筛，调味料、加工方式与器具须自行核实清真要求。');

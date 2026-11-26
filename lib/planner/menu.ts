@@ -9,6 +9,7 @@ export type MenuInput = {
   inventory?: PantryItem[];
   tastes?: string[];
   season?:string;
+  nutritionScores?:Readonly<Record<string,number>>;
   wants?: string[];
   pool: Recipe[];
   prices?: PriceOverrides;
@@ -154,7 +155,8 @@ function assemble(input: MenuInput, slots: Slot[][], quoteFor: ReturnType<typeof
           const tasteMatch=(input.tastes || []).some(t=>[...r.tastes,...r.tags].some(tag=>tag.includes(t) || t.includes(tag)));
           const count=(repeats.get(r.id)||0) + Number(dayDishes.has(r.id));
           const inSeason=input.season&&r.seasons.some(s=>s===input.season)&&r.seasons.length<4;
-          const score=-(inSeason&&strategy!==frugal?1:0)+Number(quote.missing)*1e9 + strategy.priceWeight*cost + strategy.repeatWeight*count - strategy.tasteWeight*Number(tasteMatch);
+          const nutritionWeight=(input.nutritionScores?.[r.id]||0)*(strategy===frugal?0:0.6);
+          const score=-nutritionWeight-(inSeason&&strategy!==frugal?1:0)+Number(quote.missing)*1e9 + strategy.priceWeight*cost + strategy.repeatWeight*count - strategy.tasteWeight*Number(tasteMatch);
           if (score < bestScore) { best=r; bestScore=score; }
         }
         if (!best) {
