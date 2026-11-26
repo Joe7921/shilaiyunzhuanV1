@@ -1,5 +1,6 @@
 'use client';
 
+import { shareUrl } from '@/lib/share-links';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Check, Copy, Dice5, RefreshCw, Sparkles, Star, Users, Utensils } from 'lucide-react';
 import { recipes, type Recipe } from '@/lib/recipes';
@@ -131,14 +132,12 @@ export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast
   const [busy, setBusy] = useState(false);
   const [loading, setLoading] = useState(!!initialId);
   const [error, setError] = useState('');
-  const [origin, setOrigin] = useState('');
   const [copyFallback, setCopyFallback] = useState(false);
   const [recentPolls, setRecentPolls] = useState<{ id: string; title: string; totalVotes: number; createdAt: string }[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
   const [historyError, setHistoryError] = useState('');
   const linkInput = useRef<HTMLInputElement>(null);
   const candidateKey = candidates.map((recipe) => recipe.id).join('|');
-  useEffect(() => { setOrigin(window.location.origin); }, []);
   useEffect(() => { setSelected((previous) => previous.filter((id) => candidates.some((recipe) => recipe.id === id))); }, [candidateKey]);
   useEffect(() => {
     let active = true;
@@ -197,13 +196,13 @@ export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast
   }
   async function copyLink() {
     if (!poll) return;
-    try { await navigator.clipboard.writeText(origin + '/?poll=' + encodeURIComponent(poll.id)); setCopyFallback(false); onToast('投票链接已复制。'); }
+    try { await navigator.clipboard.writeText(shareUrl('poll', poll.id)); setCopyFallback(false); onToast('投票链接已复制。'); }
     catch { setCopyFallback(true); linkInput.current?.focus(); linkInput.current?.select(); }
   }
   if (loading) return <div className="tool-loading" role="status"><RefreshCw size={24}/><p>正在端上朋友的投票…</p></div>;
   if (initialId && !poll) return <Empty title="暂时没找到这张饭票" text={error || '这次投票可能已被删除，或你还没有访问权限。'}><button className="secondary-button" disabled={busy} onClick={() => loadPoll(initialId)}>再试一次</button></Empty>;
   if (poll) {
-    const shareLink = origin + '/?poll=' + encodeURIComponent(poll.id);
+    const shareLink = shareUrl('poll', poll.id);
     return <div className="poll-tool"><div className="poll-title-row"><div><span className="pill"><Users size={14}/> 朋友帮你选</span><h3>{poll.title}</h3></div><button className="text-button" onClick={() => loadPoll(poll.id)} disabled={busy}><RefreshCw size={16}/>刷新</button></div><p className="muted">已收到 {poll.totalVotes} 票。每人一票，可以改选。</p>
       <div className="poll-results">{poll.options.map((option) => {
         const percentage = poll.totalVotes ? Math.round(option.votes / poll.totalVotes * 100) : 0;
@@ -211,7 +210,7 @@ export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast
         return <div className={'poll-result-option' + (poll.myVote === option.id ? ' is-voted' : '')} key={option.id}><button className="poll-vote-button" onClick={() => vote(option.id)} disabled={busy || poll.myVote === option.id} aria-pressed={poll.myVote === option.id}><span className="poll-option-name"><FoodIcon recipe={recipe}/> {option.label}{poll.myVote === option.id && <Check size={17}/>}</span><span className="poll-vote-count">{option.votes} 票 · {percentage}%</span><span className="poll-bar"><i style={{ width: percentage + '%' }}/></span></button>{recipe && <button className="text-button poll-recipe-button" onClick={() => onOpen(recipe)}>看做法</button>}</div>;
       })}</div>
       {error && <p className="inline-error" role="alert">{error}</p>}
-      <div className="poll-share"><label className="form-label" htmlFor="poll-share-link">邀请朋友来投票</label><div className="poll-share-row"><input ref={linkInput} id="poll-share-link" className="field" readOnly value={shareLink} onFocus={(event) => event.currentTarget.select()}/><button className="secondary-button" onClick={copyLink}><Copy size={16}/>复制链接</button></div><p className="muted">朋友需有网站访问权限。</p>{copyFallback && <p className="inline-error" role="status">浏览器暂不支持自动复制，请长按上方链接复制。</p>}</div>
+      <div className="poll-share"><label className="form-label" htmlFor="poll-share-link">邀请朋友来投票</label><div className="poll-share-row"><input ref={linkInput} id="poll-share-link" className="field" readOnly value={shareLink} onFocus={(event) => event.currentTarget.select()}/><button className="secondary-button" onClick={copyLink}><Copy size={16}/>复制链接</button></div><p className="muted">好友可以直接打开邀请链接，登录后即可投票。</p>{copyFallback && <p className="inline-error" role="status">浏览器暂不支持自动复制，请长按上方链接复制。</p>}</div>
       {!initialId && <button className="text-button" onClick={() => { setPoll(null); setError(''); setCopyFallback(false); }}>发起新的投票</button>}
     </div>;
   }

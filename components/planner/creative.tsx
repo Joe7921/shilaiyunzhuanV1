@@ -1,4 +1,5 @@
 'use client';
+import { publicSiteOrigin } from '@/lib/share-links';
 import {useMemo,useState} from 'react';
 import {ChefHat,Flower2,Stars,NotebookPen,Award} from 'lucide-react';
 import {seasonalContext,seasonalFoods,traditionalDishes,traditionalGroups,seasonCalendar,type SeasonalGroup} from '@/lib/planner/season';
@@ -30,7 +31,7 @@ export function SeasonalDesk({day,pool,open,reminder,onReminder,conditions}:{day
  const tradition=traditionalDishes(pool,selected);
  const match=foods.flatMap(f=>f.matches).at(0);
  function exportCalendar(){
-   const cal=seasonCalendar(day,pool,location.origin);
+   const cal=seasonCalendar(day,pool,publicSiteOrigin);
    if(!cal.count){setMessage('当前条件下没有可导出的时令菜。');return}
    const url=URL.createObjectURL(new Blob([cal.content],{type:'text/calendar;charset=utf-8'}));const a=document.createElement('a');
    a.href=url;a.download='食来运转-节气菜单.ics';document.body.appendChild(a);a.click();a.remove();window.setTimeout(()=>URL.revokeObjectURL(url),2000);

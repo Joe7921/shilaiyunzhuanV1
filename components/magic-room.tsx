@@ -1,4 +1,5 @@
 'use client';
+import { shareUrl } from '@/lib/share-links';
 import {useEffect,useMemo,useState} from 'react';
 import {Sparkles,Star,History,BookOpen,Plus,Share2,CalendarDays,Check} from 'lucide-react';
 import {fortuneFor,zodiac,type Birth,type Reading} from '@/lib/astro';
@@ -44,12 +45,12 @@ export default function MagicRoom({day,birth,onBirth,notebook,onSave,candidates,
   }
   async function share(){
     if(!reading)return;
-    const url=new URL(window.location.origin);url.searchParams.set('recipe',reading.main.id);
+    const url=shareUrl('recipe',reading.main.id);
     const text=reading.sign.name+'的今日美食星运 · '+day+'\n幸运数字 '+reading.number+' · '+reading.color+' · '+reading.ingredient+'\n今天做「'+reading.main.title+'」';
     try {
-      if(navigator.share) await navigator.share({title:'我的美食星运',text,url:url.href});
-      else { await navigator.clipboard.writeText(text+'\n'+url.href);onToast('星运与菜谱链接已复制'); }
-    } catch(e){if((e as Error).name!=='AbortError')setShareCopy(text+'\n'+url.href)}
+      if(navigator.share) await navigator.share({title:'我的美食星运',text,url});
+      else { await navigator.clipboard.writeText(text+'\n'+url);onToast('星运与菜谱链接已复制'); }
+    } catch(e){if((e as Error).name!=='AbortError')setShareCopy(text+'\n'+url)}
   }
   return <section className="magic-room">
     <div className="room-scene"><div><p className="eyeline"><Sparkles size={16}/> 星座美食魔法屋</p><h1>今天，你的星星<br/>想吃什么？</h1><p>跟着猫咪占卜师，翻开你的每日食签。</p></div></div>

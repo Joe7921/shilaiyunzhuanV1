@@ -1,5 +1,6 @@
 'use client';
 
+import { shareUrl } from '@/lib/share-links';
 import { useEffect, useState } from 'react';
 import { Check, Share2, X } from 'lucide-react';
 
@@ -15,23 +16,22 @@ export default function ShareButton({ recipe }: { recipe?: { id: string; title: 
   }, [copied]);
 
   async function share() {
-    const url = new URL('/', window.location.origin);
-    if (recipe) url.searchParams.set('recipe', recipe.id);
+    const url = recipe ? shareUrl('recipe', recipe.id) : shareUrl();
     const title = recipe ? recipe.title + ' · 食来运转' : '食来运转 · 今天一起好好吃饭';
     setManualLink('');
     if (navigator.share) {
       try {
-        await navigator.share({ title, url: url.href });
+        await navigator.share({ title, url });
         return;
       } catch (error) {
         if (error instanceof Error && error.name === 'AbortError') return;
       }
     }
     try {
-      await navigator.clipboard.writeText(url.href);
+      await navigator.clipboard.writeText(url);
       setCopied(true);
     } catch {
-      setManualLink(url.href);
+      setManualLink(url);
     }
   }
 
