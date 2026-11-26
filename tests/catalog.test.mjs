@@ -66,3 +66,13 @@ test('allergens and avoided ingredients apply to every fortune result and the fu
   assert(veganCandidates.some(r=>r.title==='番茄炒蛋'));
 });
 
+
+test('custom exclusions recognize cuts, aliases and allergen labels',()=>{
+  const eligible=(title,avoid)=>matchesPrefs(recipes.find(r=>r.title===title),{...defaultPrefs,avoid:[avoid]});
+  assert.equal(eligible('番茄肥牛暖锅','牛肉'),false);
+  assert.equal(eligible('番茄炒蛋','西红柿'),false);
+  assert.equal(eligible('可乐鸡翅','酒精'),false);
+  assert.equal(eligible('可乐鸡翅','鸡肉'),false);
+  assert.equal(eligible('番茄炒蛋','鸡肉'),true);
+  assert.equal(eligible('无酒精香料热饮','酒精'),true);
+});
