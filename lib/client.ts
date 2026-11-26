@@ -1,7 +1,7 @@
 import type { Recipe } from './recipes';
 
 export type User = { id: string; name: string };
-export type Preferences = { excluded: string[]; maxTime: number; vegetarian: boolean };
+export type Preferences = { excluded: string[]; maxTime: number; vegetarian: boolean; avoid?: string[]; tastes?: string[] };
 export type Post = { id: string; title: string; body: string; imageUrl: string | null; recipeId: string | null; kcal: number | null; visibility: 'private' | 'community'; authorName: string; createdAt: string; likes: number; likedByMe: boolean; isMine: boolean };
 export type Poll = { id: string; title: string; options: { id: string; label: string; votes: number }[]; totalVotes: number; myVote: string | null };
 export const defaultPrefs: Preferences = { excluded: [], maxTime: 0, vegetarian: false };
@@ -15,8 +15,10 @@ export async function api<T = Record<string, unknown>>(query: string, body?: unk
 
 export function matchesPrefs(recipe: Recipe, prefs: Preferences) {
   if (prefs.maxTime && recipe.time > prefs.maxTime) return false;
-  if (prefs.excluded.some((a) => recipe.allergens.includes(a))) return false;
-  if (prefs.vegetarian && recipe.ingredients.some((i) => /鸡腿|鸡胸|鸡翅|鸡肉|牛肉|肥牛|猪肉|五花肉|虾|鱼|培根|火腿|蚝油/.test(i.name))) return false;
+  const contents=recipe.ingredients.map(i=>i.name).join('、');
+  if (prefs.excluded.some(a=>recipe.allergens.includes(a) || (a==='甲壳类'&&recipe.allergens.includes('虾')))) return false;
+  if ((prefs.avoid || []).some(a=>[contents,recipe.title,recipe.aliases.join('、')].join('、').includes(a))) return false;
+  if (prefs.vegetarian && !recipe.vegetarian) return false;
   return true;
 }
 
@@ -27,11 +29,8 @@ export function hash(text: string) {
 }
 
 export function dayKey() {
-  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-}
-
-export function foodImagePosition(id: string) {
-  return ({ 'tomato-eggs': '0% 0%', 'teriyaki-chicken': '100% 0%', 'shrimp-broccoli': '0% 100%', 'chicken-curry': '100% 100%' } as Record<string, string>)[id];
+  const d=new Date();
+  return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
 }
 
 export function formatDate(date: string) {

@@ -3,11 +3,13 @@
  * 人均热量 = kcal / servings；实际结果随品牌、去骨方式与烹饪损耗变化。
  * 调味品配方可能不同，过敏者仍需检查所用包装的配料和过敏原标识。
  */
-export type Recipe = {
+import additions from "./catalog/recipes.json";
+
+export type OriginalRecipe = {
   id: string;
   title: string;
   description: string;
-  emoji: string;
+
   color: 'red' | 'yellow' | 'green' | 'orange' | 'white';
   colorName: string;
   luckyIngredient: string;
@@ -23,12 +25,12 @@ export type Recipe = {
   image?: string;
 };
 
-export const recipes: Recipe[] = [
+const originalRecipes: OriginalRecipe[] = [
   {
     id: 'tomato-eggs',
     title: '番茄炒蛋',
     description: '酸甜番茄裹住软嫩鸡蛋，平凡的一餐也会发光。',
-    emoji: '🍅',
+
     color: 'red',
     colorName: '番茄红',
     luckyIngredient: '番茄',
@@ -58,7 +60,7 @@ export const recipes: Recipe[] = [
     id: 'teriyaki-chicken',
     title: '照烧鸡腿饭',
     description: '亮晶晶的咸甜酱汁，配上一碗热米饭，快乐很具体。',
-    emoji: '🍗',
+
     color: 'yellow',
     colorName: '蜂蜜金',
     luckyIngredient: '蜂蜜',
@@ -91,7 +93,7 @@ export const recipes: Recipe[] = [
     id: 'shrimp-broccoli',
     title: '鲜虾西兰花',
     description: '一口鲜甜，一口清爽，给忙碌的一天添一点绿。',
-    emoji: '🥦',
+
     color: 'green',
     colorName: '西兰花绿',
     luckyIngredient: '西兰花',
@@ -121,7 +123,7 @@ export const recipes: Recipe[] = [
     id: 'chicken-curry',
     title: '日式咖喱鸡',
     description: '软糯土豆和浓浓咖喱，把小厨房变成温暖补给站。',
-    emoji: '🍛',
+
     color: 'orange',
     colorName: '胡萝卜橙',
     luckyIngredient: '胡萝卜',
@@ -153,7 +155,7 @@ export const recipes: Recipe[] = [
     id: 'pumpkin-soup',
     title: '奶香南瓜浓汤',
     description: '像把一小片阳光装进碗里，绵绵的、暖暖的。',
-    emoji: '🎃',
+
     color: 'orange',
     colorName: '南瓜橙',
     luckyIngredient: '南瓜',
@@ -183,7 +185,7 @@ export const recipes: Recipe[] = [
     id: 'tomato-beef',
     title: '番茄肥牛暖锅',
     description: '酸甜汤底和嫩嫩肥牛，适合想认真犒劳自己的晚上。',
-    emoji: '🥘',
+
     color: 'red',
     colorName: '番茄红',
     luckyIngredient: '番茄',
@@ -215,7 +217,7 @@ export const recipes: Recipe[] = [
     id: 'pan-seared-salmon',
     title: '柠檬香煎三文鱼',
     description: '一片金黄鱼排，配一点清亮的柠檬香。',
-    emoji: '🐟',
+
     color: 'yellow',
     colorName: '柠檬黄',
     luckyIngredient: '柠檬',
@@ -246,7 +248,7 @@ export const recipes: Recipe[] = [
     id: 'mushroom-pasta',
     title: '蒜香蘑菇意面',
     description: '蒜香和蘑菇香在锅里碰头，简单也能很有仪式感。',
-    emoji: '🍝',
+
     color: 'white',
     colorName: '蘑菇白',
     luckyIngredient: '白蘑菇',
@@ -277,7 +279,7 @@ export const recipes: Recipe[] = [
     id: 'scallion-noodles',
     title: '葱油拌面',
     description: '几根小葱的香气，就能把普通的一碗面变得很满足。',
-    emoji: '🍜',
+
     color: 'green',
     colorName: '小葱绿',
     luckyIngredient: '小葱',
@@ -307,7 +309,7 @@ export const recipes: Recipe[] = [
     id: 'korean-pork',
     title: '韩式香煎五花肉',
     description: '微焦的肉边、清脆的生菜，一卷就是一口小幸福。',
-    emoji: '🥬',
+
     color: 'green',
     colorName: '生菜绿',
     luckyIngredient: '生菜',
@@ -339,7 +341,7 @@ export const recipes: Recipe[] = [
     id: 'shrimp-fried-rice',
     title: '玉米虾仁炒饭',
     description: '金黄玉米、鲜甜虾仁，颗颗米饭都有自己的快乐。',
-    emoji: '🌽',
+
     color: 'yellow',
     colorName: '玉米黄',
     luckyIngredient: '玉米粒',
@@ -371,7 +373,7 @@ export const recipes: Recipe[] = [
     id: 'cola-wings',
     title: '可乐鸡翅',
     description: '咸甜酱汁抱住鸡翅，是记忆里最容易期待的一道菜。',
-    emoji: '🍗',
+
     color: 'yellow',
     colorName: '生姜黄',
     luckyIngredient: '姜',
@@ -402,7 +404,7 @@ export const recipes: Recipe[] = [
     id: 'mushroom-chicken',
     title: '香菇滑鸡',
     description: '香菇吸满鲜香汤汁，拌饭刚刚好。',
-    emoji: '🍄',
+
     color: 'white',
     colorName: '香菇白',
     luckyIngredient: '鲜香菇',
@@ -434,7 +436,7 @@ export const recipes: Recipe[] = [
     id: 'mapo-tofu',
     title: '家常麻婆豆腐',
     description: '麻辣鲜香、软软热热，一勺就能唤醒胃口。',
-    emoji: '🌶️',
+
     color: 'red',
     colorName: '辣椒红',
     luckyIngredient: '辣椒粉',
@@ -468,7 +470,7 @@ export const recipes: Recipe[] = [
     id: 'cheese-omelette',
     title: '芝士蔬菜蛋饼',
     description: '软软蛋饼藏着一点拉丝惊喜，早餐晚餐都合适。',
-    emoji: '🧀',
+
     color: 'yellow',
     colorName: '蛋黄黄',
     luckyIngredient: '鸡蛋',
@@ -499,7 +501,7 @@ export const recipes: Recipe[] = [
     id: 'cucumber-tofu',
     title: '黄瓜拌豆腐',
     description: '清清爽爽的一小碗，给浓郁口味按下清新键。',
-    emoji: '🥒',
+
     color: 'green',
     colorName: '黄瓜绿',
     luckyIngredient: '黄瓜',
@@ -528,10 +530,43 @@ export const recipes: Recipe[] = [
   },
 ];
 
+export type Recipe = OriginalRecipe & {
+  aliases: string[]; cuisine: string; category: string; tastes: string[]; seasons: string[];
+  festivals: string[]; tools: string[]; image: string; imageCredit: string; kcalBasis?:string; imageSource?:string;
+  vegetarian: boolean; series?: string; tradition?: string; alcohol?: boolean; alternativeId?: string;
+};
+const originalDetails: Record<string, [string, string, string, string, string[]]> = {
+  'tomato-eggs': ['中国家常','热菜','酸甜','炒锅',['西红柿炒鸡蛋','番茄炒鸡蛋']],
+  'teriyaki-chicken': ['日本料理','主食','咸甜','平底锅',[]],
+  'shrimp-broccoli': ['中国家常','热菜','鲜甜','炒锅',['西兰花炒虾仁']],
+  'chicken-curry': ['日本料理','主食','咖喱','炖锅',['日式鸡肉咖喱饭']],
+  'pumpkin-soup': ['西式家常','汤羹','奶香','汤锅',['牛奶南瓜汤']],
+  'tomato-beef': ['中国家常','汤羹','酸鲜','小汤锅',[]],
+  'pan-seared-salmon': ['西式家常','热菜','清鲜','平底锅',['香煎三文鱼']],
+  'mushroom-pasta': ['意大利菜','主食','蒜香','煮锅、平底锅',[]],
+  'scallion-noodles': ['本帮菜','主食','葱香','煮锅、炒锅',['上海葱油拌面']],
+  'korean-pork': ['韩国料理','热菜','咸香','平底锅',[]],
+  'shrimp-fried-rice': ['中国家常','主食','鲜甜','炒锅',[]],
+  'cola-wings': ['中国家常','热菜','咸甜','平底锅',[]],
+  'mushroom-chicken': ['粤菜','热菜','鲜香','炒锅',[]],
+  'mapo-tofu': ['川菜','热菜','麻辣','炒锅',['麻婆豆腐']],
+  'cheese-omelette': ['西式早餐','早餐','奶香','平底锅',[]],
+  'cucumber-tofu': ['中国家常','凉菜','清爽','煮锅',[]],
+};
+export const recipes: Recipe[] = [
+  ...originalRecipes.map(r => {
+    const [cuisine,category,taste,tool,aliases]=originalDetails[r.id];
+    const allergens=r.allergens.includes('虾')?[...r.allergens,'甲壳类']:r.allergens;
+    const vegetarian=['tomato-eggs','pumpkin-soup','mushroom-pasta','scallion-noodles','cheese-omelette','cucumber-tofu'].includes(r.id);
+    return {...r,vegetarian,allergens,cuisine,category,aliases,tastes:[taste],tools:tool.split('、'),seasons:['春','夏','秋','冬'],
+      festivals:[],image:'/images/dishes/'+r.id+'.webp',imageCredit:'AI 生成 · 写实美食配图'};
+  }),
+  ...(additions as Recipe[])
+];
 export type Personality = {
   id: 'cozy' | 'bold' | 'fresh' | 'quick';
   title: string;
-  emoji: string;
+
   description: string;
   tags: string[];
   recipeIds: string[];
@@ -542,7 +577,7 @@ export const personalities: Personality[] = [
   {
     id: 'cozy',
     title: '暖胃治愈派',
-    emoji: '🍲',
+
     description: '你喜欢熟悉的味道和热气腾腾的安心感。再忙的一天，也值得用一碗暖汤好好收尾。',
     tags: ['暖心汤', '下饭菜'],
     recipeIds: ['pumpkin-soup', 'tomato-beef', 'chicken-curry', 'mushroom-chicken'],
@@ -550,7 +585,7 @@ export const personalities: Personality[] = [
   {
     id: 'bold',
     title: '浓香冒险派',
-    emoji: '🌶️',
+
     description: '你希望每一口都有点意思，咸香、酸甜、微辣都能让普通一餐变成小小探险。',
     tags: ['下饭菜'],
     recipeIds: ['mapo-tofu', 'korean-pork', 'cola-wings', 'teriyaki-chicken'],
@@ -558,7 +593,7 @@ export const personalities: Personality[] = [
   {
     id: 'fresh',
     title: '清新自然派',
-    emoji: '🥦',
+
     description: '你会留意食材本来的味道，喜欢清爽和鲜甜。简单的搭配，也能吃出自己的节奏。',
     tags: ['轻负担', '快手菜'],
     recipeIds: ['shrimp-broccoli', 'cucumber-tofu', 'pan-seared-salmon', 'pumpkin-soup'],
@@ -566,7 +601,7 @@ export const personalities: Personality[] = [
   {
     id: 'quick',
     title: '快乐快手派',
-    emoji: '🍳',
+
     description: '你相信好吃不必复杂。一口锅、几样食材，就能给自己变出一份刚刚好的快乐。',
     tags: ['快手菜', '一人食'],
     recipeIds: ['tomato-eggs', 'cheese-omelette', 'scallion-noodles', 'shrimp-fried-rice'],

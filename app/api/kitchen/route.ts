@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       if (body.favorites === undefined && body.personality === undefined) throw new HttpError(400, "没有需要保存的内容。");
       let favorites: string[] = [];
       if (body.favorites !== undefined) {
-        if (!Array.isArray(body.favorites) || body.favorites.length > 100) throw new HttpError(400, "最多可以收藏 100 道菜。");
+        if (!Array.isArray(body.favorites) || body.favorites.length > 1000) throw new HttpError(400, "最多可以收藏 1000 道菜。");
         favorites = [...new Set(body.favorites.map((value) => idField(value, "菜谱编号")))];
       }
       const personality = body.personality === undefined || body.personality === null ? null : stringField(body.personality, "美食人格", 100);
@@ -62,6 +62,10 @@ export async function POST(request: Request) {
       if (imageKey) {
         const upload = await db.prepare("SELECT key FROM kitchen_uploads WHERE key = ? AND user_id = ?").bind(imageKey, user.id).first();
         if (!upload) throw new HttpError(403, "这张照片不属于你，请重新上传。");
+      }
+      if (imageKey) {
+        const photo = await db.prepare("SELECT key FROM kitchen_uploads WHERE key = ? AND user_id = ?").bind(imageKey, user.id).first();
+        if (!photo) throw new HttpError(400, "请选择自己已上传的照片。");
       }
       await rateLimit("kitchen_posts", user.id, 100);
       const id = crypto.randomUUID();

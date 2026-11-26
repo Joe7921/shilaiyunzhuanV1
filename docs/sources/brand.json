@@ -1,0 +1,24 @@
+[
+  {
+    "files": [
+      "magic-kitchen.webp",
+      "magic-kitchen-mobile.webp"
+    ],
+    "source": "OpenAI ImageGen",
+    "type": "为食来运转 V2 原创生成的 AI 品牌插画",
+    "license": "项目生成素材；无第三方图库照片。",
+    "prompt": "Use case: illustration-story. Deliver an exceptionally attractive original widescreen horizontal storybook jacket illustration, approximately 2.5:1, WITHOUT text. Desktop homepage backdrop for a playful Chinese food horoscope. A charming chubby cream orange tabby cat with two small orange forehead stripes, warm round face, fine whiskers and rosy cheeks, in a dark violet, floppy, slightly crooked witch hat with tiny gold stars. The cat is the sole protagonist at x=74% looking with curiosity at its own luminous lilac glass crystal ball, a little golden ladle-shaped constellation inside the ball. In front of it an open plum spellbook and a little shelf of food ingredients; above float a dumpling, small strawberry and a shiitake. An old fashioned cozy timber magic kitchen visible at right, little lavender scalloped curtain, far-right vines. Sparse gentle abstract clouds, connected star dots and a small golden crescent. COMPOSITION IS CRITICAL: left 47% is mostly quiet deep midnight aubergine-blue sky for white HTML headline, very few tiny stars, no objects or books there. All main character anatomy fully within right half at 58%–90%, eye level at 43% height; crystal ball at 66% height, dominant high-contrast silhouette and large expressive face. Wide panoramic straight-on stage composition with the countertop running at bottom, NOT a UI mockup, card, poster or logo. Award-winning handcrafted illustrated children's picture-book endpaper: artisan risograph screenprint, flat confidently cut shapes, soft dry gouache grain, slightly imperfect dark indigo hand-drawn outlines, carefully chosen dusty violet, twilight blue, butter yellow, warm coral, no glaring neon, no artificial glossy 3D. A little magical, happy, quiet and endearing, small golden highlights. Edge-to-edge artwork, no border, no text/letters, no typography, no logos, no watermark.",
+    "notes": "桌面版左侧留字，手机版聚焦小猫；标题可置于手机插画下方。"
+  },
+  {
+    "files": [
+      "noodle-mage.webp",
+      "noodle-mage-mark.webp"
+    ],
+    "source": "OpenAI ImageGen",
+    "type": "为食来运转 V2 原创生成的 AI 品牌插画",
+    "license": "项目生成素材；无第三方图库照片。",
+    "prompt": "Use case: illustration-story. Draw a single original brand mascot for a Chinese food diary: a very cute, expressive chubby cream-colored kitten with two orange forehead stripes, small orange ears, dark raisin oval eyes, rosy cheeks, and delicate whiskers. The kitten wears a slightly crooked floppy violet hat decorated with tiny gold stars, and hugs a bowl of noodles in both paws; one curl of pale lilac steam makes a star above the bowl. A small cohesive waist-up diecut spot illustration, visually readable as a 48 px avatar or at 240px. Retro gouache children's book, artisan flat color screenprint, thick hand-inked plum contours, gently uneven shapes, plum, lavender, coral, butter yellow. Friendly, bespoke, appetizing and painterly. Visually isolated and centered taking up 85% of image, genuine transparent background. Include the little curve of the cat's striped tail on its side. No plate below, no lettering, no type, no backdrop, no border box, no sticker white outline, no photorealism, no watermark.",
+    "notes": "透明 WebP，含高分辨率与小尺寸。"
+  }
+]

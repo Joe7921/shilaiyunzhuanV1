@@ -1,0 +1,114 @@
+{
+  "tomato-eggs": {
+    "image": "/images/dishes/tomato-eggs.webp",
+    "imageCredit": "V1 原项目原创 AI 示意配图",
+    "imageType": "ai",
+    "width": 625,
+    "height": 625
+  },
+  "teriyaki-chicken": {
+    "image": "/images/dishes/teriyaki-chicken.webp",
+    "imageCredit": "V1 原项目原创 AI 示意配图",
+    "imageType": "ai",
+    "width": 625,
+    "height": 625
+  },
+  "shrimp-broccoli": {
+    "image": "/images/dishes/shrimp-broccoli.webp",
+    "imageCredit": "V1 原项目原创 AI 示意配图",
+    "imageType": "ai",
+    "width": 625,
+    "height": 625
+  },
+  "chicken-curry": {
+    "image": "/images/dishes/chicken-curry.webp",
+    "imageCredit": "V1 原项目原创 AI 示意配图",
+    "imageType": "ai",
+    "width": 625,
+    "height": 625
+  },
+  "pumpkin-soup": {
+    "image": "/images/dishes/pumpkin-soup.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "tomato-beef": {
+    "image": "/images/dishes/tomato-beef.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "pan-seared-salmon": {
+    "image": "/images/dishes/pan-seared-salmon.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "mushroom-pasta": {
+    "image": "/images/dishes/mushroom-pasta.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "scallion-noodles": {
+    "image": "/images/dishes/scallion-noodles.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "korean-pork": {
+    "image": "/images/dishes/korean-pork.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "shrimp-fried-rice": {
+    "image": "/images/dishes/shrimp-fried-rice.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "cola-wings": {
+    "image": "/images/dishes/cola-wings.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "mushroom-chicken": {
+    "image": "/images/dishes/mushroom-chicken.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "mapo-tofu": {
+    "image": "/images/dishes/mapo-tofu.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "cheese-omelette": {
+    "image": "/images/dishes/cheese-omelette.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  },
+  "cucumber-tofu": {
+    "image": "/images/dishes/cucumber-tofu.webp",
+    "imageCredit": "食来运转 V2 · OpenAI ImageGen 生成示意图",
+    "imageType": "ai",
+    "width": 360,
+    "height": 360
+  }
+}

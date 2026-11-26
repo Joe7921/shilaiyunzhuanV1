@@ -3,6 +3,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Check, Copy, Dice5, RefreshCw, Sparkles, Star, Users, Utensils } from 'lucide-react';
 import { recipes, quizQuestions, personalities, type Recipe } from '@/lib/recipes';
+import {FoodIcon} from './food-icons';
+import {Sun,Moon,Flower2,Soup,Flame,Leaf,Zap} from 'lucide-react';
+import {arrangeWheel} from '@/lib/wheel';
 import { api, hash, type Poll, type User } from '@/lib/client';
 import { Empty, FoodImage } from '@/components/ui';
 
@@ -33,10 +36,10 @@ export function FortuneTool({ candidates, seed, onOpen, onPrefs }: {
     <p className="tool-intro">想一想今天的心情，选一张有眼缘的牌。</p>
     <div className="fortune-deck" aria-label="选择一张今日食物签">
       {[0, 1, 2].map((card) => <button key={card} type="button" className={'fortune-card' + (flipped === card ? ' is-flipped' : '') + (flipped !== null && flipped !== card ? ' is-dimmed' : '')} onClick={() => setFlipped(card)} disabled={flipped !== null} aria-label={'翻开第' + (card + 1) + '张食物签'}>
-        <span className="fortune-card-corner">✦</span>
-        <span className="fortune-card-symbol">{flipped === card ? recipe.emoji : card === 0 ? '☀' : card === 1 ? '✿' : '☾'}</span>
+        <span className="fortune-card-corner"><Sparkles size={15}/></span>
+        <span className="fortune-card-symbol">{flipped===card?<FoodIcon recipe={recipe} size={40}/>:card===0?<Sun size={40}/>:card===1?<Flower2 size={40}/>:<Moon size={40}/>}</span>
         <span className="fortune-card-label">{flipped === card ? '今日好食运' : ['太阳牌', '花朵牌', '月亮牌'][card]}</span>
-        <span className="fortune-card-corner corner-end">✦</span>
+        <span className="fortune-card-corner corner-end"><Sparkles size={15}/></span>
       </button>)}
     </div>
     {flipped !== null && <div className="fortune-result" aria-live="polite">
@@ -63,7 +66,9 @@ export function WheelTool({ candidates, onOpen, onPrefs }: {
   onOpen: (recipe: Recipe) => void;
   onPrefs: () => void;
 }) {
-  const options = candidates.slice(0, 6);
+  const [round,setRound] = useState(0);
+  const tables=useMemo(()=>arrangeWheel(candidates.filter(r=>!r.alcohol)),[candidates]);
+  const options=tables[round % tables.length] || [];
   const optionKey = options.map((recipe) => recipe.id).join('|');
   const [rotation, setRotation] = useState(0);
   const [spinning, setSpinning] = useState(false);
@@ -95,20 +100,19 @@ export function WheelTool({ candidates, onOpen, onPrefs }: {
     if (reducedMotion) finish();
     else timer.current = setTimeout(finish, 2050);
   }
-  return <div className="wheel-tool">
-    <p className="tool-intro">把选择交给转盘，开饭这件事就简单一点。</p>
+  return <div className="wheel-tool"><div className="wheel-table-head"><p>本桌 <b>{options.length}</b> 道 · 共 {tables.length} 桌可转</p>{tables.length>1 && <button className="secondary-button" disabled={spinning} onClick={()=>setRound(n=>n+1)}>换一桌</button>}</div>
     <div className="wheel-stage"><span className="wheel-pointer" aria-hidden="true"/><svg className="food-wheel" viewBox="0 0 360 360" role="img" aria-label={'今日吃什么转盘，共' + options.length + '道候选菜'} style={{ transform: `rotate(${rotation}deg)`, transition: reducedMotion ? 'none' : 'transform 2s cubic-bezier(.15,.7,.15,1)' }}>
       {options.map((recipe, index) => {
         const start = point(-90 + index * segment, 170);
         const end = point(-90 + (index + 1) * segment, 170);
         const middle = -90 + (index + 0.5) * segment;
         const label = point(middle, 112);
-        return <g key={recipe.id}><path d={`M180 180 L${start.x} ${start.y} A170 170 0 ${segment > 180 ? 1 : 0} 1 ${end.x} ${end.y} Z`} fill={fills[index]} stroke="#fff9ed" strokeWidth="3"/><g transform={`translate(${label.x},${label.y}) rotate(${middle + 90})`}><text x="0" y="-4" textAnchor="middle" fontSize="32">{recipe.emoji}</text><text x="0" y="24" textAnchor="middle" fontSize="15" fontWeight="700" fill="#654C43">{index + 1}. {recipe.title.length > 6 ? recipe.title.slice(0, 6) : recipe.title}</text></g></g>;
+        return <g key={recipe.id}><path d={`M180 180 L${start.x} ${start.y} A170 170 0 ${segment > 180 ? 1 : 0} 1 ${end.x} ${end.y} Z`} fill={fills[index % fills.length]} stroke="#fff9ed" strokeWidth="3"/><g transform={`translate(${label.x},${label.y}) rotate(${middle + 90})`}><FoodIcon recipe={recipe} size={25} x={-12.5} y={-24}/><text x="0" y="24" textAnchor="middle" fontSize="15" fontWeight="700" fill="#654C43">{index + 1}</text></g></g>;
       })}<circle cx="180" cy="180" r="168" fill="none" stroke="#79584B" strokeWidth="3"/>
     </svg><span className="wheel-centre" aria-hidden="true"><Utensils size={23}/></span></div>
     <button className="primary-button wheel-spin" onClick={spin} disabled={spinning}><RefreshCw size={18} className={spinning ? 'is-spinning' : ''}/>{spinning ? '美味转呀转…' : result ? '再转一次' : '转一转，决定吃什么'}</button>
-    <div className="wheel-options">{options.map((recipe, index) => <span key={recipe.id} className={'wheel-option' + (result?.id === recipe.id ? ' is-selected' : '')}><i style={{ background: fills[index] }}>{index + 1}</i>{recipe.title}</span>)}</div>
-    {result && <div className="wheel-result" aria-live="polite"><span>转盘替你选好了</span><h3>{result.emoji} {result.title}</h3><button className="secondary-button" onClick={() => onOpen(result)}>查看这道菜的做法</button></div>}
+    <div className="wheel-options">{options.map((recipe, index) => <span key={recipe.id} className={'wheel-option' + (result?.id === recipe.id ? ' is-selected' : '')}><i style={{ background: fills[index % fills.length] }}>{index + 1}</i>{recipe.title}</span>)}</div>
+    {result && <div className="wheel-result" aria-live="polite"><span>转盘替你选好了</span><h3><FoodIcon recipe={result}/> {result.title}</h3><button className="secondary-button" onClick={() => onOpen(result)}>查看这道菜的做法</button></div>}
   </div>;
 }
 
@@ -136,7 +140,7 @@ export function PersonalityTool({ onResult, onOpen, allowedRecipeIds }: {
   }
   if (result) {
     const recommendations = recipes.filter((recipe) => result.recipeIds.includes(recipe.id) && allowedRecipeIds.includes(recipe.id)).slice(0, 3);
-    return <div className="personality-result"><div className="personality-badge" aria-hidden="true">{result.emoji}</div><p className="muted">你的美食人格是</p><h3>{result.title}</h3><p className="personality-description">{result.description}</p><div className="personality-tags">{result.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div><div className="personality-recommendations"><h4>适合你的味道</h4>{recommendations.length ? recommendations.map((recipe) => <button className="personality-recipe" key={recipe.id} onClick={() => onOpen(recipe)}><FoodImage recipe={recipe}/><span><strong>{recipe.title}</strong><small>{recipe.time} 分钟 · {recipe.difficulty}</small></span><Utensils size={18}/></button>) : <p className="muted">这类人格推荐的菜暂时不符合你的饮食偏好，可以去菜谱里看看其他选择。</p>}</div><p className="muted personality-note">按你对 5 道题的选择匹配口味，仅作趣味参考，不是心理测评。</p><button className="secondary-button" onClick={() => { setAnswers([]); setStep(0); setResultId(null); }}><RefreshCw size={16}/>重新测一测</button></div>;
+    return <div className="personality-result"><div className="personality-badge" aria-hidden="true">{result.id==='cozy'?<Soup size={45}/>:result.id==='bold'?<Flame size={45}/>:result.id==='fresh'?<Leaf size={45}/>:<Zap size={45}/>}</div><p className="muted">你的美食人格是</p><h3>{result.title}</h3><p className="personality-description">{result.description}</p><div className="personality-tags">{result.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div><div className="personality-recommendations"><h4>适合你的味道</h4>{recommendations.length ? recommendations.map((recipe) => <button className="personality-recipe" key={recipe.id} onClick={() => onOpen(recipe)}><FoodImage recipe={recipe}/><span><strong>{recipe.title}</strong><small>{recipe.time} 分钟 · {recipe.difficulty}</small></span><Utensils size={18}/></button>) : <p className="muted">这类人格推荐的菜暂时不符合你的饮食偏好，可以去菜谱里看看其他选择。</p>}</div><p className="muted personality-note">按你对 5 道题的选择匹配口味，仅作趣味参考，不是心理测评。</p><button className="secondary-button" onClick={() => { setAnswers([]); setStep(0); setResultId(null); }}><RefreshCw size={16}/>重新测一测</button></div>;
   }
   return <div className="personality-tool"><div className="quiz-progress-label"><span><Star size={16}/> 寻找你的美食人格</span><span>{step + 1} / {quizQuestions.length}</span></div><progress className="quiz-progress" value={step + 1} max={quizQuestions.length} aria-label={`第 ${step + 1} 题，共 ${quizQuestions.length} 题`}/><fieldset className="quiz-question"><legend>{question.question}</legend><div className="quiz-options">{question.options.map((option, index) => <label key={option.type} className={'quiz-option' + (answers[step] === index ? ' is-selected' : '')}><input type="radio" name={'personality-question-' + step} checked={answers[step] === index} onChange={() => setAnswers((previous) => { const nextAnswers = [...previous]; nextAnswers[step] = index; return nextAnswers; })}/><span className="quiz-option-letter">{String.fromCharCode(65 + index)}</span><span>{option.label}</span>{answers[step] === index && <Check size={18}/>}</label>)}</div></fieldset><div className="quiz-actions"><button className="text-button" disabled={step === 0} onClick={() => setStep(step - 1)}>上一题</button><button className="primary-button" onClick={next} disabled={answers[step] === undefined}>{step === quizQuestions.length - 1 ? '看看我的美食人格' : '下一题'}</button></div></div>;
 }
@@ -151,6 +155,7 @@ export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast
 }) {
   const [poll, setPoll] = useState<Poll | null>(null);
   const [title, setTitle] = useState('今天吃什么？帮我选一道吧！');
+  const [search,setSearch]=useState('');
   const [selected, setSelected] = useState<string[]>(() => candidates.slice(0, 3).map((recipe) => recipe.id));
   const [busy, setBusy] = useState(false);
   const [loading, setLoading] = useState(!!initialId);
@@ -232,7 +237,7 @@ export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast
       <div className="poll-results">{poll.options.map((option) => {
         const percentage = poll.totalVotes ? Math.round(option.votes / poll.totalVotes * 100) : 0;
         const recipe = recipes.find((item) => item.id === option.id);
-        return <div className={'poll-result-option' + (poll.myVote === option.id ? ' is-voted' : '')} key={option.id}><button className="poll-vote-button" onClick={() => vote(option.id)} disabled={busy || poll.myVote === option.id} aria-pressed={poll.myVote === option.id}><span className="poll-option-name">{recipe?.emoji || '🍽️'} {option.label}{poll.myVote === option.id && <Check size={17}/>}</span><span className="poll-vote-count">{option.votes} 票 · {percentage}%</span><span className="poll-bar"><i style={{ width: percentage + '%' }}/></span></button>{recipe && <button className="text-button poll-recipe-button" onClick={() => onOpen(recipe)}>看做法</button>}</div>;
+        return <div className={'poll-result-option' + (poll.myVote === option.id ? ' is-voted' : '')} key={option.id}><button className="poll-vote-button" onClick={() => vote(option.id)} disabled={busy || poll.myVote === option.id} aria-pressed={poll.myVote === option.id}><span className="poll-option-name"><FoodIcon recipe={recipe}/> {option.label}{poll.myVote === option.id && <Check size={17}/>}</span><span className="poll-vote-count">{option.votes} 票 · {percentage}%</span><span className="poll-bar"><i style={{ width: percentage + '%' }}/></span></button>{recipe && <button className="text-button poll-recipe-button" onClick={() => onOpen(recipe)}>看做法</button>}</div>;
       })}</div>
       {error && <p className="inline-error" role="alert">{error}</p>}
       <div className="poll-share"><label className="form-label" htmlFor="poll-share-link">邀请朋友来投票</label><div className="poll-share-row"><input ref={linkInput} id="poll-share-link" className="field" readOnly value={shareLink} onFocus={(event) => event.currentTarget.select()}/><button className="secondary-button" onClick={copyLink}><Copy size={16}/>复制链接</button></div><p className="muted">朋友需有网站访问权限。</p>{copyFallback && <p className="inline-error" role="status">浏览器暂不支持自动复制，请长按上方链接复制。</p>}</div>
@@ -241,8 +246,8 @@ export function PollTool({ user, candidates, initialId, onLogin, onOpen, onToast
   }
   const history = !initialId && (historyLoading || historyError || recentPolls.length > 0) ? <section className="poll-history" aria-labelledby="poll-history-heading"><div className="poll-history-head"><h4 id="poll-history-heading">我发起的投票</h4><span className="muted">最近 20 场</span></div>{historyLoading && <p className="muted" role="status">正在找回你的饭票…</p>}{historyError && <div className="poll-history-error"><p className="muted">之前的投票暂时没有加载成功，你仍可以发起新投票。</p><button type="button" className="text-button" disabled={historyLoading} onClick={refreshHistory}>重试加载</button></div>}{recentPolls.length > 0 && <div className="poll-history-list">{recentPolls.map((item) => <button type="button" className="poll-history-item" key={item.id} onClick={() => loadPoll(item.id)} disabled={busy}><span>{item.title}</span><span className="muted">{item.totalVotes} 票</span></button>)}</div>}</section> : null;
   if (candidates.length < 2) return <div className="poll-tool">{history}<Empty icon={<Users size={42}/>} title="至少准备两道候选菜" text="当前偏好下的菜谱不足两道，可以放宽做饭时间或稍后添加更多菜谱。"/>{error && <p className="inline-error" role="alert">{error}</p>}</div>;
-  return <div className="poll-tool">{history}<form onSubmit={createPoll}><label className="form-label" htmlFor="poll-title">这次想让朋友帮你决定什么？</label><input id="poll-title" className="field" value={title} onChange={(event) => setTitle(event.target.value)} maxLength={80} required/><div className="poll-selection-head"><span className="form-label">挑 2–6 道候选菜</span><span className="muted">已选 {selected.length} / 6</span></div><div className="poll-choice-grid">{candidates.map((recipe) => {
+  return <div className="poll-tool">{history}<form onSubmit={createPoll}><label className="form-label" htmlFor="poll-title">这次想让朋友帮你决定什么？</label><input id="poll-title" className="field" value={title} onChange={(event) => setTitle(event.target.value)} maxLength={80} required/><div className="poll-selection-head"><span className="form-label">挑 2–6 道候选菜</span><span className="muted">已选 {selected.length} / 6</span></div><input className="field" aria-label="搜索投票候选菜" placeholder="输入菜名或食材挑选候选菜" value={search} onChange={e=>setSearch(e.target.value)}/><div className="poll-choice-grid">{candidates.filter(r=>selected.includes(r.id)||[r.title,...r.aliases,...r.ingredients.map(i=>i.name)].some(s=>s.includes(search.trim()))).map((recipe) => {
     const checked = selected.includes(recipe.id);
-    return <label key={recipe.id} className={'poll-choice' + (checked ? ' is-selected' : '')}><input type="checkbox" checked={checked} disabled={busy || (!checked && selected.length >= 6)} onChange={() => { setSelected((previous) => checked ? previous.filter((id) => id !== recipe.id) : [...previous, recipe.id]); }}/><span>{recipe.emoji}</span><span>{recipe.title}</span>{checked && <Check size={16}/>}</label>;
+    return <label key={recipe.id} className={'poll-choice' + (checked ? ' is-selected' : '')}><input type="checkbox" checked={checked} disabled={busy || (!checked && selected.length >= 6)} onChange={() => { setSelected((previous) => checked ? previous.filter((id) => id !== recipe.id) : [...previous, recipe.id]); }}/><span><FoodIcon recipe={recipe}/></span><span>{recipe.title}</span>{checked && <Check size={16}/>}</label>;
   })}</div>{error && <p className="inline-error" role="alert">{error}</p>}<button type="submit" className="primary-button" disabled={busy || selected.length < 2 || selected.length > 6 || !title.trim()}><Users size={18}/>{busy ? '正在创建饭票…' : '创建投票，邀请朋友'}</button><p className="muted">创建后会得到专属链接，大家的投票会汇总在一起。</p></form></div>;
 }

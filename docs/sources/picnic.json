@@ -1,0 +1,20 @@
+[
+  {
+    "files": [
+      "picnic.webp",
+      "picnic-mobile.webp"
+    ],
+    "source": "OpenAI ImageGen",
+    "type": "食来运转 V2 原创 AI 卡通插画",
+    "prompt": "Use case: illustration-story. Original panoramic horizontal fine-art children's picture book spread, 2.7:1 landscape. A cozy spring morning in a tiny food diary kitchen. Medium: delicate loose color pencil with visible crayon strokes, chalky dry pastel on tactile warm cream paper; airy Japanese and Chinese picture-book editorial energy, low contrast pastel matte color, dark chocolate fine uneven pencil outlines, beautiful tactile detail, sophisticated print design. Primary characters are entirely original: a plump bright mandarin-orange tabby chef, cream muzzle, three small forehead stripes, joyful closed crescent eyes, blue and white gingham kerchief tied over head behind ears (no tall hat!), coral gingham apron. The cat stands at right-center x=72% and proudly presents a large golden omelette rice served on a broad oval white plate with a small red ketchup flourish. A round butter-yellow duckling kitchen assistant at x=86% offers a wooden spoon, and one very tiny tomato character with a smile and little feet sits by the food. Open handwritten-looking but completely BLANK recipe scrapbook with just a little egg sketch, little ceramic soup bowl and a little green vegetable side dish rest on a table with pale blue and pink checked cloth. Softly sketched light-blue kitchen shelves on right, a muted pink pot, just a few details, sunshine and light. LEFT 42% MUST REMAIN open lightly textured warm vanilla/blush cream paper, very pale, nearly blank for dark brown copy to be overlaid later; blend gently into the right painted scene without hard dividing line. A few delicate food doodles and tiny rosemary leaves near extreme left top or bottom edge only. Arrange cat face, omelette, duck, tomato all comfortably INSIDE right two-thirds (avoid anything clipped), express gentle friendly playfulness. Camera eye level, enough variety, avoid putting repeated cats. Flat hand-made 2D illustration, large charming facial features, warm morning scene. Full bleed. No typography, no language, no writing or letters, no logo or frame. No nighttime, zodiac, stars, magical props, wizardry, witch hat or crystal ball. Not a screenshot or user interface. Do not evoke existing character franchises.",
+    "usage": "桌面版左侧叠文字，手机版聚焦橘猫、小鸭、番茄与餐桌，建议文案排在插画上方或下方。"
+  },
+  {
+    "files": [
+      "picnic-mark.webp"
+    ],
+    "source": "OpenAI ImageGen",
+    "type": "根据同系列原创主视觉生成的透明导航头像",
+    "prompt": "Use case: identity-preserve. Extract this exact original illustrated orange cat chef from the supplied picture as a small transparent mascot badge. Redraw only a clean, front-facing icon of the cat's full head and ears, blue-and-white checkered kerchief behind the ears with the knot visible to the side, warm ginger tabby stripes, cream muzzle, gentle happy crescent eyes, little smiling mouth and rosy cheeks. NO shoulders, paws, plates, food, whiskers may slightly extend. Preserve the picture's delicate colored pencil texture, warm honey orange and thin brown pencil lines. Create a bold simple silhouette suited to navigation at 36px. The head fills 86% of the square canvas, edges complete. Genuine transparent alpha everywhere around the head, no frame, white outline, drop shadow, text or watermark. No fantasy hats or symbols."
+  }
+]

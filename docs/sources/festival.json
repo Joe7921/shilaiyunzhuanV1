@@ -1,0 +1,66 @@
+{
+  "collection": "食来运转 V2 节日菜单",
+  "images": [
+    {
+      "id": "mugwort-qingtuan",
+      "asset": "/images/festival/mugwort-qingtuan.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "jujube-zongzi",
+      "asset": "/images/festival/jujube-zongzi.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "cantonese-bean-mooncake",
+      "asset": "/images/festival/cantonese-bean-mooncake.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "osmanthus-rice-cake",
+      "asset": "/images/festival/osmanthus-rice-cake.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "chongyang-rice-cake",
+      "asset": "/images/festival/chongyang-rice-cake.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "brown-sugar-niangao",
+      "asset": "/images/festival/brown-sugar-niangao.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "pork-napa-dumplings",
+      "asset": "/images/festival/pork-napa-dumplings.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    },
+    {
+      "id": "birthday-chicken-noodles",
+      "asset": "/images/festival/birthday-chicken-noodles.webp",
+      "source": "OpenAI ImageGen",
+      "kind": "项目原创 AI 写实美食配图",
+      "inspected": true
+    }
+  ],
+  "nutrition": "kcal 是整份配方估算能量，按原料典型值估算。实际摄入随品牌、油脂及烹饪损耗而变。",
+  "safetyReferences": [
+    "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+    "https://www.cfs.gov.hk/sc_chi/whatsnew/whatsnew_sfst/whatsnew_sfst_rice_dumplings_27052008.html"
+  ]
+}
