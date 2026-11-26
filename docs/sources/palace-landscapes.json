@@ -1,0 +1,42 @@
+[
+  {
+    "file": "spring.webp",
+    "subject": "粉樱与春草",
+    "source": "OpenAI ImageGen，为食来运转创作的 AI 手绘童话风插画",
+    "generated": "2026-11-26",
+    "width": 625,
+    "height": 625,
+    "bytes": 116904,
+    "sha256": "ba27057afe9d5e38472ef68f27d7c80b5351b9b85d06233e8a72db90d909c2b2"
+  },
+  {
+    "file": "summer.webp",
+    "subject": "树冠与湖光",
+    "source": "OpenAI ImageGen，为食来运转创作的 AI 手绘童话风插画",
+    "generated": "2026-11-26",
+    "width": 625,
+    "height": 625,
+    "bytes": 128654,
+    "sha256": "62065fc40d591d02d96381ef07b54aec54f8c9c2cfc57dae1bf84cadf0f4669b"
+  },
+  {
+    "file": "autumn.webp",
+    "subject": "金橙田野",
+    "source": "OpenAI ImageGen，为食来运转创作的 AI 手绘童话风插画",
+    "generated": "2026-11-26",
+    "width": 625,
+    "height": 625,
+    "bytes": 122444,
+    "sha256": "70fd029b663ddd25ef42b1c06c106a1e2d90fa33ad0304054b01b19ed09a5337"
+  },
+  {
+    "file": "winter.webp",
+    "subject": "蓝雪与冰湖",
+    "source": "OpenAI ImageGen，为食来运转创作的 AI 手绘童话风插画",
+    "generated": "2026-11-26",
+    "width": 625,
+    "height": 625,
+    "bytes": 102856,
+    "sha256": "946a6f8d48dcc40d96fe026c5bcf6e845380691e0be9b576a97200227e2e237e"
+  }
+]

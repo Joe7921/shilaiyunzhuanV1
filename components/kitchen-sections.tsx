@@ -5,6 +5,7 @@ import type {Recipe} from '@/lib/recipes';
 import {recipes} from '@/lib/recipes';
 import {calendarYear,upcomingEvents,CALENDAR_SOURCE,CALENDAR_YEARS} from '@/lib/calendar/calendar.mjs';
 import {Empty,FoodImage} from './ui';
+import PalaceKitchen from './palace-kitchen';
 
 export type Page='home'|'magic'|'recipes'|'season'|'calendar'|'book'|'community';
 export type Tool='fortune'|'wheel'|'personality'|'poll'|'preferences';
@@ -24,7 +25,7 @@ export function Home({day,birthday,pool,renderCard,go,tool,onOpen}:{day:string;b
     return pool.filter(r=>filter==='半小时开饭'?r.time<=30:filter==='一碗热汤'?/汤羹|汤品/.test(r.category):/甜品|糖水|甜点/.test(r.category)).slice(0,4);
   },[filter,pool]);
   return <div className="journal page-content">
-    <section className="cover"><picture><source media="(max-width:620px)" srcSet="/images/brand/picnic-mobile.webp"/><img src="/images/brand/picnic.webp" width={1600} height={640} alt="橘猫大厨和小伙伴在粉蓝色厨房端出一桌热菜" fetchPriority="high"/></picture><div className="cover-copy"><p className="eyeline"><BookOpen size={16}/> 食来运转 · 家常食谱</p><h1>今天，一起<br/><em>好好吃饭。</em></h1><p className="cover-intro">挑一道想吃的菜，跟着食谱慢慢做。</p><div className="cover-links"><button className="gold-button" onClick={()=>go('recipes')}><BookOpen size={18}/>翻开菜谱</button><button className="hero-fortune" onClick={()=>go('magic')}><Sparkles size={17}/>抽今日幸运菜</button></div></div></section>
+    <PalaceKitchen day={day} recipes={()=>go('recipes')} fortune={()=>go('magic')}/>
     <div className="discovery-strip">{[{label:'美食大转盘',desc:'转出一桌好味',icon:Dices,act:()=>tool('wheel')},{label:'四季食养馆',desc:'汤水与暖饮',icon:Soup,act:()=>go('season')},{label:'节日限定菜单',desc:near?near.name+' · '+near.date.slice(5):'全年食历',icon:CalendarDays,act:()=>go('calendar')},{label:'好友帮选',desc:'请饭搭子投一票',icon:Users,act:()=>tool('poll')}].map(({label,desc,icon:Icon,act})=><button onClick={act} key={label}><i><Icon size={24}/></i><span><b>{label}</b><small>{desc}</small></span></button>)}</div>
     <section className="editor-picks"><div className="sectitle"><div><p className="overline"><ChefHat size={15}/> 厨房手记</p><h2>今天端上桌</h2></div><button className="flat-button" onClick={()=>go('recipes')}>浏览全部 {recipes.length} 道 <BookOpen size={16}/></button></div><div className="paper-tabs">{['编辑精选','半小时开饭','一碗热汤','饭后甜点'].map(f=><button className={filter===f?'active':''} key={f} onClick={()=>setFilter(f)}>{f}</button>)}</div>
     {featured.length?<div className="recipe-grid">{featured.map(renderCard)}</div>:<Empty title="这个栏目暂时没有匹配的菜" text="可以看看其他分类，或调整选菜偏好。"/>}</section>
